@@ -1,0 +1,351 @@
+@import url(template.scss);
+
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    width: 1000%;
+    overflow: hidden;
+
+    box-shadow: 0 0px 20px $gray ;
+    background-color: #FFF;
+    h1{
+        font-weight: bold;
+    }
+    
+}
+
+.banner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    padding: 30px;
+    .title{
+        border-bottom: 1px solid #000;
+        padding: 16px 32px;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 64px;
+        position: relative;
+        @media (max-width:1200px) {
+            width: 60%;
+        }
+        @media (max-width:768px) {
+            width: 100%;
+        }
+        svg{
+            height:24px;
+            animation: blink;
+        }
+        h2{
+            // line-height: 0;
+            margin: 0;
+            flex-basis: fill;
+            .typewriter::after{
+                content: "";
+                border-right: 1px solid #000;
+                animation: blink 0.5s infinite;
+            }
+            @keyframes blink {
+                0%,100%{opacity: 1;}
+                50%{opacity: 0;}
+                
+            }
+            .typewriter::before {
+                content:"";
+                animation: typing 5s infinite;
+              }
+            @keyframes typing {
+                0%,7.69%{ content: "N";}
+                7.69%,15.38%{ content: "N";}
+                15.38%,23.07%{content:"NA"}
+                23.07%,30.76%{content:"NAI"}
+                30.76%,38.45%{content:"NAI H"}
+                38.45%,46.14%{content:"NAI HS"}
+                46.14%,53.83%{content:"NAI HSU"}
+                53.83%,61.52%{content:"NAI HSUA"}
+                61.52%,69.21%{content:"NAI HSUAN"}
+                69.21%,76.90%{content:"NAI HSUAN K"}
+                76.90%,84.59%{content:"NAI HSUAN KU"}
+                84.59%,92.28%{content:"NAI HSUAN KUO"}
+                92.28%,100%{content:"NAI HSUAN KUO"}
+            }
+        }
+    }
+    .relate{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        .relate-title{
+            // color: red;
+            // border: 1px solid #000;
+            margin: 0;
+        }
+        .tags{
+            // border: 1px solid #000;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            .tag{
+                display: flex;
+                align-items: baseline;
+                border: 1px solid #000;
+                padding: 8px  16px;
+                border-radius: 32px;
+                p{
+                    margin: 0;
+                }
+                h5{
+                    margin: 0;
+                }
+            }
+        }
+        
+    }
+    
+
+}
+.works{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    gap: 60px;
+
+    width: 100%;
+    .title{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .content{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 3.6%;
+        @media (max-width:1200px) {
+            gap: 4%;
+        }
+        @media (max-width:768px) {
+            gap: 0%;
+        }
+        .work{
+            display: flex;
+            width: 30.9%;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-bottom: 48px;
+            padding-bottom: 16px;
+               .img{
+                   width: 100%;
+                //    background-color: gray;
+                   height: 220px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                //    overflow: hidden;
+                   img{
+                       width: 95%;
+                    //    height: 100%;
+                   }
+                   :hover{
+                        transform: scale(1.05);
+                   }
+               }
+               .work-title{
+                   display: flex;
+                   align-items: center;
+                   padding: 16px;
+               }
+               .work-type{
+                color: $gray;
+               }
+            @media (max-width:1200px) {
+                width: 48%;
+                
+            }
+            @media (max-width:768px) {
+                width: 100%;
+                
+            }
+        }
+    }
+  
+    
+}
+
+
+.work-detail{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 60px;
+    gap: 32px;
+    // align-items: center;
+    .work-photo{
+        width: 100%;
+        // height: 500px;
+        border: 1px solid #000;
+        background-color: #000;
+    }
+    .des{
+        display: flex;
+        justify-content: space-between;
+        input{
+            background-color: #FAFAFA;
+            border: none;
+            border-bottom: 1px solid #000;
+
+        }
+    }
+    .other-works{
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        .btn{
+            // width: 30px;
+            // padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // border: 1px solid #000;
+            user-select: none;
+        }
+        .work{
+            flex-basis: fill;
+            width: 100%;
+            height: 100px;
+            background-color: #636363;
+        }
+    }
+}
+
+
+.personal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    gap: 16px;
+    width: 100%;
+    .name{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+    }
+    .brief{
+        text-align: center;
+    }
+    .content{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        // border: 1px solid #000;
+        gap: 5%;
+        @media (max-width:768px) {
+            flex-direction: column;
+            gap: 32px;
+        }
+        .photo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            width: 23%;
+            @media (max-width:768px) {
+                width: 80%;;
+            }
+            img{
+                background-color: #636363;
+                width: 100%;
+                height: 230px;
+                @media (max-width:768px) {
+                    flex-direction: column;
+                }
+            }
+            .link{
+                display: flex;
+                a{
+                    display: block;
+                    color:$black;
+                    svg{
+                        width: 23px;
+                        height: 22.5px;
+                        margin-right: 16px;
+                    }
+                }
+               
+            }
+        }
+        .info{
+            display: flex;
+            width: 72%;
+            @media (max-width:768px) {
+                flex-direction: column;
+                gap: 36px;
+                width: 100%;
+            }
+            .item{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 24px;
+                width: 50%;
+                @media (max-width:768px) {
+                    width: 100%;
+                    align-items: center;    
+                }
+                .title{
+                    display: flex;
+                    flex-direction: column;
+                    gap:4px;
+                    align-items: start;
+                    @media (max-width:768px) {
+                        align-items: center;    
+                    }
+                    h4,h5{
+                        margin: 0;
+                        color: #636363;
+                    }
+                }
+                
+                .item-content{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                }
+            }
+            .experience{
+                .item-content{
+                    display: flex;
+                    flex-direction: column;
+                    gap:16px;
+                    .item{
+                        display: flex;
+                        gap:8px;
+                        width: 100%;
+                        p{
+                            color:$gray;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
