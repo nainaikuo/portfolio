@@ -1,4 +1,9 @@
 const header = document.querySelector(".jsHeader")
 
-console.log(header);
 
+
+function headerShow(){
+    header.classList.add("scroll")
+}
+
+headerShow()

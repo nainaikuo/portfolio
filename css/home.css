@@ -1,0 +1,485 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  transition: all 1s;
+}
+
+image, svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.pointer, li, button, .logo {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+}
+
+body {
+  background-color: #FAFAFA;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Noto Serif TC", serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body h1 {
+  font-size: 3rem;
+}
+body h2 {
+  font-size: 2.25rem;
+}
+body h3 {
+  font-size: 1.5rem;
+}
+body h4 {
+  font-size: 1.25rem;
+}
+body h5 {
+  font-size: 1rem;
+}
+body p {
+  font-size: 0.875rem;
+}
+
+.block {
+  border-bottom: 1px solid #000;
+}
+
+.header {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  width: 1000%;
+  overflow: hidden;
+  box-shadow: 0 0px 20px #636363;
+  background-color: #FFF;
+}
+.header h1 {
+  font-weight: bold;
+}
+
+.banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  padding: 30px;
+  height: 100vh;
+}
+.banner .title {
+  border-bottom: 1px solid #000;
+  padding: 16px 32px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .banner .title {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .banner .title {
+    width: 100%;
+  }
+}
+.banner .title svg {
+  height: 24px;
+  animation: blink;
+}
+.banner .title h2 {
+  margin: 0;
+  flex-basis: fill;
+}
+.banner .title h2 .typewriter::after {
+  content: "";
+  border-right: 1px solid #000;
+  animation: blink 0.5s infinite;
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.banner .title h2 .typewriter::before {
+  content: "";
+  animation: typing 5s infinite;
+}
+@keyframes typing {
+  0%, 7.69% {
+    content: "N";
+  }
+  7.69%, 15.38% {
+    content: "N";
+  }
+  15.38%, 23.07% {
+    content: "NA";
+  }
+  23.07%, 30.76% {
+    content: "NAI";
+  }
+  30.76%, 38.45% {
+    content: "NAI H";
+  }
+  38.45%, 46.14% {
+    content: "NAI HS";
+  }
+  46.14%, 53.83% {
+    content: "NAI HSU";
+  }
+  53.83%, 61.52% {
+    content: "NAI HSUA";
+  }
+  61.52%, 69.21% {
+    content: "NAI HSUAN";
+  }
+  69.21%, 76.90% {
+    content: "NAI HSUAN K";
+  }
+  76.90%, 84.59% {
+    content: "NAI HSUAN KU";
+  }
+  84.59%, 92.28% {
+    content: "NAI HSUAN KUO";
+  }
+  92.28%, 100% {
+    content: "NAI HSUAN KUO";
+  }
+}
+.banner .relate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.banner .relate .relate-title {
+  margin: 0;
+}
+.banner .relate .tags {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.banner .relate .tags .tag {
+  display: flex;
+  align-items: baseline;
+  border: 1px solid #000;
+  padding: 8px 16px;
+  border-radius: 32px;
+}
+.banner .relate .tags .tag p {
+  margin: 0;
+}
+.banner .relate .tags .tag h5 {
+  margin: 0;
+}
+
+.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+  gap: 60px;
+  width: 100%;
+}
+.works .title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.works .content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 3.6%;
+}
+@media (max-width: 1200px) {
+  .works .content {
+    gap: 4%;
+  }
+}
+@media (max-width: 768px) {
+  .works .content {
+    gap: 0%;
+  }
+}
+.works .content .work {
+  display: flex;
+  width: 30.9%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 48px;
+  padding-bottom: 16px;
+}
+.works .content .work .img {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.works .content .work .img img {
+  width: 95%;
+}
+.works .content .work .img :hover {
+  transform: scale(1.05);
+}
+.works .content .work .work-title {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+.works .content .work .work-type {
+  color: #636363;
+}
+@media (max-width: 1200px) {
+  .works .content .work {
+    width: 48%;
+  }
+}
+@media (max-width: 768px) {
+  .works .content .work {
+    width: 100%;
+  }
+}
+
+.work-detail {
+  display: flex;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  padding: 60px;
+  gap: 32px;
+}
+.work-detail .work-photo {
+  width: 100%;
+  border: 1px solid #000;
+  background-color: #000;
+}
+.work-detail .des {
+  display: flex;
+  justify-content: space-between;
+}
+.work-detail .des input {
+  background-color: #FAFAFA;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+.work-detail .other-works {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.work-detail .other-works .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.work-detail .other-works .work {
+  flex-basis: fill;
+  width: 100%;
+  height: 100px;
+  background-color: #636363;
+}
+
+.personal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  gap: 16px;
+  width: 100%;
+  height: 100vh;
+}
+.personal .name {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.personal .brief {
+  text-align: center;
+}
+.personal .content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 5%;
+}
+@media (max-width: 768px) {
+  .personal .content {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+.personal .content .photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 23%;
+}
+@media (max-width: 768px) {
+  .personal .content .photo {
+    width: 80%;
+  }
+}
+.personal .content .photo img {
+  background-color: #636363;
+  width: 100%;
+  height: 230px;
+}
+@media (max-width: 768px) {
+  .personal .content .photo img {
+    flex-direction: column;
+  }
+}
+.personal .content .photo .link {
+  display: flex;
+}
+.personal .content .photo .link a {
+  display: block;
+  color: #000;
+}
+.personal .content .photo .link a svg {
+  width: 23px;
+  height: 22.5px;
+  margin-right: 16px;
+}
+.personal .content .info {
+  display: flex;
+  width: 72%;
+}
+@media (max-width: 768px) {
+  .personal .content .info {
+    flex-direction: column;
+    gap: 36px;
+    width: 100%;
+  }
+}
+.personal .content .info .item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .personal .content .info .item {
+    width: 100%;
+    align-items: center;
+  }
+}
+.personal .content .info .item .title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .personal .content .info .item .title {
+    align-items: center;
+  }
+}
+.personal .content .info .item .title h4, .personal .content .info .item .title h5 {
+  margin: 0;
+  color: #636363;
+}
+.personal .content .info .item .item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.personal .content .info .experience .item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.personal .content .info .experience .item-content .item {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+.personal .content .info .experience .item-content .item p {
+  color: #636363;
+}
+
+.right {
+  padding: 8px;
+}/*# sourceMappingURL=home.css.map */
