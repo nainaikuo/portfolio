@@ -14,8 +14,17 @@
 
     box-shadow: 0 0px 20px $gray ;
     background-color: $white;
+    @media (max-width:768px){
+        padding: 16px;
+        // color: red;
+        // font-size: 32px;
+    }
     h1{
         font-weight: bold;
+        @media (max-width:768px){
+            // color: red;
+            font-size: 32px;
+        }
     }
     
 }
@@ -37,6 +46,7 @@
     height: 100vh;
     @media (max-width:768px){
         height: auto;
+        padding-top: 120px;
     }
     .title{
         border-bottom: 1px solid $black;
@@ -140,6 +150,7 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+        text-align: center;
     }
     .content{
         width: 100%;
