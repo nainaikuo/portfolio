@@ -39,7 +39,7 @@ function renderWrok(data){
     data.forEach(i=>{
         // console.log(i)
         workListContent +=` <div class="work ">
-        <div class="img"><a href="${i.id}"><img src="${i.work_pic}" alt=""></a></div>
+        <div class="img"><a href="#"><img src="${i.work_pic}" alt=""></a></div>
         <div class="work-title"><h4>${i.work_title}</h4></div>
         <div class="work-type"><p>${i.work_type}</p></div>
     </div>`
