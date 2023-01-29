@@ -79,6 +79,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  color: #302f2f;
 }
 body h1 {
   font-size: 3rem;
@@ -100,5 +101,5 @@ body p {
 }
 
 .block {
-  border-bottom: 1px solid #000;
+  border-bottom: 0.5px solid #302f2f;
 }/*# sourceMappingURL=template.css.map */
