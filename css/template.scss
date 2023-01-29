@@ -78,17 +78,17 @@ body{
     background-color: #FAFAFA;
     width: 80%;
     max-width: 1200px;
-    // min-width: 900px;
+    min-width: 300px;
     margin: 0 auto;
-    // border: 1px solid $black;
-    font-family: 'Noto Serif TC', serif;
+
+font-family: 'Tenor Sans', sans-serif;
     display: flex;
     align-items: center;
     flex-direction: column;
     color: $black;
     letter-spacing: 0.5px;
-    @media (max-width:1200px){
-        width: 90%;
+    @media (max-width:768px){
+        width: 100%;
     }
     h1{
         font-size: 2.5rem;
@@ -106,7 +106,7 @@ body{
         font-size: 1rem;
     }
     p{
-        font-size: 0.875rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -117,10 +117,15 @@ body{
 
 
 .block{
-    border-bottom: 0.5px solid $black;
+    border-bottom: 0.5px solid $gray;
     padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     @media (max-width:768px){
         padding: 32px 16px;
+        border: none;
     }
     .title{
         text-align: center;
@@ -132,4 +137,34 @@ body{
             color: $gray;
         }
     }
+}
+
+
+.header{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    width: 1000%;
+    overflow: hidden;
+    z-index: 99;
+
+    box-shadow: 0 0px 20px $gray ;
+    background-color: $white;
+    @media (max-width:768px){
+        padding: 16px;
+        // color: red;
+        // font-size: 32px;
+    }
+    h1{
+        font-weight: bold;
+        @media (max-width:768px){
+            // color: red;
+            font-size: 32px;
+        }
+    }
+    
 }

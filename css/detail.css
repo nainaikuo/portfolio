@@ -157,4 +157,12 @@ body p {
   .header h1 {
     font-size: 32px;
   }
-}/*# sourceMappingURL=template.css.map */
+}
+
+.work-detail {
+  height: 100vh;
+  gap: 16px;
+}
+.work-detail .content .work-pic {
+  width: 800px;
+}/*# sourceMappingURL=detail.css.map */

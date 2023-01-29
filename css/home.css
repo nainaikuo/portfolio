@@ -73,17 +73,18 @@ body {
   background-color: #FAFAFA;
   width: 80%;
   max-width: 1200px;
+  min-width: 300px;
   margin: 0 auto;
-  font-family: "Noto Serif TC", serif;
+  font-family: "Tenor Sans", sans-serif;
   display: flex;
   align-items: center;
   flex-direction: column;
   color: #393a49;
   letter-spacing: 0.5px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   body {
-    width: 90%;
+    width: 100%;
   }
 }
 body h1 {
@@ -102,16 +103,21 @@ body h5 {
   font-size: 1rem;
 }
 body p {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
 }
 
 .block {
-  border-bottom: 0.5px solid #393a49;
+  border-bottom: 0.5px solid #636363;
   padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 768px) {
   .block {
     padding: 32px 16px;
+    border: none;
   }
 }
 .block .title {
@@ -270,6 +276,14 @@ body p {
   border: 1px solid #393a49;
   padding: 8px 16px;
   border-radius: 32px;
+  color: #636363;
+  transition-duration: 0.05s;
+}
+.banner .relate .tags .tag:hover {
+  background-color: #636363;
+  user-select: none;
+  color: #FFF;
+  border: 1px solid #636363;
 }
 .banner .relate .tags .tag p {
   margin: 0;
@@ -422,6 +436,10 @@ body p {
 }
 .personal .brief {
   text-align: center;
+  line-height: 1.5;
+  border-bottom: 1px solid #636363;
+  width: 100%;
+  padding-bottom: 16px;
 }
 .personal .content {
   display: flex;
@@ -529,4 +547,5 @@ body p {
 
 .rights {
   padding: 8px;
+  font-size: 12px;
 }/*# sourceMappingURL=home.css.map */

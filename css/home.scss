@@ -1,33 +1,6 @@
 @import "template.scss";
 
-.header{
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-    padding: 32px;
-    width: 1000%;
-    overflow: hidden;
-    z-index: 99;
 
-    box-shadow: 0 0px 20px $gray ;
-    background-color: $white;
-    @media (max-width:768px){
-        padding: 16px;
-        // color: red;
-        // font-size: 32px;
-    }
-    h1{
-        font-weight: bold;
-        @media (max-width:768px){
-            // color: red;
-            font-size: 32px;
-        }
-    }
-    
-}
 
 // .header.scroll{
 //     h4{
@@ -118,12 +91,23 @@
             gap: 16px;
             flex-wrap: wrap;
             justify-content: center;
+            
             .tag{
                 display: flex;
                 align-items: baseline;
                 border: 1px solid $black;
                 padding: 8px  16px;
                 border-radius: 32px;
+                color: $gray;
+                transition-duration: 0.05s;
+                &:hover{
+                    background-color: $gray;
+                    user-select: none;
+                    color: $white;
+                    
+                    border: 1px solid $gray;
+                    }
+               
                 p{
                     margin: 0;
                 }
@@ -285,6 +269,10 @@
 
     .brief{
         text-align: center;
+        line-height: 1.5;
+        border-bottom: 1px solid $gray;
+        width: 100%;
+        padding-bottom: 16px;
     }
     .content{
         display: flex;
@@ -389,4 +377,6 @@
 
 .rights{
     padding: 8px;
+    font-size: 12px;
+    // font-family: 'Architects Daughter', cursive;
 }
