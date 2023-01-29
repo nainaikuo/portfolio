@@ -148,12 +148,6 @@ body p {
   padding: 60px;
   height: 100vh;
 }
-@media (max-width: 768px) {
-  .banner {
-    height: auto;
-    padding-top: 120px;
-  }
-}
 .banner .title {
   border-bottom: 1px solid #302f2f;
   padding: 16px 32px;
@@ -276,6 +270,11 @@ body p {
   gap: 60px;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .works {
+    gap: 16px;
+  }
+}
 .works .title {
   text-align: center;
   display: flex;
@@ -308,6 +307,11 @@ body p {
   padding: 0;
   margin-bottom: 48px;
   padding-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .works .content .work {
+    margin-bottom: 0;
+  }
 }
 .works .content .work .img {
   width: 100%;
@@ -437,7 +441,7 @@ body p {
 }
 .personal .content .photo img {
   background-color: #636363;
-  width: 100%;
+  width: 230px;
   height: 230px;
 }
 @media (max-width: 768px) {

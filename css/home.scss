@@ -45,8 +45,8 @@
     padding: 60px;
     height: 100vh;
     @media (max-width:768px){
-        height: auto;
-        padding-top: 120px;
+        // height: auto;
+        // padding-top: 120px;
     }
     .title{
         border-bottom: 1px solid $black;
@@ -145,7 +145,9 @@
     gap: 60px;
 
     width: 100%;
-
+    @media (max-width:768px){
+        gap:16px
+    }
     .title{
         text-align: center;
         display: flex;
@@ -174,6 +176,9 @@
             // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             margin-bottom: 48px;
             padding-bottom: 16px;
+            @media (max-width:768px){
+                margin-bottom: 0;
+            }
                .img{
                    width: 100%;
                 //    background-color: gray;
@@ -306,7 +311,7 @@
             }
             img{
                 background-color: $gray;
-                width: 100%;
+                width: 230px;
                 height: 230px;
                 @media (max-width:768px) {
                     flex-direction: column;
