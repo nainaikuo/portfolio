@@ -40,7 +40,7 @@ function renderWrok(data){
     data.forEach(i=>{
 
         workListContent +=` <div class="work" data-name="${i.work_title}" data-id="${i.id}" data-description="${i.work_description}">
-        <div class="img"><img src="img/${i.id} (1).png" alt=""></div>
+        <div class="img"><img src="${i.work_mainpic_url}" alt=""></div>
         <div class="work-title"><h4>${i.work_title}</h4></div>
         <div class="work-type"><p>${i.work_type}</p></div>
     </div>`
@@ -57,7 +57,7 @@ function renderWrok(data){
 const work = document.querySelector(".js-works")
 
 
-work.addEventListener("click",renderWorkDetail)
+// work.addEventListener("click",renderWorkDetail)
 
 function renderWorkDetail(e){
     // 找出按的是哪個作品
@@ -87,13 +87,13 @@ function renderWorkDetail(e){
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="img/${i.id} (1).png" class="d-block w-100" alt="...">
+                <img src="img/${i.id}-01.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="img/${i.id} (2).png" class="d-block w-100" alt="...">
+                <img src="img/${i.id}-02.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="img/${i.id} (3).png" class="d-block w-100" alt="...">
+                <img src="img/${i.id}-03.png" class="d-block w-100" alt="...">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
