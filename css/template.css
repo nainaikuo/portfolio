@@ -157,4 +157,7 @@ body p {
   .header h1 {
     font-size: 32px;
   }
+}
+.header img {
+  display: none;
 }/*# sourceMappingURL=template.css.map */

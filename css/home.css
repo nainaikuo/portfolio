@@ -158,6 +158,9 @@ body p {
     font-size: 32px;
   }
 }
+.header img {
+  display: none;
+}
 
 .banner {
   width: 100%;
