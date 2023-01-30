@@ -103,7 +103,7 @@ body h5 {
   font-size: 1rem;
 }
 body p {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .block {
@@ -132,7 +132,6 @@ body p {
 }
 
 .header {
-  position: fixed;
   display: flex;
   flex-direction: column;
   gap: 16px;
