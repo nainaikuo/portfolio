@@ -1,4 +1,4 @@
-const workUrl = "https://script.google.com/macros/s/AKfycbz-W7lFHAkAFpReiwmAn_bC1Ohsh_zFKMLuHezts1GeVCsGWlmvv2DDVa0FHiGUiU_R/exec"
+const workUrl = "https://script.google.com/macros/s/AKfycbyL2fxu_Fc3FkxFYO9r_x-q-ot02UoiWju9PL1sJJFwr19PwooXYfrnm1FXD8ovmaKY/exec"
 
 let workData ;
 
@@ -26,6 +26,7 @@ function getWorkData(){
     axios.get(workUrl)
     .then(res => {
         workData = res.data;
+        console.log(workData)
         renderWrok(workData)
     })
     .catch(err => {
@@ -39,10 +40,10 @@ function renderWrok(data){
 
     data.forEach(i=>{
 
-        workListContent +=` <div class="work" data-name="${i.work_title}" data-id="${i.id}" data-description="${i.work_description}">
-        <div class="img"><img src="${i.work_mainpic_url}" alt=""></div>
-        <div class="work-title"><h4>${i.work_title}</h4></div>
-        <div class="work-type"><p>${i.work_type}</p></div>
+        workListContent +=` <div class="work" data-name="${i.title}" data-id="${i.id}" data-description="${i.work_description}">
+        <div class="img"><img src="${i.mainpic_url}" alt=""></div>
+        <div class="work-title"><h4>${i.title}</h4></div>
+        <div class="work-type"><p>${i.type}</p></div>
     </div>`
 
 
@@ -57,7 +58,7 @@ function renderWrok(data){
 const work = document.querySelector(".js-works")
 
 
-// work.addEventListener("click",renderWorkDetail)
+work.addEventListener("click",renderWorkDetail)
 
 function renderWorkDetail(e){
     // 找出按的是哪個作品
@@ -80,21 +81,12 @@ function renderWorkDetail(e){
     nowWorkData.forEach(i=>{
 
         workDetailContent+=`<div class="title">
-        <h4>${i.work_title} / ${i.work_type}</h4>
-        <p>${i.work_description}</p>
+        <h4>${i.title} / ${i.type}</h4>
+        <p>${i.description}</p>
     </div>
     <div class="work-photo">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img/${i.id}-01.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/${i.id}-02.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/${i.id}-03.png" class="d-block w-100" alt="...">
-              </div>
+            <div class="carousel-inner js-work-detail-pics">
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -105,10 +97,7 @@ function renderWorkDetail(e){
               <span class="sr-only">Next</span>
             </a>
           </div>
-    </div> 
-    <div class="des">
-        <p>${i.work_description}</p>
-    </div>`
+    </div> `
 
     })
     work.classList.add("hide")
@@ -119,6 +108,34 @@ function renderWorkDetail(e){
         behavior: "smooth"
     });
 
+const workPicsArea = document.querySelector(".js-work-detail-pics")
+
+const nowWorkPics = nowWorkData[0].pic
+let workPicsContent =""
+nowWorkPics.forEach((pic,index)=>{
+    if(index===0){
+        workPicsContent+=
+        `
+        <div class="carousel-item active">
+                        <img src="${pic.url}" class="d-block w-100" alt="${pic.des}">
+        </div>
+        `
+
+    }else{
+        // console.log(i)
+        if(pic.url===undefined){
+            return
+        }
+        workPicsContent+=
+        `
+        <div class="carousel-item">
+                        <img src="${pic.url}" class="d-block w-100" alt="${pic.des}">
+        </div>
+        `
+    }
+
+})
+workPicsArea.innerHTML=workPicsContent
 const otherWorkArea = document.querySelector(".other-works")
 const otherWork = document.querySelector(".other-works .content .works-container")
 
@@ -128,8 +145,8 @@ workData.forEach(i=>{
     
     otherWorkContent+=`
     <div class="work">
-    <img data-id="${i.id}"src="img/${i.id} (1).png" alt="">
-    <div class="title">${i.work_title}</div>
+    <img data-id="${i.id}"src="${i.mainpic_url}" alt="">
+    <div class="title">${i.title}</div>
     </div>
     `
 })
