@@ -26,7 +26,7 @@ function getWorkData(){
     axios.get(workUrl)
     .then(res => {
         workData = res.data;
-        console.log(workData)
+
         renderWrok(workData)
     })
     .catch(err => {
@@ -58,7 +58,7 @@ function renderWrok(data){
 const work = document.querySelector(".js-works")
 
 
-work.addEventListener("click",renderWorkDetail)
+// work.addEventListener("click",renderWorkDetail)
 
 function renderWorkDetail(e){
     // 找出按的是哪個作品
@@ -117,19 +117,19 @@ nowWorkPics.forEach((pic,index)=>{
         workPicsContent+=
         `
         <div class="carousel-item active">
-                        <img src="${pic.url}" class="d-block w-100" alt="${pic.des}">
+                        <img src="${pic.url}" class=" w-100" alt="${pic.des}">
         </div>
         `
 
     }else{
-        // console.log(i)
+
         if(pic.url===undefined){
             return
         }
         workPicsContent+=
         `
         <div class="carousel-item">
-                        <img src="${pic.url}" class="d-block w-100" alt="${pic.des}">
+                        <img src="${pic.url}" class="w-100" alt="${pic.des}">
         </div>
         `
     }
