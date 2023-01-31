@@ -369,7 +369,6 @@
         display: flex;
         width: 100%;
         align-items: center;
-        // border: 1px solid $black;
         gap: 5%;
         @media (max-width:768px) {
             flex-direction: column;
@@ -381,6 +380,8 @@
             align-items: center;
             gap: 16px;
             width: 23%;
+            height: auto;
+            // border: 1px solid #000;
             @media (max-width:768px) {
                 width: 80%;;
             }
@@ -389,7 +390,7 @@
                 width: 230px;
                 height: 230px;
                 overflow: hidden;
-                // border: 1px solid #000;
+
                 @media (max-width:768px) {
                     flex-direction: column;
                 }
