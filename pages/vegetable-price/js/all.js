@@ -64,6 +64,7 @@ function search(e){
     return i.作物名稱.match(searchInput.value.trim())
   })
   if(showData.length==0){
+    sortMessage.textContent=`查看「${searchInput.value.trim()}」比價結果`
     table.innerHTML=`<tr><td colspan="7" class="message">查詢不到當日的交易資訊QQ</td></tr>`
   }else if(searchInput.value.trim()==""){
     alert("請輸入作物名稱")
