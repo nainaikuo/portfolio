@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/style.css">
+    <title>todolist</title>
+</head>
+<body> 
+    <div class="content">
+        <h1 class="title">TODO LIST</h1>
+        <div class="container">
+          <div class="addArea">
+            <input class="text" placeholder="新增待辦事項"/>
+            <button class="add">+</button>
+          </div>
+          <div class="list">
+            <ul class="tab">
+              <li class="tab-button"  id="all">全部</li>
+              <li class="tab-button" id="undone">待完成</li>
+              <li class="tab-button" id="done">已完成</li>
+            </ul>
+            <ul class="todolist">
+            </ul>
+            <div class="bottom"> 
+              <p><span class="num"></span>個待完成項目</p>
+              <p class="del_done">清除已完成項目</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="js/all.js"></script>
+    
+
+</body>
+</html>

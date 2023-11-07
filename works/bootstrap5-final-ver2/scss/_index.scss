@@ -1,0 +1,158 @@
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+}
+p,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+.fs-12{
+    font-size: 0.75rem;
+}
+
+.ls-lg{
+    letter-spacing: 3px;
+}
+.w-40{
+    width: 40%;
+}
+.w-58{
+    width: 58%;
+}
+
+.baloo{
+    font-family: 'Baloo Tamma 2', 'Noto Sans TC';
+}
+
+.h-16{
+    height: 16px;
+}
+
+
+.header{
+    .logo{
+        width: 111px;
+    }
+}
+
+.icon img{
+    width: 24px;
+    height: 24px;
+}
+.nav-link{
+    border:none
+}
+.nav-link.active,.nav-link:hover{
+    border:none;
+    box-shadow: inset 0 -3px $primary;
+}
+
+.nav-link.active{
+    font-weight: bold;
+}
+
+.btn-outline-gray:hover{
+    color: white;
+}
+
+.btn-primary:hover{
+    background: $danger;
+    color: $white!important;
+}
+
+.btn-gray-hover:hover{
+    background: $primary;
+    border-color: $primary;
+    color: $gray;
+    font-weight: bold;
+}
+
+.btn-gray-hover:hover>i{
+    color: $danger;
+}
+
+
+.profile{
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/sidebar-1.jpg);
+}
+
+.circle{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+        font-size: 14px;
+    }
+
+}
+.sponsor{
+    img.sponsor{
+        width: 43px;
+    }
+    .title{
+        width: 100%;
+        .line{
+            width: 40%;
+            height: 3px;
+            background: $primary;
+        }
+    }
+    
+}
+
+.line{
+    height: 1px;
+}
+
+
+.form{
+    input{
+        background: #F7F7F7;
+        border:1px solid;
+        border-color: transparent;
+        &:focus{
+            outline: none;
+            box-shadow: none;
+            border:1px solid  $primary;
+        }
+    }
+    select{
+        background: #F7F7F7;
+        border:1px solid;
+        border-color: transparent;
+        &:focus{
+            border:none;
+            box-shadow: none;
+            border:1px solid  $primary;
+        }
+    }
+}
+.photo{
+    width: 60px;
+    height: 60px;
+}
+.photo.user1{
+    background-image: url(../img/user_img01.jpg);
+}
+.photo.user2{
+    background-image: url(../img/user_img02.jpg);
+
+}
+.photo.user3{
+    background-image: url(../img/user_img03.jpg);
+
+}
+
+button:focus{
+    outline: none;
+    box-shadow: none!important;
+}
+
+

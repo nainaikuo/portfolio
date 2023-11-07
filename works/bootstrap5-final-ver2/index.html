@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Bootstrap5練習</title>
+</head>
+<body>
+    <div class="header bg-white border-bottom border-5 border-primary py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light bg-white align-items-center">
+                <div class="container-fluid">
+                    <img class=logo src="img/logo.jpg" alt="">
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto  mb-4 mb-md-0">
+                      <li class="nav-item px-3">
+                        <a class="nav-link text-center" aria-current="page" href="#">關於</a>
+                      </li>
+                      <li class="nav-item px-3">
+                        <a class="nav-link text-center" href="#">挖寶</a>
+                      </li>
+                      <li class="nav-item px-3">
+                        <a class="nav-link text-center" href="#">我有個大膽的想法</a>
+                      </li>
+                      
+                    </ul>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <button class="btn btn-primary rounded-pill text-dark px-4 me-3" data-bs-toggle="modal" data-bs-target="#login" type="button">登入</button>  
+                        <button class="btn btn-outline-gray rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#register" type="button">註冊</button>
+                        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content border-0 border-top border-primary border-5">
+                              <div class="modal-header">
+                                <h5 class="modal-title text-info fs-4 fw-bold" id="login">登入</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body py-4">
+                                <div class="form w-100 mb-3 d-flex flex-column align-item-center" >
+                                  <div class="mb-3">
+                                    <label for="account" class="form-label text-infp">帳號</label>
+                                    <input type="text" class="form-control " id="account">
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="password" class="form-label text-info">密碼</label>
+                                    <input type="password" class="form-control" id="password">
+                                  </div>
+                                  <a class="text-gray fs-7" href="#">忘記密碼？</a>
+                                </div>
+                                <button class="btn btn-primary rounded-pill w-100 py-2 fw-bold fs-5 text-dark" type="submit">登入</button>
+                              </div>
+                              <div class="modal-footer border-0 pb-4">
+                                <div class="w-100 d-flex align-items-center justify-content-between">
+                                  <div class="line bg-light-gray w-25" ></div>
+                                  <p class="text-gray text-center fs-7">還沒有帳號？<a class="text-danger" data-bs-toggle="modal" data-bs-target="#register" data-bs-dismiss="modal" href="#">註冊一個帳號</a> </p>
+                                  <div class="line w-25 bg-light-gray w-25"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content border-0 border-top border-primary border-5">
+                              <div class="modal-header">
+                                <h5 class="modal-title text-info fs-4 fw-bold" id="register">註冊</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body py-4">
+                                <div class="form w-100 mb-3 d-flex flex-column align-item-center" >
+                                  <div class="mb-3">
+                                    <label for="account" class="form-label text-infp">帳號</label>
+                                    <input type="text" class="form-control " id="account">
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="password" class="form-label text-info">密碼</label>
+                                    <input type="password" class="form-control" id="password">
+                                  </div>
+                                </div>
+                                <button class="btn btn-primary rounded-pill w-100 py-2 fw-bold fs-5 text-dark" type="submit">註冊</button>
+                              </div>
+                              <div class="modal-footer border-0 pb-4">
+                                <div class="w-100 d-flex align-items-center justify-content-between">
+                                  <div class="line bg-light-gray w-25" ></div>
+                                  <p class="text-gray text-center fs-7">已經有帳號？<a class="text-danger" data-bs-toggle="modal" data-bs-target="#login" data-bs-dismiss="modal" href="#login">按此登入</a> </p>
+                                  <div class="line w-25 bg-light-gray w-25"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>
+    <div class="top bg-light py-5">
+      <div class="container">
+        <span class="badge bg-gray fs-12 px-3">魔法科技</span>
+        <h2 class="my-3 fw-bold ls-lg">拍出會動的照片｜LivePhotos魔法拍立得</h2>
+        <div class="row">
+          <div class="col-12 col-lg-7 mb-3 mb-lg-0">
+            <img src="img/produt_image.jpg" alt="">
+          </div>
+          <div class="col-12 col-lg-5 d-flex flex-column justify-content-md-between">
+            <p class="mb-3 mb-lg-1" >目標 $6000,000</p>
+            <h2 class="baloo fw-bold mb-3 mb-lg-1">$280,047</h2>
+            <div class="progress h-16 mb-3 mb-lg-1">
+              <div class="progress-bar progress-primary w-40 text-gray">41%
+              </div>
+            </div>
+            <div class="d-flex mb-3 mb-lg-1">
+              <div class="w-50">
+                <p class="mb-1">贊助人數</p>
+              <h2 class="fw-bold fs-4"><span class="baloo fs-2">1374</span> 人</h2>
+              </div>
+              <div class="w-50">
+                <p class="mb-1">募資倒數</p>
+                <h2 class="fw-bold fs-4"><span class="baloo fs-2">27</span> 天</h2>
+              </div>
+            </div>
+            <div class="icon w-100 mb-3 mb-lg-1 d-flex justify-content-between justify-content-lg-start">
+              <div class="">
+                <img class="me-lg-4" src="img/icon_good01.svg" alt="">
+                <span class="m-0 d-lg-none">認證標章</span>
+              </div>
+              <div class="">
+                <img class="me-lg-4" src="img/icon_good02.svg" alt="">
+                <span class="m-0 d-lg-none">品質保證</span>
+              </div>
+              <div class="">
+                <img class="me-lg-4" src="img/icon_good03.svg" alt="">
+                <span class="m-0 d-lg-none">原生創意</span>
+              </div>
+              <div class="">
+                <img class="me-lg-4" src="img/icon_good04.svg" alt="">
+                <span class="m-0 d-lg-none">人氣王</span>
+              </div>
+            </div>
+            <div class="text border-start border-4 border-primary p-2 bg-white rounded mb-3 mb-lg-1">
+              <p class="m-0 fs-6">專案募資中！<br>
+                在  <span class="fw-bold">2021/06/14 23:59</span> 募資結束前，您都可以贊助我們！</p>
+            </div>
+            <div class="buttons">
+              <button class="btn btn-primary w-100 rounded-pill fs-5 fw-bold text-dark mb-2">贊助專案</button>
+            <button class="btn btn-outline-gray btn-gray-hover rounded-pill w-58"> <i class="fa fa-heart"></i> 追蹤專案</button>
+            <button class="btn btn-outline-gray rounded-pill w-40" ><i class="fa fa-share-alt"></i>  分享</button>
+            </div>
+            
+
+          </div>
+        </div>
+          
+      </div>
+    </div>
+    <div class="tabs border-bottom border-light-gray  ">
+      <div class="container">
+        <nav>
+          <div class="nav nav-tabs border-0 justify-content-center justify-content-lg-start " id="nav-tab" role="tablist">
+            <button class="nav-link text-dark border-0 py-3 active" id="intro-tab" data-bs-toggle="tab" data-bs-target="#intro" type="button" role="tab" aria-controls="intro" aria-selected="true">專案介紹</button>
+            <button class="nav-link text-dark border-0" id="fqa" data-bs-toggle="tab" data-bs-target="#fqa-tab" type="button" role="tab" aria-controls="fqa" aria-selected="false">常見問答</button>
+            <button class="nav-link text-dark border-0" id="progress-tab" data-bs-toggle="tab" data-bs-target="#progress" type="button" role="tab" aria-controls="progress" aria-selected="false">目前進度</button>
+            <button class="nav-link text-dark border-0" id="comment-tab" data-bs-toggle="tab" data-bs-target="#comment" type="button" role="tab" aria-controls="comment" aria-selected="false">留言</button>
+
+          </div>
+        </nav>
+      </div>
+
+    </div>
+    <div class="detail m-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8 mb-2 mb-lg-0">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="intro" role="tabpanel" aria-labelledby="intro-tab">
+                <img src="img/intro-1.jpg" alt="">
+                <h4 class="border-start border-4 border-primary ps-2 fw-bold mt-4 mb-2">施了魔法的照片</h4>
+                <p class="lh-lg mb-4">受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女，外成認心香吸工並知日成展源大超時動為生葉衣致長山對精做英密差家他微熱建取示濟定心一，品定把別銀動，深青輪一物加，生明果。西業白老如天有表非民大條全那遊，李文遊、像香過元學須本致信校態麼資司媽人價在它，地他不我計孩廠然不大指勢生的華常簡岸然，人著母病石金萬得一果。</p>
+                <img src="img/intro-2.jpg" alt="">
+                <h4 class="border-start border-4 border-primary ps-2 fw-bold mt-4 mb-2">留下當下的美好</h4>
+                <p class="lh-lg">受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女，外成認心香吸工並知日成展源大超時動為生葉衣致長山對精做英密差家他微熱建取示濟定心一，品定把別銀動，深青輪一物加，生明果。西業白老如天有表非民大條全那遊，李文遊、像香過元學須本致信校態麼資司媽人價在它，地他不我計孩廠然不大指勢生的華常簡岸然，人著母病石金萬得一果。</p>
+                
+              </div>
+              <div class="tab-pane fade" id="fqa-tab" role="tabpanel" aria-labelledby="fqa-tab">
+                <div class="accordion" id="faq">
+                  <div class="accordion-item mb-4 border shadow">
+                    <h2 class="accordion-header d-flex align-items-center bg-white" id="headingOne">
+                      
+                      <button class="accordion-button bg-transparent border-0 text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+                        <div class="bg-primary rounded p-1 me-2"><p class="fs-7 fw-bold baloo text-dark">Q1</p></div>
+                        影片拍完之後可以編輯嗎？
+                      </button>
+                    </h2>
+                    <div id="q1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq">
+                      <div class="accordion-body ms-4">
+                        <p class="text-gray lh-lg">可以進行簡易的編輯，內建 5 種濾鏡，影片秒數有3秒、5秒、10秒可以選擇，拍完的當下可以編輯要印出來的影片範圍哦！</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item mb-4 border shadow">
+                    <h2 class="accordion-header d-flex align-items-center bg-white" id="headingOne">
+                      
+                      <button class="accordion-button bg-transparent border-0 text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="true" aria-controls="q1">
+                        <div class="bg-primary rounded p-1 me-2"><p class="fs-7 fw-bold baloo text-dark">Q2</p></div>
+                        有提供保固或維修服務嗎？
+                      </button>
+                    </h2>
+                    <div id="q2" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faq">
+                      <div class="accordion-body ms-4">
+                        <p class="text-gray lh-lg">多年物：得不始進；層個共請？因間至告優他人。一手子……發慢會位不真口心器大記集母會外個笑助會的。況國眾火停來道久求此……獎服往人處，故對不建。我必會現著坡大其光在場類難！印出來的影片範圍哦！</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item mb-4 border shadow">
+                    <h2 class="accordion-header d-flex align-items-center bg-white" id="headingOne">
+                      
+                      <button class="accordion-button bg-transparent border-0 text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="true" aria-controls="q1">
+                        <div class="bg-primary rounded p-1 me-2"><p class="fs-7 fw-bold baloo text-dark">Q3</p></div>
+                        補充包底片要去哪裡購買呢？
+                      </button>
+                    </h2>
+                    <div id="q3" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faq">
+                      <div class="accordion-body ms-4">
+                        <p class="text-gray lh-lg">多年物：得不始進；層個共請？因間至告優他人。一手子……發慢會位不真口心器大記集母會外個笑助會的。況國眾火停來道久求此……獎服往人處，故對不建。我必會現著坡大其光在場類難！印出來的影片範圍哦！</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item mb-4 border shadow">
+                    <h2 class="accordion-header d-flex align-items-center bg-white" id="headingOne">
+                      
+                      <button class="accordion-button bg-transparent border-0 text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="true" aria-controls="q1">
+                        <div class="bg-primary rounded p-1 me-2"><p class="fs-7 fw-bold baloo text-dark">Q4</p></div>
+                        印出來的拍立得照片需要充電嗎？
+                      </button>
+                    </h2>
+                    <div id="q4" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faq">
+                      <div class="accordion-body ms-4">
+                        <p class="text-gray lh-lg">多年物：得不始進；層個共請？因間至告優他人。一手子……發慢會位不真口心器大記集母會外個笑助會的。況國眾火停來道久求此……獎服往人處，故對不建。我必會現著坡大其光在場類難！印出來的影片範圍哦！</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item mb-4 border shadow">
+                    <h2 class="accordion-header d-flex align-items-center bg-white" id="headingOne">
+                      
+                      <button class="accordion-button bg-transparent border-0 text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="true" aria-controls="q1">
+                        <div class="bg-primary rounded p-1 me-2"><p class="fs-7 fw-bold baloo text-dark">Q5</p></div>
+                        運送方式及付款方式有哪些呢？
+                      </button>
+                    </h2>
+                    <div id="q5" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faq">
+                      <div class="accordion-body ms-4">
+                        <p class="text-gray lh-lg">多年物：得不始進；層個共請？因間至告優他人。一手子……發慢會位不真口心器大記集母會外個笑助會的。況國眾火停來道久求此……獎服往人處，故對不建。我必會現著坡大其光在場類難！印出來的影片範圍哦！</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="accordion-item mb-4 border shadow">
+                    <h2 class="accordion-header d-flex align-items-center bg-white" id="headingOne">
+                      
+                      <button class="accordion-button bg-transparent border-0 text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="true" aria-controls="q1">
+                        <div class="bg-primary rounded p-1 me-2"><p class="fs-7 fw-bold baloo text-dark">Q6</p></div>
+                        退換貨方式及規則
+                      </button>
+                    </h2>
+                    <div id="q6" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faq">
+                      <div class="accordion-body ms-4">
+                        <p class="text-gray lh-lg">多年物：得不始進；層個共請？因間至告優他人。一手子……發慢會位不真口心器大記集母會外個笑助會的。況國眾火停來道久求此……獎服往人處，故對不建。我必會現著坡大其光在場類難！印出來的影片範圍哦！</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+              <div class="tab-pane fade " id="progress" role="tabpanel" aria-labelledby="progress-tab">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-5 col-md-4">
+                      <img src="img/news01.jpg" alt="...">
+                    </div>
+                    <div class="col-7 col-md-8">
+                      <div class="card-body h-100 d-flex flex-column justify-content-between">
+                        <div class="top">
+                          <h5 class="card-title">高雄體驗會｜免費參加送帆布袋</h5>
+                          <p class="fs-7 text-gray">2021-6-20</p>
+                        </div>
+                        <p class="card-text text-gray fs-7 d-none d-lg-block">大家安安！謝謝每位贊助者的熱情支持，讓我們離夢想更進一步，我們將於下個月舉辦體驗會，歡迎各位踴躍參與！</p>
+                        <a class="card-text" href=""><small class="text-danger baloo fw-bold">MORE</small></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-5 col-md-4">
+                      <img src="img/news02.jpg" alt="...">
+                    </div>
+                    <div class="col-7 col-md-8">
+                      <div class="card-body h-100 d-flex flex-column justify-content-between">
+                        <div class="top">
+                          <h5 class="card-title">高雄體驗會｜免費參加送帆布袋</h5>
+                          <p class="fs-7 text-gray">2021-6-20</p>
+                        </div>
+                        <p class="card-text text-gray fs-7 d-none d-lg-block">大家安安！謝謝每位贊助者的熱情支持，讓我們離夢想更進一步，我們將於下個月舉辦體驗會，歡迎各位踴躍參與！</p>
+                        <a class="card-text" href=""><small class="text-danger baloo fw-bold">MORE</small></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-5 col-md-4">
+                      <img src="img/news03.jpg" alt="...">
+                    </div>
+                    <div class="col-7 col-md-8">
+                      <div class="card-body h-100 d-flex flex-column justify-content-between">
+                        <div class="top">
+                          <h5 class="card-title">高雄體驗會｜免費參加送帆布袋</h5>
+                          <p class="fs-7 text-gray">2021-6-20</p>
+                        </div>
+                        <p class="card-text text-gray fs-7 d-none d-lg-block">大家安安！謝謝每位贊助者的熱情支持，讓我們離夢想更進一步，我們將於下個月舉辦體驗會，歡迎各位踴躍參與！</p>
+                        <a class="card-text" href=""><small class="text-danger baloo fw-bold">MORE</small></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="comment" role="tabpanel" aria-labelledby="comment-tab">
+                <div class="border-start border-4 border-primary p-3 bg-light mb-5">
+                  <p class="fs-7">只有本專案的贊助者才可以留言哦，如果有任何專案相關的問題，歡迎<a class="text-danger" href="#">聯絡提案人</a>！</p>
+                </div>
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <div class="top d-flex ">
+                      <div class="photo user1 border rounded-circle me-3"></div>
+                      <div class="name">
+                        <h5 class="card-title">廖小杰</h5>
+                        <p class="fs-7 text-gray">2020年5月22日 11:32</p>    
+                      </div>
+                    </div>
+                    <div class="comment my-3">
+                      <p class="text-info">晚上起床上廁所看到照片裡的人一直動其實有點恐怖，希望可以有暫停或是定時的功能！</p>
+                    </div>
+                    <div class="reply bg-light p-3">
+                      <p class="fs-7 text-danger mb-1">提案者回覆</p>
+                      <p class="text-secondary">你要嘛起床的時候開燈，要嘛給我們更多錢開發阿</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <div class="top d-flex ">
+                      <div class="photo user2 border rounded-circle me-3"></div>
+                      <div class="name">
+                        <h5 class="card-title">卡阿伯</h5>
+                        <p class="fs-7 text-gray">2020年5月22日 11:32</p>    
+                      </div>
+                    </div>
+                    <div class="comment my-3">
+                      <p class="text-info">希望有更多花色可以選擇！我女兒最近喜歡綠色</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <div class="top d-flex ">
+                      <div class="photo user2 border rounded-circle me-3"></div>
+                      <div class="name">
+                        <h5 class="card-title">賈師</h5>
+                        <p class="fs-7 text-gray">2020年5月22日 11:32</p>    
+                      </div>
+                    </div>
+                    <div class="comment my-3">
+                      <p class="text-info">可以做個相簿功能嗎？拍出好看的影片再讓我們選擇要印出哪一張這樣</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <div class="top d-flex ">
+                      <div class="photo user2 border rounded-circle me-3"></div>
+                      <div class="name">
+                        <h5 class="card-title">俊俊</h5>
+                        <p class="fs-7 text-gray">2020年5月22日 11:32</p>    
+                      </div>
+                    </div>
+                    <div class="comment my-3">
+                      <p class="text-info">test123 看一下我是不是真的可以留言</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sponsor d-none d-lg-block ">
+                <div class="d-flex flex-column align-items-center">
+                  <img class="sponsor mb-2" src="img/intro-icon.svg" alt="">
+                <div class="title d-flex align-items-center justify-content-between">
+                  <div class="line"></div>
+                  <h4 class="">贊助專案</h4>
+                  <div class="line"></div>
+                </div>
+                <div class="form w-100 py-4 d-flex flex-column align-item-center" >
+                  <label class="text-info mb-2" for="#plan">贊助方案</label>
+                  <select class="form-select mb-3" id="plan" aria-label="Default select example">
+                    <option selected>請選擇一個方案</option>
+                    <option value="1">方案一</option>
+                    <option value="2">方案二</option>
+                    <option value="3">方案三</option>
+                  </select>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">收件人姓名</label>
+                    <input type="text" class="form-control " id="name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">連絡電話</label>
+                    <input type="text" class="form-control" id="phone">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">聯絡信箱</label>
+                    <input type="email" class="form-control" id="name">
+                  </div>
+                  <label class="text-info mb-2" for="#plan">贊助方案</label>
+                  <select class="form-select mb-3" id="plan" aria-label="Default select example">
+                    <option selected>信用卡付款</option>
+                    <option value="1">貨到付款</option>
+                    <option value="2">超商付款</option>
+                    <option value="3">銀行轉帳</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary rounded-pill px-5 fw-bold text-dark" type="submit">贊助專案</button>
+  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 over-flow-auto">
+            <div class="card">
+              <div class="card-body">
+                <div class="header d-flex align-items-center ">
+                  <div class="profile border-1 border-primary me-3">
+                  </div>
+                  <div class="">
+                    <h5 class=" fw-bold mb-2">缺錢事務所</h5>
+                    <h6 class="">已發起1個專案</h6>
+                  </div>
+                  
+                </div>
+                <p class="card-text text-info my-3">需要點錢錢做些酷酷的東西，拜託各位乾爹乾媽囉！</p>
+                <div class="d-flex justify-content-between">
+                  <div class="social d-flex">
+                    <div class="circle bg-gray rounded-circle me-2 text-white"> <i class="fab fa-facebook"></i> </div>
+                    <div class="circle bg-gray rounded-circle me-2 text-white"> <i class="fab fa-youtube"></i> </div>
+                  </div>
+                  <button class="btn btn-outline-gray rounded-pill "> <i class="fa fa-comment"></i> 聯絡我們</button>
+                </div>
+              </div>
+            </div>
+            <h5 class="border-start border-end border-4 border-primary rounded w-100 py-2 mt-4 mb-3 bg-light text-center fw-bold">選擇一個方案來支持</h5>
+            <div class="card border-0 my-4">
+              <img src="img/sidebar-2.jpg" class="card-img-top" alt="...">
+              <div class="card-body border-bottom border-start border-end rounded">
+                <div class="d-flex justify-content-between text-dark border-bottom border-light-gray pb-2 mb-2">
+                  <span>限時優惠</span>
+                  <span>2 days 20:05:20</span>
+                </div>
+                <h5 class="card-title fw-bold">買一送一，只有兩百組別錯過</h5>
+                <h5 class="card-title fw-bold baloo">NT$ 1600</h5>
+                <span class="badge bg-light-gray text-gray fw-bold px-3">已被贊助88次</span>
+                <span class="badge bg-gray text-white fw-bold px-3">限量<span class="text-primary">200</span>個 </span>
+                <p class="card-text text-gray my-2 ">受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。</p>
+                <button class="btn btn-primary rounded-pill w-100 text-dark fw-bold">贊助此專案</button>
+              </div>
+            </div>
+            <div class="card border-0 my-4">
+              <img src="img/sidebar-2.jpg" class="card-img-top" alt="...">
+              <div class="card-body border-bottom border-start border-end rounded">
+                <div class="d-flex justify-content-between text-dark border-bottom border-light-gray pb-2 mb-2">
+                  <span>限時優惠</span>
+                  <span>2 days 20:05:20</span>
+                </div>
+                <h5 class="card-title fw-bold">買一送一，只有兩百組別錯過</h5>
+                <h5 class="card-title fw-bold baloo">NT$ 1600</h5>
+                <span class="badge bg-light-gray text-gray fw-bold px-3">已被贊助88次</span>
+                <span class="badge bg-gray text-white fw-bold px-3">限量<span class="text-primary">200</span>個 </span>
+                <p class="card-text text-gray my-2 ">受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。</p>
+                <button class="btn btn-primary rounded-pill w-100 text-dark fw-bold">贊助此專案</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="sponsor d-lg-none d-flex flex-column align-items-center"  id="sponsor">
+              <img class="sponsor mb-2" src="img/intro-icon.svg" alt="">
+              <div class="title d-flex align-items-center justify-content-between">
+                <div class="line"></div>
+                <h4 class="fs-6">贊助專案</h4>
+                <div class="line"></div>
+              </div>
+              <div class="form w-100 py-4 d-flex flex-column align-item-center" >
+                <label class="text-info mb-2" for="#plan">贊助方案</label>
+                <select class="form-select mb-3" id="plan" aria-label="Default select example">
+                  <option selected>請選擇一個方案</option>
+                  <option value="1">方案一</option>
+                  <option value="2">方案二</option>
+                  <option value="3">方案三</option>
+                </select>
+                <div class="mb-3">
+                  <label for="name" class="form-label">收件人姓名</label>
+                  <input type="text" class="form-control " id="name">
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">連絡電話</label>
+                  <input type="text" class="form-control" id="phone">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">聯絡信箱</label>
+                  <input type="email" class="form-control" id="name">
+                </div>
+                <label class="text-info mb-2" for="#plan">贊助方案</label>
+                <select class="form-select mb-3" id="plan" aria-label="Default select example">
+                  <option selected>信用卡付款</option>
+                  <option value="1">貨到付款</option>
+                  <option value="2">超商付款</option>
+                  <option value="3">銀行轉帳</option>
+                </select>
+              </div>
+              <button class="btn btn-primary rounded-pill px-5 fw-bold text-dark" type="submit">贊助專案</button>
+
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="fixed-bottom d-md-none bg-primary py-3">
+      <a class="d-block text-dark text-center fw-bold" href="#sponsor">贊助專案</a>
+    </div>
+    <div class="footer bg-secondary py-3">
+      <div class="contanier">
+        <p class="text-white text-center">Copyright � 拼拼 All rights reserved.</p>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</body>
+</html>
