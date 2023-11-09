@@ -5,6 +5,8 @@ $white:#FFF;
 $light-gray:#f5f5f5;
 $gray:#B9B9B9;
 $red:#C44021;
+$screen-tablet:920px;
+$screen-mobile:480px;
 
 
 body{
@@ -21,7 +23,7 @@ body{
     margin: 0 auto;
 }
 
-@media screen and (max-width:920px){
+@media screen and (max-width:$screen-tablet){
     .container-1100,.container-920{
         width: 100%;
     }
@@ -33,6 +35,9 @@ h4{
     padding-bottom: 20px;
     font-weight: 700;
     color: $main;
+}
+p{
+    font-size: 1rem;
 }
 li{
     cursor: initial;
