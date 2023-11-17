@@ -58,7 +58,7 @@ function renderWrok(data){
 const work = document.querySelector(".js-works")
 
 
-// work.addEventListener("click",renderWorkDetail)
+work.addEventListener("click",renderWorkDetail)
 
 function renderWorkDetail(e){
     // 找出按的是哪個作品
