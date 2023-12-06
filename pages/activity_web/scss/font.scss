@@ -1,0 +1,73 @@
+
+$normal-line-height:160%;
+$title-line-height:150%;
+$serif:'Noto Serif TC', serif;
+$sans:'Noto Sans TC', sans-serif;
+$gaegu:'Gaegu', sans-serif;
+$weight-B:700;
+$weight-R:400;
+// h1
+@mixin headline(){
+    font-family:$serif;
+    font-weight: $weight-B;
+    font-size: 7.5rem;
+    line-height: $title-line-height;
+}
+// h2
+@mixin headline-1(){
+    font-family:$serif;
+    font-weight: $weight-B;
+    font-size: 3rem;
+    line-height: $title-line-height;
+}
+// h3
+@mixin title(){
+    font-family:$sans;
+    font-weight: $weight-B;
+    font-size: 2.5rem;
+    line-height: $title-line-height;
+}
+// h4
+@mixin title-1(){
+    font-family:$sans;
+    font-weight: $weight-B;
+    font-size: 1.75rem;
+    line-height: $title-line-height;
+}
+// h5
+@mixin subtitle(){
+    font-family:$sans;
+    font-weight: $weight-B;
+    font-size: 1.5rem;
+    line-height: $normal-line-height;
+}
+// p
+@mixin body-1($font-weight){
+    font-family:$sans;
+    font-weight: $font-weight;
+    font-size: 1.25rem;
+    line-height: $normal-line-height;
+}
+
+
+@mixin body-2($font-weight){
+    font-family:$sans;
+    font-weight: $font-weight;
+    font-size: 1rem;
+    line-height: $normal-line-height;
+}
+
+@mixin caption(){
+    font-family:$sans;
+    font-weight: $weight-R;
+    font-size: 0.75rem;
+    line-height: $normal-line-height;
+}
+
+@mixin gaegu($font-size){
+    font-family:$gaegu;
+    font-weight: $weight-R;
+    font-size: $font-size;
+    line-height: $normal-line-height;
+}
+
