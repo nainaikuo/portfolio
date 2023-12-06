@@ -1,21 +1,57 @@
 [
     {
         "title":"開票地圖",
-        "link":"https://nainaikuo.github.io/2023_F2E_WEEK2/",
+        "link":"https://nainaikuo.com/pages/election_map/index.html",
         "tags":["frontend","web"],
-        "pic":"../img/work_pic/election.png",
+        "pic":"https://nainaikuo.com/img/work_pic/election.png"
     },
     {
         "title":"POS銷售系統",
         "link":"https://medium.com/@nainaikuo1210/ui-ux-redesign-pos%E7%B3%BB%E7%B5%B1-a295f3eeaba5",
         "tags":["UI/UX","redesign","system"],
-        "pic":"../img/work_pic/pos.png",
+        "pic":"https://nainaikuo.com/img/work_pic/pos.png"
     },
     {
         "title":"活動頁面",
-        "link":"https://medium.com/@nainaikuo1210/ui-ux-redesign-pos%E7%B3%BB%E7%B5%B1-a295f3eeaba5",
+        "link":"https://nainaikuo.com/pages/activity_web/index.html",
         "tags":["frontend","anmation","web"],
-        "pic":"../img/work_pic/pos.png",
+        "pic":".https://nainaikuo.com/img/work_pic/activity_web.png"
     },
-
+    {
+        "title":"工單管理系統",
+        "link":"https://medium.com/@nainaikuo1210/專案規劃-ui-ux-design-工單管理系統-1371be87f3a3",
+        "tags":["UI/UX","project","system"],
+        "pic":"https://nainaikuo.com/img/work_pic/ticket.png"
+    },
+    {
+        "title":"公司網站",
+        "link":"https://www.bonvies.com",
+        "tags":["UI","wordpress","frontend"],
+        "pic":"https://nainaikuo.com/img/work_pic/company_homepage.png"
+    },
+    {
+        "title":"動物醫院住院系統",
+        "link":"https://medium.com/@nainaikuo1210/ui-design-寵物住院紀錄系統-4067ba17ed3",
+        "tags":["UI/UX","system"],
+        "pic":"https://nainaikuo.com/img/work_pic/hospital.png"
+    },
+    {
+        "title":"蔬菜比價網",
+        "link":"https://nainaikuo.com/pages/vegetable/index.html",
+        "tags":["frontend","web"],
+        "pic":"https://nainaikuo.com/img/work_pic/vegetable.png"
+    },
+    {
+        "title":"電商網站前後台",
+        "link":"https://nainaikuo.com/pages/ecommerce/index.html",
+        "tags":["frontend","web"],
+        "pic":"https://nainaikuo.com/img/work_pic/ecommerce.png"
+    },
+    {
+        "title":"募資網站",
+        "link":"https://nainaikuo.com/pages/donate_web/index.html",
+        "tags":["frontend","web"],
+        "pic":"https://nainaikuo.com/img/work_pic/ecommerce.png"
+    }
+    
 ]
