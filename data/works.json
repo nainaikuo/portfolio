@@ -1,1 +1,21 @@
-[]
+[
+    {
+        "title":"開票地圖",
+        "link":"https://nainaikuo.github.io/2023_F2E_WEEK2/",
+        "tags":["frontend","web"],
+        "pic":"../img/work_pic/election.png",
+    },
+    {
+        "title":"POS銷售系統",
+        "link":"https://medium.com/@nainaikuo1210/ui-ux-redesign-pos%E7%B3%BB%E7%B5%B1-a295f3eeaba5",
+        "tags":["UI/UX","redesign","system"],
+        "pic":"../img/work_pic/pos.png",
+    },
+    {
+        "title":"活動頁面",
+        "link":"https://medium.com/@nainaikuo1210/ui-ux-redesign-pos%E7%B3%BB%E7%B5%B1-a295f3eeaba5",
+        "tags":["frontend","anmation","web"],
+        "pic":"../img/work_pic/pos.png",
+    },
+
+]
