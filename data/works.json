@@ -15,7 +15,7 @@
         "title":"活動頁面",
         "link":"https://nainaikuo.com/pages/activity_web/index.html",
         "tags":["frontend","anmation","web"],
-        "pic":".https://nainaikuo.com/img/work_pic/activity_web.png"
+        "pic":"https://nainaikuo.com/img/work_pic/activity_web.png"
     },
     {
         "title":"工單管理系統",
@@ -50,8 +50,20 @@
     {
         "title":"募資網站",
         "link":"https://nainaikuo.com/pages/donate_web/index.html",
+        "tags":["frontend","web","RWD"],
+        "pic":"https://nainaikuo.com/img/work_pic/donate_web.png"
+    },
+    {
+        "title":"室內設計網站",
+        "link":"https://wanong.net",
+        "tags":["UI","wordpress","frontend"],
+        "pic":"https://nainaikuo.com/img/work_pic/wanong.jpeg"
+    },
+    {
+        "title":"ToDoList",
+        "link":"h=ttps://nainaikuo.com/pages/todolist/index.html",
         "tags":["frontend","web"],
-        "pic":"https://nainaikuo.com/img/work_pic/ecommerce.png"
-    }
+        "pic":"https://nainaikuo.com/img/work_pic/todolist.png"
+    },
     
 ]

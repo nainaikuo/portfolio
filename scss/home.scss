@@ -9,115 +9,114 @@
 // }
 
 .banner{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 60px;
-    padding: 60px;
     height: 100vh;
     @media (max-width:768px){
         // height: auto;
         // padding-top: 120px;
     }
-    .search{
-        border-bottom: 1px solid $black;
-        padding: 16px 32px;
-        width: 50%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 64px;
-        position: relative;
-        @media (max-width:1200px) {
-            width: 60%;
-        }
-        @media (max-width:768px) {
-            width: 100%;
-        }
-        svg{
-            height:24px;
-            animation: blink;
-        }
-        h2{
-            // line-height: 0;
-            margin: 0;
-            flex-basis: fill;
-            .typewriter::after{
-                content: "";
-                border-right: 1px solid $black;
-                animation: blink 0.5s infinite;
-            }
-            @keyframes blink {
-                0%,100%{opacity: 1;}
-                50%{opacity: 0;}
-                
-            }
-            .typewriter::before {
-                content:"";
-                animation: typing 5s infinite;
-              }
-            @keyframes typing {
-                0%,7.69%{ content: "N";}
-                7.69%,15.38%{ content: "N";}
-                15.38%,23.07%{content:"NA"}
-                23.07%,30.76%{content:"NAI"}
-                30.76%,38.45%{content:"NAI H"}
-                38.45%,46.14%{content:"NAI HS"}
-                46.14%,53.83%{content:"NAI HSU"}
-                53.83%,61.52%{content:"NAI HSUA"}
-                61.52%,69.21%{content:"NAI HSUAN"}
-                69.21%,76.90%{content:"NAI HSUAN K"}
-                76.90%,84.59%{content:"NAI HSUAN KU"}
-                84.59%,92.28%{content:"NAI HSUAN KUO"}
-                92.28%,100%{content:"NAI HSUAN KUO"}
-            }
-        }
-    }
-    .relate{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        .relate-title{
-            // color: red;
-            // border: 1px solid $black;
-            margin: 0;
-        }
-        .tags{
-            // border: 1px solid $black;
+    .container{
+        // justify-content: center;
+        .search{
+            border-bottom: 1px solid $black;
+            padding: 16px 32px;
+            width: 50%;
             display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            justify-content: center;
-            
-            .tag{
-                display: flex;
-                align-items: baseline;
-                border: 1px solid $black;
-                padding: 8px  16px;
-                border-radius: 32px;
-                color: $gray;
-                transition-duration: 0.05s;
-                &:hover{
-                    background-color: $gray;
-                    user-select: none;
-                    color: $white;
-                    
-                    border: 1px solid $gray;
-                    }
-               
-                p{
-                    margin: 0;
+            justify-content: space-between;
+            align-items: center;
+            gap: 64px;
+            position: relative;
+            @media (max-width:1200px) {
+                width: 60%;
+            }
+            @media (max-width:768px) {
+                width: 100%;
+            }
+            svg{
+                height:24px;
+                animation: blink;
+            }
+            h2{
+                // line-height: 0;
+                margin: 0;
+                flex-basis: fill;
+                .typewriter::after{
+                    content: "";
+                    border-right: 1px solid $black;
+                    animation: blink 0.5s infinite;
                 }
-                h5{
-                    margin: 0;
+                @keyframes blink {
+                    0%,100%{opacity: 1;}
+                    50%{opacity: 0;}
+                    
+                }
+                .typewriter::before {
+                    content:"";
+                    animation: typing 5s infinite;
+                  }
+                @keyframes typing {
+                    0%,7.69%{ content: "N";}
+                    7.69%,15.38%{ content: "N";}
+                    15.38%,23.07%{content:"NA"}
+                    23.07%,30.76%{content:"NAI"}
+                    30.76%,38.45%{content:"NAI H"}
+                    38.45%,46.14%{content:"NAI HS"}
+                    46.14%,53.83%{content:"NAI HSU"}
+                    53.83%,61.52%{content:"NAI HSUA"}
+                    61.52%,69.21%{content:"NAI HSUAN"}
+                    69.21%,76.90%{content:"NAI HSUAN K"}
+                    76.90%,84.59%{content:"NAI HSUAN KU"}
+                    84.59%,92.28%{content:"NAI HSUAN KUO"}
+                    92.28%,100%{content:"NAI HSUAN KUO"}
                 }
             }
         }
+        .relate{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            .relate-title{
+                // color: red;
+                // border: 1px solid $black;
+                margin: 0;
+            }
+            .tags{
+                // border: 1px solid $black;
+                display: flex;
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+                
+                .tag{
+                    display: flex;
+                    align-items: baseline;
+                    border: 1px solid $black;
+                    padding: 8px  16px;
+                    border-radius: 32px;
+                    color: $gray;
+                    transition-duration: 0.05s;
+                    &:hover{
+                        background-color: $gray;
+                        user-select: none;
+                        color: $white;
+                        
+                        border: 1px solid $gray;
+                        }
+                   
+                    p{
+                        margin: 0;
+                    }
+                    h5{
+                        margin: 0;
+                    }
+                }
+            }
+            
+        }
+
         
     }
+
     
 
 }
