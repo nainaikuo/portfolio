@@ -71,9 +71,6 @@ button {
 
 body {
   background-color: #FAFAFA;
-  width: 80%;
-  max-width: 1200px;
-  min-width: 300px;
   margin: 0 auto;
   font-family: "Tenor Sans", sans-serif;
   display: flex;
@@ -81,11 +78,6 @@ body {
   flex-direction: column;
   color: #393a49;
   letter-spacing: 0.5px;
-}
-@media (max-width: 768px) {
-  body {
-    width: 100%;
-  }
 }
 body h1 {
   font-size: 2.5rem;
@@ -107,17 +99,27 @@ body p {
 }
 
 .block {
-  border-bottom: 0.5px solid #636363;
-  padding: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-self: stretch;
+}
+.block .container {
+  width: 80%;
+  max-width: 1200px;
+  border-bottom: 0.5px solid #636363;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 64px;
+  flex: 1;
 }
 @media (max-width: 768px) {
-  .block {
+  .block .container {
     padding: 32px 16px;
-    border: none;
   }
 }
 .block .title {
@@ -138,7 +140,7 @@ body p {
   align-items: center;
   justify-content: center;
   padding: 32px;
-  width: 1000%;
+  width: 100%;
   overflow: hidden;
   z-index: 99;
   box-shadow: 0 0px 20px #636363;
@@ -158,5 +160,9 @@ body p {
   }
 }
 .header img {
+  display: none;
+}
+
+.header.none {
   display: none;
 }/*# sourceMappingURL=template.css.map */

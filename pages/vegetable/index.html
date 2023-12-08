@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>蔬菜比價網</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+          <div class="logo"></div>
+        </div>
+        <div class="content">
+          <div class="filter">
+            <button data-category="N04">蔬果</button>
+            <button data-category="N05">水果</button>
+            <button data-category="N06">花卉</button>
+          </div>
+          <div class="search">
+            <div class="input">
+              <lebal for="search-text">作物名稱</lebal>
+              <input id="search-input" placeholder="請輸入作物名稱"/>
+            </div>
+            <button class="searchBtn">搜尋</button>
+          </div>
+          <div class="sort">
+            <p class="sort-message"> </p>
+            <select>
+              <option value="排序篩選">排序篩選</option>
+              <option value="依上價排序">依上價排序</option>
+              <option value="依中價排序">依中價排序</option>
+              <option value="依下價排序">依下價排序</option>
+              <option value="依平均價排序">依平均價排序</option>
+              <option value="依交易量排序">依交易量排序</option>
+            </select>
+          </div>
+          <div class="table">
+            <table class="table-header">
+              <tr>
+                <th class="name">作物名稱</th>
+                <th class="market">市場名稱</th>
+                <th> 
+                  <div class="advanced-sort">
+                    <p>上價</p>
+                    <div class="icon"><i class="fa fa-caret-up up" data-sort="上價"></i><i class="fa fa-caret-down down" data-sort="上價"></i></div>
+                  </div>
+                </th>
+                <th> 
+                  <div class="advanced-sort">
+                    <p>中價</p>
+                    <div class="icon"><i class="fa fa-caret-up up" data-sort="中價"></i><i class="fa fa-caret-down down" data-sort="中價"></i></div>
+                  </div>
+                </th>
+                <th> 
+                  <div class="advanced-sort">
+                    <p>下價</p>
+                    <div class="icon"><i class="fa fa-caret-up up" data-sort="下價"></i><i class="fa fa-caret-down down" data-sort="下價"></i></div>
+                  </div>
+                </th>
+                <th> 
+                  <div class="advanced-sort">
+                    <p>平均價</p>
+                    <div class="icon"><i class="fa fa-caret-up up" data-sort="平均價"></i><i class="fa fa-caret-down down" data-sort="平均價"></i></div>
+                  </div>
+                </th>
+                <th> 
+                  <div class="advanced-sort">
+                    <p>交易量</p>
+                    <div class="icon"><i class="fa fa-caret-up up" data-sort="交易量"></i><i class="fa fa-caret-down down" data-sort="交易量"></i></div>
+                  </div>
+                </th>
+              </tr>
+            </table>
+            <div class="list">
+              <table>
+                <tr>
+                  <td class="message" colspan="7">請輸入並搜尋想比價的作物名稱^＿^</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="js/all.js"></script>
+</body>
+</html>

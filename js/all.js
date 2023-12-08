@@ -26,7 +26,7 @@ function getWorkData(){
     axios.get(workUrl)
     .then(res => {
         workData = res.data;
-
+        console.log(workData)
         renderWrok(workData)
     })
     .catch(err => {

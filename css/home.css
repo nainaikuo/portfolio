@@ -71,9 +71,6 @@ button {
 
 body {
   background-color: #FAFAFA;
-  width: 80%;
-  max-width: 1200px;
-  min-width: 300px;
   margin: 0 auto;
   font-family: "Tenor Sans", sans-serif;
   display: flex;
@@ -81,11 +78,6 @@ body {
   flex-direction: column;
   color: #393a49;
   letter-spacing: 0.5px;
-}
-@media (max-width: 768px) {
-  body {
-    width: 100%;
-  }
 }
 body h1 {
   font-size: 2.5rem;
@@ -107,17 +99,27 @@ body p {
 }
 
 .block {
-  border-bottom: 0.5px solid #636363;
-  padding: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-self: stretch;
+}
+.block .container {
+  width: 80%;
+  max-width: 1200px;
+  border-bottom: 0.5px solid #636363;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 64px;
+  flex: 1;
 }
 @media (max-width: 768px) {
-  .block {
+  .block .container {
     padding: 32px 16px;
-    border: none;
   }
 }
 .block .title {
@@ -138,7 +140,7 @@ body p {
   align-items: center;
   justify-content: center;
   padding: 32px;
-  width: 1000%;
+  width: 100%;
   overflow: hidden;
   z-index: 99;
   box-shadow: 0 0px 20px #636363;
@@ -161,17 +163,14 @@ body p {
   display: none;
 }
 
+.header.none {
+  display: none;
+}
+
 .banner {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 60px;
-  padding: 60px;
   height: 100vh;
 }
-.banner .search {
+.banner .container .search {
   border-bottom: 1px solid #393a49;
   padding: 16px 32px;
   width: 50%;
@@ -182,24 +181,24 @@ body p {
   position: relative;
 }
 @media (max-width: 1200px) {
-  .banner .search {
+  .banner .container .search {
     width: 60%;
   }
 }
 @media (max-width: 768px) {
-  .banner .search {
+  .banner .container .search {
     width: 100%;
   }
 }
-.banner .search svg {
+.banner .container .search svg {
   height: 24px;
   animation: blink;
 }
-.banner .search h2 {
+.banner .container .search h2 {
   margin: 0;
   flex-basis: fill;
 }
-.banner .search h2 .typewriter::after {
+.banner .container .search h2 .typewriter::after {
   content: "";
   border-right: 1px solid #393a49;
   animation: blink 0.5s infinite;
@@ -212,7 +211,7 @@ body p {
     opacity: 0;
   }
 }
-.banner .search h2 .typewriter::before {
+.banner .container .search h2 .typewriter::before {
   content: "";
   animation: typing 5s infinite;
 }
@@ -257,22 +256,22 @@ body p {
     content: "NAI HSUAN KUO";
   }
 }
-.banner .relate {
+.banner .container .relate {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
-.banner .relate .relate-title {
+.banner .container .relate .relate-title {
   margin: 0;
 }
-.banner .relate .tags {
+.banner .container .relate .tags {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
 }
-.banner .relate .tags .tag {
+.banner .container .relate .tags .tag {
   display: flex;
   align-items: baseline;
   border: 1px solid #393a49;
@@ -281,16 +280,16 @@ body p {
   color: #636363;
   transition-duration: 0.05s;
 }
-.banner .relate .tags .tag:hover {
+.banner .container .relate .tags .tag:hover {
   background-color: #636363;
   user-select: none;
   color: #FFF;
   border: 1px solid #636363;
 }
-.banner .relate .tags .tag p {
+.banner .container .relate .tags .tag p {
   margin: 0;
 }
-.banner .relate .tags .tag h5 {
+.banner .container .relate .tags .tag h5 {
   margin: 0;
 }
 

@@ -1,0 +1,351 @@
+$yellow: #f8d45a;
+$green: #899e39;
+$light-yellow: #f4f1ea;
+$white: #fff;
+$light: #fffcef;
+$black: #2a2a2a;
+$gray: #9a9a9a;
+$light-gray: #d9d9d9;
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-image: url(https://hexschool.github.io/js-filter/assets/bg.jpg);
+  background-size: 120%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1% 5%;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.header {
+  height: 80px;
+  width: 930px;
+
+  .logo {
+    width: 70%;
+    height: 80px;
+    background-image: url(https://hexschool.github.io/js-filter/assets/logo.jpg);
+    background-repeat: no-repeat;
+    align-self: start;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 930px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow:
+    0 0 0 5px $light,
+    inset 0 0 0 4px $yellow;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+
+  .filter {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+    button {
+      background: $white;
+      border: 2px solid $black;
+      width: 28%;
+      height: 40px;
+      box-sizing: border-box;
+      padding: 5px 0.5%;
+      color: $black;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      font-size: 1rem;
+      box-shadow: 0 1px 0 $black;
+      cursor: pointer;
+    }
+  }
+
+  .search {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    font-size: 1rem;
+
+    .input {
+      display: flex;
+      width: 90%;
+
+      lebal {
+        background: $green;
+        color: $white;
+        border-radius: 5px 0 0 5px;
+        margin-right: 0;
+        padding: 0 4%;
+        font-weight: 500;
+        width: 35%;
+        height: 40px;
+        box-sizing: border-box;
+        line-height: 40px;
+      }
+
+      input {
+        border: 2px solid $green;
+        padding: 2.5% 6%;
+        margin-left: 0;
+        border-radius: 0 5px 5px 0;
+        font-size: 16px;
+        width: 55%;
+        height: 40px;
+        box-sizing: border-box;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    button {
+      background: $green;
+      color: $white;
+      border: none;
+      width: 35%;
+      height: 40px;
+      border-radius: 5px;
+      padding: 1%;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  .sort {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+
+    p {
+      color: $black;
+      font-weight: bold;
+      line-height: 0;
+    }
+
+    select {
+      width: 150px;
+      height: 40px;
+      padding: 10px;
+      border: 1px solid $gray;
+      border-radius: 5px;
+      color: $black;
+      letter-spacing: 1px;
+      font-size: 16px;
+
+      &:after {
+        display: block;
+        content: "";
+        border: 1px solid;
+        width: 100px;
+        height: 100px;
+        background: red;
+      }
+    }
+  }
+
+  .table {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+
+    .table-header {
+      width: 100%;
+      border-collapse: collapse;
+
+      th {
+        background: $light-yellow;
+        width: 12.4%;
+        padding: 0 2%;
+        box-sizing: border-box;
+        border-top: 2px solid $black;
+        border-bottom: 2px solid $black;
+        text-align: left;
+
+        .advanced-sort {
+          display: flex;
+          position: relative;
+          align-items: center;
+
+          .icon {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+
+            i {
+              line-height: 0.8;
+            }
+          }
+        }
+      }
+
+      th.name {
+        width: 21%;
+      }
+
+      th.market {
+        width: 17%;
+      }
+    }
+
+    .list {
+      width: 100%;
+      overflow: scroll;
+      height: 100%;
+      padding-right: 16px;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        tr {
+          padding-right: -16px;
+
+          td {
+            width: 12.4%;
+            padding: 2% 2%;
+            border-bottom: 1px solid $gray;
+          }
+
+          td.name {
+            width: 21%;
+          }
+
+          td.market {
+            width: 17%;
+          }
+
+          td.message {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.filter {
+  button.active,
+  button:hover {
+    background: $yellow;
+  }
+}
+
+button,
+select,
+i {
+  cursor: pointer;
+}
+
+@media (max-width: 414px) {
+  .header {
+    .logo {
+      width: 100%;
+      background-image: url(https://hexschool.github.io/js-filter/assets/logo-sm.jpg);
+      background-position: center center;
+    }
+  }
+
+  .content {
+    height: 80%;
+    padding: 10px;
+    box-shadow:
+      0 0 0 6px $light,
+      inset 0 0 0 2px $yellow;
+
+    .filter {
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      button {
+        width: 33%;
+      }
+    }
+
+    .search {
+      flex-direction: column;
+      width: 100%;
+
+      .input {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+
+        input {
+          height: 40px;
+          width: 70%;
+        }
+      }
+
+      button {
+        height: 40px;
+        width: 100%;
+      }
+    }
+
+    .sort {
+      order: 5;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 5%;
+      font-size: 12px;
+
+      select {
+        border-radius: 50px;
+        width: 30%;
+        font-size: 12px;
+        letter-spacing: 0.2px;
+        padding: 5px;
+      }
+    }
+
+    .table {
+      height: 80%;
+      font-size: 10px;
+
+      .table-header {
+        th {
+          padding: 0 1%;
+
+          .advanced-sort {
+            .icon {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .list {
+        table {
+          td {
+            padding: 0 1%;
+          }
+        }
+      }
+    }
+  }
+}
