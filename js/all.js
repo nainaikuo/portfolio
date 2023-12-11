@@ -2,7 +2,7 @@ const workUrl = "https://script.google.com/macros/s/AKfycbyL2fxu_Fc3FkxFYO9r_x-q
 
 let workData ;
 
-init()
+// init()
 
 function init(){
     nameSet()

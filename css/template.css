@@ -54,7 +54,7 @@ a {
 
 *, *::before, *::after {
   box-sizing: border-box;
-  transition: all 1s;
+  transition: 1s;
 }
 
 img, svg {
@@ -95,7 +95,7 @@ body h5 {
   font-size: 1rem;
 }
 body p {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 .block {
@@ -122,15 +122,18 @@ body p {
     padding: 32px 16px;
   }
 }
-.block .title {
+.block .container .title {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 16px;
   text-align: center;
 }
-.block .title h4 {
+.block .container .title h4 {
   color: #636363;
+}
+.block .container .content {
+  width: 100%;
 }
 
 .header {

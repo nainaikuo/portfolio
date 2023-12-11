@@ -57,7 +57,7 @@ a{
 }
 *,*::before,*::after{
     box-sizing: border-box;
-	transition: all 1s;
+    transition:  0.5s;
 }
 
 img,svg{
@@ -102,7 +102,7 @@ font-family: 'Tenor Sans', sans-serif;
         font-size: 1rem;
     }
     p{
-        font-size: 1rem;
+        font-size: 0.875rem;
     }
 }
 
@@ -132,18 +132,22 @@ font-family: 'Tenor Sans', sans-serif;
         @media (max-width:768px){
         padding: 32px 16px;
         }
-    }
-    
-    .title{
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
-        h4{
-            color: $gray;
+        .title{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            text-align: center;
+            h4{
+                color: $gray;
+            }
+        }
+        .content{
+           width: 100%;
         }
     }
+    
+    
 }
 
 
