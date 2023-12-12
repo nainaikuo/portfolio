@@ -118,6 +118,7 @@ font-family: 'Tenor Sans', sans-serif;
     align-items: center;
     justify-content: center;
     align-self: stretch;
+    transition: opacity 2s;
     .container{
         width: 80%;
         max-width: 1200px;

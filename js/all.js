@@ -1,14 +1,32 @@
-const workUrl = "https://script.google.com/macros/s/AKfycbyL2fxu_Fc3FkxFYO9r_x-q-ot02UoiWju9PL1sJJFwr19PwooXYfrnm1FXD8ovmaKY/exec"
+const workDataUrl = "./data/works.json"
+const tags = document.querySelector(".js-total-tags-area")
+const fadeInBlock = [...document.querySelectorAll(".fade-in")]
 
-let workData ;
+function fadeIn() {
+  fadeInBlock.forEach((i, index) => {
+      setTimeout(() => {
+          i.classList.remove("fade-in")
+      }, index * 90)
 
-// init()
 
-function init(){
-    nameSet()
-    getWorkData()
+  })
 }
 
+function showHide() {
+  const hides = [...document.querySelectorAll(".hide")]
+  hides.forEach((i, index) => {
+      setTimeout(() => {
+          i.classList.remove("hide")
+      }, index * 30)
+
+  })
+
+}
+
+function init(){
+    renderinit()
+    nameSet()
+}
 
 
 function nameSet(){
@@ -22,167 +40,110 @@ function nameSet(){
 
 }
 
-function getWorkData(){
-    axios.get(workUrl)
-    .then(res => {
-        workData = res.data;
-        console.log(workData)
-        renderWrok(workData)
-    })
-    .catch(err => {
-        console.error(err); 
-    })
-}
-
-function renderWrok(data){
-    const workList = document.querySelector(".js-worklist")
-    let workListContent="";
-
-    data.forEach(i=>{
-
-        workListContent +=` <div class="work" data-name="${i.title}" data-id="${i.id}" data-description="${i.work_description}">
-        <div class="img"><img src="${i.mainpic_url}" alt=""></div>
-        <div class="work-title"><h4>${i.title}</h4></div>
-        <div class="work-type"><p>${i.type}</p></div>
-    </div>`
-
-
-    })
-
-
-
-    workList.innerHTML=workListContent
+function renderinit(){
+    fetch(workDataUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (res) {
+    const workData = res;
+    renderTags(workData)
+    renderWorks(workData)
+  });
 }
 
 
-const work = document.querySelector(".js-works")
+function renderTags(data){
 
+    let totalTags = []
+    data.forEach(work=>{
+        work.tags.forEach(tag=>{
 
-// work.addEventListener("click",renderWorkDetail)
-
-function renderWorkDetail(e){
-    // 找出按的是哪個作品
-    const workId= e.target.dataset.id
-    // 如沒按到作品則不執行
-    if(!workId){return}
-    // 取得全部作品資料
-    axios.get(workUrl)
-    .then(res => {
-        const workData = res.data
-    })
-        // 篩選出按到作品的資料
-        const nowWorkData = workData.filter(i=> i.id == workId)
-    // 選到作品詳細資料div
-    const workDetail = document.querySelector(".js-work-detail")
-
-    // 先為作品詳細資料宣告一個空字串用來放HTML
-    let workDetailContent="";
-    // 用篩選出的作品資料跑forEach?
-    nowWorkData.forEach(i=>{
-
-        workDetailContent+=`<div class="title">
-        <h4>${i.title} / ${i.type}</h4>
-        <p>${i.description}</p>
-    </div>
-    <div class="work-photo">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner js-work-detail-pics">
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-    </div> `
-
-    })
-    work.classList.add("hide")
-    workDetail.innerHTML=workDetailContent
-    workDetail.classList.add("show")
-    window.scrollTo({
-        top: 1080,
-        behavior: "smooth"
-    });
-
-const workPicsArea = document.querySelector(".js-work-detail-pics")
-
-const nowWorkPics = nowWorkData[0].pic
-let workPicsContent =""
-nowWorkPics.forEach((pic,index)=>{
-    if(index===0){
-        workPicsContent+=
-        `
-        <div class="carousel-item active">
-                        <img src="${pic.url}" class=" w-100" alt="${pic.des}">
-        </div>
-        `
-
-    }else{
-
-        if(pic.url===undefined){
-            return
-        }
-        workPicsContent+=
-        `
-        <div class="carousel-item">
-                        <img src="${pic.url}" class="w-100" alt="${pic.des}">
-        </div>
-        `
-    }
-
-})
-workPicsArea.innerHTML=workPicsContent
-const otherWorkArea = document.querySelector(".other-works")
-const otherWork = document.querySelector(".other-works .content .works-container")
-
-let otherWorkContent="";
-
-workData.forEach(i=>{   
-    
-    otherWorkContent+=`
-    <div class="work">
-    <img data-id="${i.id}"src="${i.mainpic_url}" alt="">
-    <div class="title">${i.title}</div>
-    </div>
-    `
-})
-
-otherWork.innerHTML=otherWorkContent
-otherWorkArea.classList.add("show")
-if(workData.length<5){
-    const btn = document.querySelectorAll(".other-works .content .btn")
-
-    btn.forEach(i=>{
-        i.classList.add("hide")
-    })
-
-}
-
-}
-    
-
-const otherWorks = document.querySelector(".other-works")
-
-otherWorks.addEventListener("click",function(e){
-    if(e.target.nodeName==="IMG"){
-        renderWorkDetail(e)
-    window.scrollTo({
-        top: 1080,
-        behavior: "smooth"
-    });
-    }
-    else{
-        const otherWork = document.querySelector(".other-works .content .works-container")
-        if(e.target.classList.contains("next")){
+            if(totalTags.indexOf(tag)===-1){
+                totalTags.push(tag)
+            }else{
+                return
+            }
             
-            otherWork.scrollLeft += 216;
-        }else{
-            otherWork.scrollLeft -= 216;
-        }
-    }
+        })    
+    })
+
+    let totalTagsContent = ""
+    totalTags.forEach(tag=>{
+        totalTagsContent+= `<div class="tag" id="${tag}">${tag}</div>`
+    })
+    const totalTagsArea = document.querySelector(".js-total-tags-area")
+    totalTagsContent+=`<div class="reset" id="reset">RESET</div>`
+    totalTagsArea.innerHTML=totalTagsContent
+}
+
+function renderWorks (data) {
+    let workAreaContent=""
+    data.forEach(work=>{
+        const tags = work.tags
+        let tagsContent =""
+
+        tags.forEach(tag=>{
+            tagsContent+=
+            `<div class="tag"><p>${tag}</p></div>`
+        })
+
+        workAreaContent+=
+        ` <div class="card hide" id="${work.title}" onclick="window.open('${work.link}','mywindow');">
+        <div class="img"><img src="${work.pic}" alt=""></div>
+        <div class="content">
+          <h3 class="title">${work.title}</h3>
+          <div class="tags">
+            ${tagsContent}
+          </div>
+        </div>
+      </div>`
+    })
+
+
+
+    const workArea = document.querySelector(".js-work-area")
+    workArea.innerHTML=workAreaContent
+    showHide()
+
+  }
+  
+function renderFilterWorks(e){
+  if(!e.target.id){
+    return
+  }
+  // 移除未選中的tag樣式
+  const tags = document.querySelectorAll(".js-total-tags-area>div")
+
+  tags.forEach(tag=>{
+    tag.classList.remove("select")
+  })
+  if(e.target.id==="reset"){
+    console.log("RE")
+    init()
+    return
+  }
+  e.target.classList.toggle("select")
+
+  const filtertag  = e.target.id;
+
+    fetch(workDataUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (res) {
+    const workData = res.filter(work=>work.tags.indexOf(filtertag)!==-1)
+
+    renderWorks(workData)
+    const y = document.querySelector("#work").getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top:y,
+      behavior:"smooth"
+    })
+  });
+
     
-})
+}
+tags.addEventListener("click",renderFilterWorks)
+window.addEventListener("DOMContentLoaded", fadeIn)
+init()

@@ -54,7 +54,7 @@ a {
 
 *, *::before, *::after {
   box-sizing: border-box;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 img, svg {
@@ -104,6 +104,7 @@ body p {
   align-items: center;
   justify-content: center;
   align-self: stretch;
+  transition: opacity 2s;
 }
 .block .container {
   width: 80%;

@@ -1,15 +1,23 @@
 @import "template.scss";
 
+body{
+    scroll-snap-type: y mandatory;
+    // height: 100vh;
+    overflow: auto;
+    // display: flex;
+}
 
+.fade-in,.hide{
+    // display: none;
+    opacity: 0;
+}
 .tags{
     // border: 1px solid $black;
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
-    @media (max-width:960px) {
-        justify-content: center;
-    }
-    // justify-content: center;
+
+    justify-content: center;
     .tag{
         display: flex;
         align-items: baseline;
@@ -26,6 +34,7 @@
             
             border-color: $gray;
             }
+
         &::before{
             content: "#";
         }
@@ -36,7 +45,25 @@
             margin: 0;
         }
     }
-    
+    .tag.select{
+        background-color: $gray;
+        user-select: none;
+        color: $white;
+        
+        border-color: $gray;
+        }
+    .reset{
+        cursor: pointer;
+        color: $gray;
+        padding: 8px 16px;
+        // border-bottom: 1px solid $gray;
+        box-shadow: 0px -1px inset rgba($gray,0.2);
+        transition: box-shadow 0.6s ease-in-out;
+        &:hover{
+            box-shadow: 0 -40px inset rgba($gray,0.2);
+            color: $black;
+        }
+    }
     
 }
 
@@ -150,32 +177,36 @@
             .cards{
                 display: flex;
                 flex-wrap: wrap;
-                gap: 32px;
+                gap: 5%;
                 }
                 .card{
-                    
-                    flex: 1;
-                    // margin-bottom: 32px;
+                    cursor: pointer;
+                    width: 45%;
+                    margin-bottom: 5%;
                     min-width: 300px;
-                    max-width: 600px;
+                    // max-width: 600px;
                     background: #fff;
-                    border-radius: 4px;
+                    border-radius: 8px;
                     box-shadow: 0px 0px 5px 0px rgba($gray, 0.20);
+                    transition: box-shadow 0.5s;
                     // height: fill;
-                    @media (max-width:412px) {
+                    &:hover{
+                        box-shadow: 0px 0px 10px 5px rgba($gray, 0.50);
+                    }
+                    @media (max-width:960px) {
                         width: 100%;
                         min-width: 100%;
                     }
                     .img{
-                        height: 180px;
+                        
+                        height: 240px;
                         box-shadow: 0px 1px 0px 0px rgba($gray, 0.20);
                         display: flex;
                         align-items: center;
+                        justify-content: center;
                         overflow: hidden;
-                        img{
-                            // height: 240px;
-                            width: 100%;
-                        }
+                        border-radius: 8px 8px 0 0 ;
+
                     }
                     .content{
                         display: flex;
@@ -183,10 +214,7 @@
                         align-items: center;
                         padding: 16px;
                         gap: 16px;
-                        .title{
-                            // border: 1px solid #000;
-                            // flex: 1;
-                        }
+
                     }
                 }
             }

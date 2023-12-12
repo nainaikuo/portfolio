@@ -6,17 +6,18 @@
         "pic":"https://nainaikuo.com/img/work_pic/election.png"
     },
     {
-        "title":"POS銷售系統",
-        "link":"https://medium.com/@nainaikuo1210/ui-ux-redesign-pos%E7%B3%BB%E7%B5%B1-a295f3eeaba5",
-        "tags":["UI/UX","redesign","system"],
-        "pic":"https://nainaikuo.com/img/work_pic/pos.png"
-    },
-    {
         "title":"活動頁面",
         "link":"https://nainaikuo.com/pages/activity_web/index.html",
         "tags":["frontend","anmation","web"],
         "pic":"https://nainaikuo.com/img/work_pic/activity_web.png"
     },
+    {
+        "title":"POS銷售系統",
+        "link":"https://medium.com/@nainaikuo1210/ui-ux-redesign-pos%E7%B3%BB%E7%B5%B1-a295f3eeaba5",
+        "tags":["UI/UX","redesign","system"],
+        "pic":"https://nainaikuo.com/img/work_pic/pos.png"
+    },
+   
     {
         "title":"工單管理系統",
         "link":"https://medium.com/@nainaikuo1210/專案規劃-ui-ux-design-工單管理系統-1371be87f3a3",
@@ -45,7 +46,7 @@
         "title":"電商網站前後台",
         "link":"https://nainaikuo.com/pages/ecommerce/index.html",
         "tags":["frontend","web"],
-        "pic":"https://nainaikuo.com/img/work_pic/ecommerce.png"
+        "pic":"https://nainaikuo.com/img/work_pic/ecommerce.jpeg"
     },
     {
         "title":"募資網站",
@@ -61,9 +62,8 @@
     },
     {
         "title":"ToDoList",
-        "link":"h=ttps://nainaikuo.com/pages/todolist/index.html",
+        "link":"https://nainaikuo.com/pages/todolist/index.html",
         "tags":["frontend","web"],
         "pic":"https://nainaikuo.com/img/work_pic/todolist.png"
-    },
-    
+    }
 ]
