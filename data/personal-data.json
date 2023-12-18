@@ -1,0 +1,38 @@
+{
+    "name": "郭乃萱",
+    "en-name": "Nai Hsuan Kuo",
+    "pic-url": "https://nainaikuo.com/img/personal-pic.JPG",
+    "contact": {
+        "email": "nainaikuo1210@gmail.com",
+        "phone": "0972237438"
+    },
+    "link": {
+        "github": "https://github.com/nainaikuo",
+        "personal-web": "https://nainaikuo.com/",
+        "medium": "https://medium.com/@nainaikuo1210"
+    },
+    "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScriprt",
+        "UI/UX設計",
+        "平面設計"
+    ],
+    "experience": [
+        {
+            "from-time":"2014/09",
+            "to-time":"2018/06",
+            "title":"國立臺北藝術大學｜劇場設計學系"
+        },
+        {
+            "from-time":"2018/09",
+            "to-time":"2020/12",
+            "title":"品牌營運專員"
+        },
+        {
+            "from-time":"2021/01",
+            "to-time":"PRESENT",
+            "title":"品牌營運專員"
+        }
+    ]
+}
