@@ -58,7 +58,7 @@ function renderinit(){
   })
   .then(function (res) {
     const personalData = res;
-    console.log(res)
+    renderPersonalData(personalData)
   });
 
 }
@@ -155,6 +155,11 @@ function renderFilterWorks(e){
 
     
 }
+
+function renderPersonalData(data){
+  console.log(data)
+}
+
 tags.addEventListener("click",renderFilterWorks)
 window.addEventListener("DOMContentLoaded", fadeIn)
 init()
