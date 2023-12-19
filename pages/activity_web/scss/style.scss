@@ -94,10 +94,12 @@ label{
     
     background: url(../img/HeaderBackground.png) no-repeat;
     background-position: top center;
+    background-size: cover;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+    // border: 1px solid #000;
     .header-menu{
         background: $basic-white;
         border-radius: 100px;
@@ -189,15 +191,28 @@ label{
     }
     .container{
         width: 100%;
-        background: url(../img/HeaderBackground-cat.png) no-repeat;
-        background-position: top  center;
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         color: $primary-default;
         margin-top: -32px;
         padding-top: 320px;
+        // border: 1px solid #000;
+        &::before{
+            content: "";
+            background: url(../img/HeaderBackground-cat.png) no-repeat;
+            background-position: top  center;
+            background-size: fill;
+            width: 100%;
+            height: 100%;
+            // border: 1px solid #000;
+            position: absolute;
+            top: 0;
+            z-index: 0;
+        }
         .text{
+            z-index: 1;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -270,13 +285,30 @@ label{
     align-items: center;
     padding-top: 240px;
     gap: 48px;
-
+    position: relative;
+    // border: 1px solid #000;
     .vote-box{
-        width: 440px;
-        height: 15px;
-        background: $secdonary-dark;
+        width: 500px;
+        height: 1200px;
+        border-bottom: 15px solid $secdonary-dark;
+        // background: #000;
+        overflow: hidden;
+        // height: 15px;
+        // background: $secdonary-dark;
+        // position: relative;
+        position: absolute;
+        // border: 1px solid #000;
+        bottom: 200px;
+        .vote{
+            // background: #000;
+            position: absolute;
+            // border: 1px solid #000;
+            bottom: -200px;
+            transition: 5s;
+        }
     }
     .title{
+        margin-top: 48px;
         color: $secdonary-tint;
     }
 }
@@ -299,7 +331,7 @@ label{
             // background: #000;
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             // align-items: center;
             gap: 50px;
             // overflow: hidden;
@@ -308,8 +340,15 @@ label{
                 display: flex;
                 flex-direction: column;
                 padding: 32px;
+                gap: 64px;
+                overflow: auto;
+                height: 650px;
+                // border: 1px solid #000;
                 // flex: 1;
                 // border: 1px solid #000;
+                &::-webkit-scrollbar {
+                    display: none;
+                  }
                 img{
                     width: 100%;
                 }
@@ -325,16 +364,18 @@ label{
 
             }
             .timeline{
+                border-left: 2px solid $secdonary-tint;
                 display: flex;
                 // border: 1px solid #000;
                 flex:1;
                 padding-top: 24px;
-                margin-left: -74px;
+
                 .activities{
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     // border: 1px solid #000;
+                    margin-left: -25px;
                     .item{
                         display: flex;
                         gap: 18px;
@@ -421,8 +462,7 @@ label{
                             h5,p{
                                 color: $basic-white;
                             }
-                            .title{
-                            }
+
                         }
                     }
                 }

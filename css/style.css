@@ -1,292 +1,281 @@
-html,
-body {
-  width: 100%;
-  height: 100%;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-ul {
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
   list-style: none;
 }
 
-.content {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  padding-top: 10px;
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: none;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+body {
+  background: #FCF9E9;
+}
+
+h1 {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 7.5rem;
+  line-height: 150%;
+}
+
+h2 {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 150%;
+}
+
+h3 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 150%;
+}
+
+h4 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 150%;
+}
+
+h5 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+
+p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 160%;
+  color: #515151;
+}
+
+h6 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 150%;
+  color: #00A199;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00A199;
+  gap: 16px;
+}
+.name .ch {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 150%;
+}
+.name .eng {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-size: 4.5rem;
+  line-height: 160%;
+}
+
+input[type=button], input[type=submit] {
+  padding: 8px 32px;
+  background: #00A199;
+  color: #FFFFFF;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 160%;
+  border: none;
+  border-radius: 8px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+input[type=button]:hover, input[type=submit]:hover {
+  background: #14C3BB;
+}
+input[type=button]:focus, input[type=submit]:focus {
+  box-shadow: 0 0 0 2px #00A199;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
+}
+
+input[type=text], input[type=email], textarea {
+  padding: 10px;
+  border: 1px solid #C9F1EF;
+  background: #FFFFFF;
+  border-radius: 4px;
+  color: #00A199;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 160%;
+}
+input[type=text]:hover, input[type=email]:hover, textarea:hover {
+  box-shadow: 0 0 0 1px #00A199;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  background: #E9FEFD;
+  outline: 1px solid #00A199;
+}
+
+label {
+  color: #00A199;
+  margin-bottom: 12px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+}
+
+.banner {
+  background: url(../img/HeaderBackground.png) no-repeat;
+  background-position: top center;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(172deg, #FFD370 70%, #FFF 30%);
-  font-family: "Noto Sans TC";
 }
-
-.title {
-  color: #333;
-  font-size: 3rem;
-  font-family: "Baloo Tamma 2";
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 0.5rem;
-}
-
-.container {
-  width: 50%;
-}
-.container .addArea {
-  background: #FFF;
-  padding: 5px;
-  border-radius: 10px;
+.banner .header-menu {
+  background: #FFFFFF;
+  border-radius: 100px;
+  width: 62.5%;
+  max-width: 1200px;
+  margin-top: 40px;
   display: flex;
-  margin: 0;
-}
-.container .addArea input.alert .text {
-  color: red;
-  font-weight: bold;
-}
-.container .addArea input.text {
-  border: none;
-  padding: 3px 15px;
-  width: 100%;
-  color: #333;
-  font-size: 1rem;
-}
-.container .addArea input.text:focus {
-  outline: none;
-}
-.container .addArea .add {
-  background: #333;
-  color: #FFF;
-  font-size: 2rem;
-  font-weight: bold;
-  border-radius: 10px;
-  width: 20%;
-  cursor: pointer;
-}
-.container .list.show {
-  display: block;
-}
-.container .list {
-  user-select: none;
-  background: #FFF;
-  border-radius: 10px;
-  margin: 0;
-}
-.container .list .tab {
-  padding: 0 10px 0px 10px;
-  display: flex;
-  justify-content: space-around;
-  cursor: pointer;
-  margin: 10px -10px 5px -10px;
-}
-.container .list .tab li {
-  width: 33%;
-  text-align: center;
-  font-size: 0.87rem;
-  color: #333;
-  padding: 20px 0;
-  border-bottom: 2px solid #EFEFEF;
-}
-.container .list .tab li:hover {
-  color: #333;
-  font-weight: bold;
-  border-bottom: 2px solid #333;
-}
-.container .list .tab li.select {
-  font-weight: bold;
-  color: #333;
-  border-bottom: 2px solid #333;
-}
-.container .list .todolist li.true {
-  text-decoration: line-through;
-  color: rgba(51, 51, 51, 0.3);
-}
-.container .list .todolist li {
+  flex-direction: column;
+  align-items: center;
+  padding: 0.2% 5%;
+  box-shadow: 6px 8px #FFDC9E;
+  z-index: 2;
   position: relative;
-  border-bottom: 1px solid #EFEFEF;
-  color: #333;
-  margin: 15px 0px;
-  padding-bottom: 15px;
-  letter-spacing: 1px;
-  cursor: pointer;
 }
-.container .list .todolist li button {
-  width: 1rem;
-  height: 1rem;
-  cursor: pointer;
-}
-.container .list .todolist li button.check {
+.banner .header-menu::before {
+  content: "";
+  width: 2vw;
+  height: 40px;
   position: absolute;
-  top: 0.25rem;
-  left: -1.5rem;
-  background: #FFF;
-  border: 1px solid #333;
-  border-radius: 3px;
-  line-height: 0;
-  padding: 0;
-  color: #FFF;
+  top: -27px;
+  left: 30px;
+  background: #FFFFFF;
+  z-index: -1;
+  transform: rotate(-30deg);
+  border-radius: 2px;
+  border-right: 6px solid #FFDC9E;
+  clip-path: polygon(100% 0, 100% 100%, 0 63%);
 }
-.container .list .todolist li button.true {
-  border: none;
-  color: #FFD370;
-}
-.container .list .todolist li img {
-  height: 1rem;
-  width: 1rem;
+.banner .header-menu::after {
+  content: "";
+  width: 2vw;
+  height: 40px;
   position: absolute;
-  right: 15px;
-  bottom: 15px;
-  cursor: pointer;
+  top: -27px;
+  left: 80px;
+  background: #FFFFFF;
+  z-index: -1;
+  transform: rotate(-30deg);
+  border-radius: 2px;
+  border-right: 6px solid #FFDC9E;
+  clip-path: polygon(100% 0, 100% 100%, 0 63%);
 }
-.container .bottom {
+.banner .header-menu .content {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  font-size: 0.87rem;
-  padding: 0px 15px;
 }
-.container .bottom .num {
-  color: #333;
+.banner .header-menu .content .logo h1 {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 160%;
+  color: #00A199;
 }
-.container .bottom .del_done {
-  color: #9F9A91;
-  cursor: pointer;
-}/*# sourceMappingURL=style.css.map */llapse: collapse;
-}
-.content .table .table-header th {
-  background: #f4f1ea;
-  width: 12.4%;
-  padding: 0 2%;
-  box-sizing: border-box;
-  border-top: 2px solid #2a2a2a;
-  border-bottom: 2px solid #2a2a2a;
-  text-align: left;
-}
-.content .table .table-header th .advanced-sort {
+.banner .header-menu .content .menu {
   display: flex;
-  position: relative;
   align-items: center;
+  gap: 20px;
 }
-.content .table .table-header th .advanced-sort .icon {
+.banner .header-menu .content .menu .menu-nav {
+  display: flex;
+  gap: 40px;
+}
+.banner .header-menu .content .menu .menu-nav li a {
+  color: #00A199;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 160%;
+}
+.banner .header-menu .content .menu .menu-social {
+  display: flex;
+}
+.banner .container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
-}
-.content .table .table-header th .advanced-sort .icon i {
-  line-height: 0.8;
-}
-.content .table .table-header th.name {
-  width: 21%;
-}
-.content .table .table-header th.market {
-  width: 17%;
-}
-.content .table .list {
-  width: 100%;
-  overflow: scroll;
-  height: 100%;
-  padding-right: 16px;
-}
-.content .table .list table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.content .table .list table tr {
-  padding-right: -16px;
-}
-.content .table .list table tr td {
-  width: 12.4%;
-  padding: 2% 2%;
-  border-bottom: 1px solid #9a9a9a;
-}
-.content .table .list table tr td.name {
-  width: 21%;
-}
-.content .table .list table tr td.market {
-  width: 17%;
-}
-.content .table .list table tr td.message {
-  text-align: center;
-}
-
-.filter button.active,
-.filter button:hover {
-  background: #f8d45a;
-}
-
-button,
-select,
-i {
-  cursor: pointer;
-}
-
-@media (max-width: 414px) {
-  .header .logo {
-    width: 100%;
-    background-image: url(https://hexschool.github.io/js-filter/assets/logo-sm.jpg);
-    background-position: center center;
-  }
-  .content {
-    height: 80%;
-    padding: 10px;
-    box-shadow: 0 0 0 6px #fffcef, inset 0 0 0 2px #f8d45a;
-  }
-  .content .filter {
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  .content .filter button {
-    width: 33%;
-  }
-  .content .search {
-    flex-direction: column;
-    width: 100%;
-  }
-  .content .search .input {
-    display: flex;
-    width: 100%;
-    margin: 0;
-    margin-bottom: 20px;
-  }
-  .content .search .input input {
-    height: 40px;
-    width: 70%;
-  }
-  .content .search button {
-    height: 40px;
-    width: 100%;
-  }
-  .content .sort {
-    order: 5;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5%;
-    font-size: 12px;
-  }
-  .content .sort select {
-    border-radius: 50px;
-    width: 30%;
-    font-size: 12px;
-    letter-spacing: 0.2px;
-    padding: 5px;
-  }
-  .content .table {
-    height: 80%;
-    font-size: 10px;
-  }
-  .content .table .table-header th {
-    padding: 0 1%;
-  }
-  .content .table .table-header th .advanced-sort .icon {
-    display: none;
-  }
-  .content .table .list table td {
-    padding: 0 1%;
-  }
-}/*# sourceMappingURL=style.css.map */320px;
+  align-items: center;
+  color: #00A199;
+  margin-top: -32px;
+  padding-top: 320px;
+  border: 1px solid #000;
 }
 .banner .container .text {
   width: 100%;

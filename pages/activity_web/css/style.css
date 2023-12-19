@@ -189,6 +189,7 @@ label {
 .banner {
   background: url(../img/HeaderBackground.png) no-repeat;
   background-position: top center;
+  background-size: cover;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -269,8 +270,7 @@ label {
 }
 .banner .container {
   width: 100%;
-  background: url(../img/HeaderBackground-cat.png) no-repeat;
-  background-position: top center;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -278,7 +278,19 @@ label {
   margin-top: -32px;
   padding-top: 320px;
 }
+.banner .container::before {
+  content: "";
+  background: url(../img/HeaderBackground-cat.png) no-repeat;
+  background-position: top center;
+  background-size: fill;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
 .banner .container .text {
+  z-index: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -337,13 +349,23 @@ label {
   align-items: center;
   padding-top: 240px;
   gap: 48px;
+  position: relative;
 }
 .activity-top .vote-box {
-  width: 440px;
-  height: 15px;
-  background: #F4CA80;
+  width: 500px;
+  height: 1200px;
+  border-bottom: 15px solid #F4CA80;
+  overflow: hidden;
+  position: absolute;
+  bottom: 200px;
+}
+.activity-top .vote-box .vote {
+  position: absolute;
+  bottom: -200px;
+  transition: 5s;
 }
 .activity-top .title {
+  margin-top: 48px;
   color: #FCF9E9;
 }
 
@@ -364,7 +386,7 @@ label {
 .activity .container .content {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 50px;
   flex-wrap: wrap;
 }
@@ -372,6 +394,12 @@ label {
   display: flex;
   flex-direction: column;
   padding: 32px;
+  gap: 64px;
+  overflow: auto;
+  height: 650px;
+}
+.activity .container .content .imgs::-webkit-scrollbar {
+  display: none;
 }
 .activity .container .content .imgs img {
   width: 100%;
@@ -385,15 +413,16 @@ label {
   justify-content: space-between;
 }
 .activity .container .content .timeline {
+  border-left: 2px solid #FCF9E9;
   display: flex;
   flex: 1;
   padding-top: 24px;
-  margin-left: -74px;
 }
 .activity .container .content .timeline .activities {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: -25px;
 }
 .activity .container .content .timeline .activities .item {
   display: flex;
