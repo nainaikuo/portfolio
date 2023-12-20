@@ -343,30 +343,12 @@ label {
   background: url(../img/cat-ear.png) no-repeat;
   background-size: 100%;
   background-position: top center;
-  height: 460px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 240px;
+  padding: 240px;
   gap: 48px;
   position: relative;
-}
-.activity-top .vote-box {
-  width: 500px;
-  height: 1200px;
-  border-bottom: 15px solid #F4CA80;
-  overflow: hidden;
-  position: absolute;
-  bottom: 200px;
-}
-.activity-top .vote-box .vote {
-  position: absolute;
-  bottom: -200px;
-  transition: 5s;
-}
-.activity-top .title {
-  margin-top: 48px;
-  color: #FCF9E9;
 }
 
 .activity {
@@ -382,6 +364,24 @@ label {
   flex-direction: column;
   align-items: center;
   gap: 48px;
+  position: relative;
+  padding-top: 64px;
+}
+.activity .container .vote-box {
+  width: 500px;
+  border-bottom: 15px solid #F4CA80;
+  overflow: hidden;
+  top: 64px;
+  position: absolute;
+}
+.activity .container .vote-box .vote {
+  position: absolute;
+  bottom: 1200px;
+  transition: 5s;
+}
+.activity .container .title {
+  margin-top: 48px;
+  color: #FCF9E9;
 }
 .activity .container .content {
   width: 100%;
@@ -396,13 +396,14 @@ label {
   padding: 32px;
   gap: 64px;
   overflow: auto;
-  height: 650px;
+  height: 695px;
 }
 .activity .container .content .imgs::-webkit-scrollbar {
   display: none;
 }
 .activity .container .content .imgs img {
   width: 100%;
+  scroll-snap-align: end;
 }
 .activity .container .content .scroll-bar {
   width: 2px;
@@ -427,16 +428,21 @@ label {
 .activity .container .content .timeline .activities .item {
   display: flex;
   gap: 18px;
+  transition: 0.5s;
 }
 .activity .container .content .timeline .activities .item .icon {
   background: #00A199;
   height: 52px;
 }
+.activity .container .content .timeline .activities .item .text * {
+  transition: 0.5s;
+}
 .activity .container .content .timeline .activities .item .text .date {
   color: #FFDC9E;
   margin-bottom: 12px;
+  transition: 0.5s;
 }
-.activity .container .content .timeline .activities .item .text .title {
+.activity .container .content .timeline .activities .item .text .act-title {
   color: #FFDC9E;
 }
 .activity .container .content .timeline .activities .item .text .text-content {
@@ -446,25 +452,22 @@ label {
   font-size: 1rem;
   line-height: 160%;
 }
-.activity .container .content .timeline .activities .item.select {
-  display: flex;
-  gap: 18px;
-}
-.activity .container .content .timeline .activities .item.select .icon {
-  background: #00A199;
-}
 .activity .container .content .timeline .activities .item.select .text .date {
-  color: #FFDC9E;
-  margin-bottom: 12px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 150%;
 }
-.activity .container .content .timeline .activities .item.select .text .title {
-  color: #FFDC9E;
+.activity .container .content .timeline .activities .item.select .text .act-title {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 160%;
 }
-.activity .container .content .timeline .activities .item.select .text .content {
-  color: #FCF9E9;
+.activity .container .content .timeline .activities .item.select .text .text-content {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 160%;
 }
 
@@ -504,6 +507,10 @@ label {
   color: #FFFFFF;
 }
 .policy .container .content .policy-img {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  overflow: auto;
   padding: 120px 0;
 }
 

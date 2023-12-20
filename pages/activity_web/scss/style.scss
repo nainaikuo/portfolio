@@ -279,38 +279,15 @@ label{
     background:url(../img/cat-ear.png) no-repeat;
     background-size: 100%;
     background-position: top center;
-    height: 460px;
+    // height: 460px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 240px;
+    padding: 240px;
     gap: 48px;
     position: relative;
     // border: 1px solid #000;
-    .vote-box{
-        width: 500px;
-        height: 1200px;
-        border-bottom: 15px solid $secdonary-dark;
-        // background: #000;
-        overflow: hidden;
-        // height: 15px;
-        // background: $secdonary-dark;
-        // position: relative;
-        position: absolute;
-        // border: 1px solid #000;
-        bottom: 200px;
-        .vote{
-            // background: #000;
-            position: absolute;
-            // border: 1px solid #000;
-            bottom: -200px;
-            transition: 5s;
-        }
-    }
-    .title{
-        margin-top: 48px;
-        color: $secdonary-tint;
-    }
+   
 }
 .activity{
 
@@ -326,6 +303,32 @@ label{
         flex-direction: column;
         align-items: center;
         gap: 48px;
+        position: relative;
+        padding-top: 64px;
+        .vote-box{
+            width: 500px;
+            border-bottom: 15px solid $secdonary-dark;
+            // background: #000;
+            overflow: hidden;
+            // height: 15px;
+            // background: $secdonary-dark;
+            // position: relative;
+            top: 64px;
+            position: absolute;
+            // border: 1px solid #000;
+            // bottom: 200px;
+            .vote{
+                // background: #000;
+                position: absolute;
+                // border: 1px solid #000;
+                bottom: 1200px;
+                transition: 5s;
+            }
+        }
+        .title{
+            margin-top: 48px;
+            color: $secdonary-tint;
+        }
 
         .content{
             // background: #000;
@@ -342,15 +345,19 @@ label{
                 padding: 32px;
                 gap: 64px;
                 overflow: auto;
-                height: 650px;
+                height: 695px;
                 // border: 1px solid #000;
-                // flex: 1;
-                // border: 1px solid #000;
+                @media (max-width:768px) {
+                    // background: #000;
+                    
+                }
                 &::-webkit-scrollbar {
                     display: none;
                   }
                 img{
                     width: 100%;
+                    // border: 1px solid #000;
+                    scroll-snap-align: end;
                 }
 
             }
@@ -380,17 +387,22 @@ label{
                         display: flex;
                         gap: 18px;
                         // background: #000;
+                        transition: 0.5s;
                         .icon{
                             background: $primary-default;
                             // border: 1px solid #000;
                             height: 52px;
                         }
                         .text{
+                            *{
+                                transition: 0.5s;
+                            }
                             .date{
                                 color: $secdonary-default;
                                 margin-bottom:12px ;
+                                transition: 0.5s;
                             } 
-                            .title{
+                            .act-title{
                                 color: $secdonary-default;
                             }
                             .text-content{
@@ -400,22 +412,15 @@ label{
                         }
                     }
                     .item.select{
-                        display: flex;
-                        gap: 18px;
-                        .icon{
-                            background: $primary-default;
-                        }
                         .text{
                             .date{
-                                color: $secdonary-default;
-                                margin-bottom: 12px;
+                                @include title;
                             } 
-                            .title{
-                                color: $secdonary-default;
+                            .act-title{
+                                @include subtitle;
                             }
-                            .content{
-                                color: $secdonary-tint;
-                                @include body-2($weight-R)
+                            .text-content{
+                                @include body-1($weight-R);
                             }
                         }
                     }
@@ -468,6 +473,10 @@ label{
                 }
             }
             .policy-img{
+                display: flex;
+                flex-direction: column;
+                height: 600px;
+                overflow: auto;
                 padding: 120px 0;
             }
         }

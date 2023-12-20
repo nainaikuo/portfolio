@@ -6,7 +6,7 @@ function init() {
     return response.json();
   })
   .then(function (result) {
-    renderActivity(result)
+    renderActivity(result.activity)
   });
   }
 
@@ -40,7 +40,7 @@ function init() {
         </div>
         <div class="text">
             <h4 class="date">${act.date}</h4>
-        <p class="title">${act.title}</p>
+        <p class="act-title">${act.title}</p>
         <p class="text-content">${act.description}</p>
     </div>
     </div>
@@ -54,12 +54,17 @@ function init() {
 
  function observerImg() {
     let option={
-        root:document.querySelector("js-act-imgs")
+        root:document.querySelector("js-act-imgs"),
+        threshold:0.5
     }
     const actImgObserver = new IntersectionObserver ((entries)=>{
         entries.forEach(entry=>{
+            const currentid = entry.target.dataset.actid
+            const currentText = document.querySelector(`.js-act-text>.item[data-actid=${currentid}]`)
             if(entry.isIntersecting){
-                console.log(entry.target.dataset.actid)
+                currentText.classList.add("select")
+            }else if(!entry.isIntersecting){
+                currentText.classList.remove("select")
             }
             
         })
