@@ -251,7 +251,6 @@ body {
   .banner .container .search {
     width: 100%;
     gap: 16px;
-    border: 1px solid #000;
   }
 }
 .banner .container .search .btn {

@@ -1,0 +1,139 @@
+{
+    "personal": {
+        "name": "郭乃萱",
+        "en-name": "Nai Hsuan Kuo",
+        "pic-url": "https://nainaikuo.com/img/personal-pic.JPG",
+        "contact": {
+            "email": "nainaikuo1210@gmail.com",
+            "phone": "0972237438"
+        },
+        "link": {
+            "github": "https://github.com/nainaikuo",
+            "personal-web": "https://nainaikuo.com/",
+            "medium": "https://medium.com/@nainaikuo1210"
+        },
+        "skills": [
+            "HTML5",
+            "CSS3",
+            "JavaScriprt",
+            "UI/UX設計",
+            "平面設計"
+        ],
+        "experience": [
+            {
+                "from-time": "2014/09",
+                "to-time": "2018/06",
+                "title": "國立臺北藝術大學｜劇場設計學系"
+            },
+            {
+                "from-time": "2018/09",
+                "to-time": "2020/12",
+                "title": "品牌營運專員"
+            },
+            {
+                "from-time": "2021/01",
+                "to-time": "PRESENT",
+                "title": "品牌營運專員"
+            }
+        ]
+    },
+    "work": [
+        {
+            "title": "開票地圖",
+            "link": "https://nainaikuo.com/pages/election_map/index.html",
+            "tags": [
+                "frontend",
+                "web"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/election.png"
+        },
+        {
+            "title": "活動頁面",
+            "link": "https://nainaikuo.com/pages/activity_web/index.html",
+            "tags": [
+                "frontend",
+                "anmation",
+                "web"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/activity_web.png"
+        },
+        {
+            "title": "公司網站",
+            "link": "https://www.bonvies.com",
+            "tags": [
+                "UI",
+                "wordpress",
+                "frontend"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/company_homepage.png"
+        },
+        {
+            "title": "蔬菜比價網",
+            "link": "https://nainaikuo.com/pages/vegetable/index.html",
+            "tags": [
+                "frontend",
+                "web"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/vegetable.png"
+        },
+        {
+            "title": "電商網站前後台",
+            "link": "https://nainaikuo.com/pages/ecommerce/index.html",
+            "tags": [
+                "frontend",
+                "web"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/ecommerce.jpeg"
+        },
+        {
+            "title": "募資網站",
+            "link": "https://nainaikuo.com/pages/donate_web/index.html",
+            "tags": [
+                "frontend",
+                "web",
+                "RWD"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/donate_web.png"
+        },
+        {
+            "title": "室內設計網站",
+            "link": "https://wanong.net",
+            "tags": [
+                "UI",
+                "wordpress",
+                "frontend"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/wanong.jpeg"
+        },
+        {
+            "title": "ToDoList",
+            "link": "https://nainaikuo.com/pages/todolist/index.html",
+            "tags": [
+                "frontend",
+                "web"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/todolist.png"
+        },
+        {
+            "title": "動物醫院住院管理系統",
+            "link": "https://medium.com/@nainaikuo1210/ui-design-寵物住院紀錄系統-3518324101ed",
+            "tags": [
+                "UI/UX",
+                "system",
+                "project"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/hospital.png"
+        },
+        {
+            "title": "POS系統 Redesign",
+            "link": "https://medium.com/@nainaikuo1210/ui-ux-redesign-pos系統-15ae8b61967b",
+            "tags": [
+                "UI/UX",
+                "redesign",
+                "system",
+                "project"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/pos.png"
+        }
+    ]
+}

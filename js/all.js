@@ -1,5 +1,4 @@
-const workDataUrl = "./data/works.json"
-const personalDataUrl = "https://nainaikuo.com/data/personal-data.json"
+const dataUrl = "./data/data.json"
 const tags = document.querySelector(".js-total-tags-area")
 const fadeInBlock = [...document.querySelectorAll(".fade-in")]
 
@@ -42,22 +41,15 @@ function nameSet(){
 }
 
 function renderinit(){
-    fetch(workDataUrl)
+    fetch(dataUrl)
   .then(function (response) {
     return response.json();
   })
   .then(function (res) {
-    const workData = res;
+    const workData = res.work;
+    const personalData = res.personal;
     renderTags(workData)
     renderWorks(workData)
-  });
-
-  fetch(personalDataUrl)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (res) {
-    const personalData = res;
     renderPersonalData(personalData)
   });
 
