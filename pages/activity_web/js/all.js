@@ -1,4 +1,5 @@
-
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 function init() {
     fetch("./data/data.json")
@@ -81,7 +82,6 @@ function init() {
     const policyTextArea = document.querySelector(".js-policy-text-area")
     const num = data.findIndex(i=>i.id===id)
     const nowSelectedPolicy = data.filter(policy=>policy.id===id)[0]
-    console.log(nowSelectedPolicy)
     let policyImgAreaContentUlContent=""
     nowSelectedPolicy.content.forEach((i,index)=>{
         policyImgAreaContentUlContent+=
@@ -106,8 +106,6 @@ function init() {
      ${policyImgAreaContentUlContent}   
     </ul>
 </div>`
-
-console.log(policyTextAreaContent)
     
     policyTextArea.innerHTML = policyTextAreaContent
     policyTextArea.classList.add("display")
