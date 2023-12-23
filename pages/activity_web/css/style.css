@@ -313,7 +313,6 @@ label {
   align-items: center;
   padding: 120px;
   height: 1080px;
-  background: #FCF9E9 url(../img/VoteMiao-desktop.png) no-repeat bottom center;
 }
 .intro .container {
   width: 75%;
@@ -337,18 +336,6 @@ label {
 .intro .container .text .intro-title {
   text-align: center;
   color: #00A199;
-}
-
-.activity-top {
-  background: url(../img/cat-ear.png) no-repeat;
-  background-size: 100%;
-  background-position: top center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 240px;
-  gap: 48px;
-  position: relative;
 }
 
 .activity {
@@ -477,6 +464,11 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 1s;
+  overflow: hidden;
+}
+.policy * {
+  transition: 0.5s;
 }
 .policy .container {
   width: 75%;
@@ -487,6 +479,11 @@ label {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
+}
+.policy .container .content .policy-text.display {
+  opacity: 1;
+  transform: translateX(0);
 }
 .policy .container .content .policy-text {
   display: flex;
@@ -494,24 +491,49 @@ label {
   gap: 80px;
   flex: 1;
   padding: 240px 0;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: 1s;
+}
+.policy .container .content .policy-text .num {
+  font-size: 20rem;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .policy .container .content .policy-text .header {
   color: #FFDC9E;
+  position: relative;
 }
-.policy .container .content .policy-text .content ul {
+.policy .container .content .policy-text .policy-text-content ul {
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
-.policy .container .content .policy-text .content ul li h5, .policy .container .content .policy-text .content ul li p {
+.policy .container .content .policy-text .policy-text-content ul li h5, .policy .container .content .policy-text .policy-text-content ul li p {
   color: #FFFFFF;
 }
 .policy .container .content .policy-img {
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: 100vh;
   overflow: auto;
-  padding: 120px 0;
+  padding: 240px 0;
+}
+.policy .container .content .policy-img::-webkit-scrollbar {
+  display: none;
+}
+.policy .container .content .policy-img img {
+  filter: contrast(50%);
+  transform: translateX(120px);
+  transition: 0.5s;
+}
+.policy .container .content .policy-img img.select {
+  filter: none;
+  transform: translateX(0);
 }
 
 .donation {

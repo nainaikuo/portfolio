@@ -1,12 +1,13 @@
 
 
 function init() {
-    fetch("./data/activity.json")
+    fetch("./data/data.json")
   .then(function (response) {
     return response.json();
   })
   .then(function (result) {
     renderActivity(result.activity)
+    renderPolicy(result.policy)
   });
   }
 
@@ -26,7 +27,7 @@ function init() {
     })
     const actImgArea = document.querySelector(".js-act-imgs")
     actImgArea.innerHTML = actImgAreacontent
-    observerImg()
+    observerActivityImg()
  }
 
  function renderActivityText(data){
@@ -52,7 +53,7 @@ function init() {
 
  init()
 
- function observerImg() {
+ function observerActivityImg() {
     let option={
         root:document.querySelector("js-act-imgs"),
         threshold:0.5
@@ -76,4 +77,74 @@ function init() {
     })
    }
 
- 
+ function renderPolicyText(data,id){
+    const policyTextArea = document.querySelector(".js-policy-text-area")
+    const num = data.findIndex(i=>i.id===id)
+    const nowSelectedPolicy = data.filter(policy=>policy.id===id)[0]
+    console.log(nowSelectedPolicy)
+    let policyImgAreaContentUlContent=""
+    nowSelectedPolicy.content.forEach((i,index)=>{
+        policyImgAreaContentUlContent+=
+        `
+        <li>
+                                <h5>0${index+1} ${i.title}</h5>
+                                <p>${i.description}</p>
+                            </li>
+        `
+        
+    
+    })
+    let policyTextAreaContent = `
+    <div class="num">No.${num+1}</div>
+    <div class="header">
+    
+    <h3 class="title">政策 No. 0<span class="no-id">.${num+1}</span></h3>
+    <h4 class="subtitle">${nowSelectedPolicy.title}</h4>
+</div>
+<div class="policy-text-content">
+    <ul class="policy-list ">
+     ${policyImgAreaContentUlContent}   
+    </ul>
+</div>`
+
+console.log(policyTextAreaContent)
+    
+    policyTextArea.innerHTML = policyTextAreaContent
+    policyTextArea.classList.add("display")
+ }
+
+ function renderPolicy(data) {
+    let policyImgAreaContent="";
+    data.forEach(policy=>{
+        policyImgAreaContent+=
+        `
+        <img src="${policy.img}" alt="${policy.title}" data-polid="${policy.id}">
+        `
+    })
+    const policyImgArea = document.querySelector(".js-policy-img-area")
+    policyImgArea.innerHTML = policyImgAreaContent
+    observerPolicyImg(data)
+   }
+
+function observerPolicyImg(data){
+    let option={
+        root:document.querySelector("js-policy-imgs"),
+        threshold:0.5
+    }    
+    const observer = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                const nowId = entry.target.dataset.polid
+                renderPolicyText(data,nowId)
+                entry.target.classList.add("select")
+            }else if(!entry.isIntersecting){
+                entry.target.classList.remove("select")
+            }
+        })
+    },option)
+
+    const poliyImgs = document.querySelectorAll(".js-policy-img-area>img")
+    poliyImgs.forEach(img=>{
+        observer.observe(img)
+    })
+}

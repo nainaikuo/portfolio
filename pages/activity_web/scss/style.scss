@@ -244,8 +244,6 @@ label{
     padding: 120px;
 
     height: 1080px;
-    background: $secdonary-tint url(../img/VoteMiao-desktop.png) no-repeat bottom center;
-    // border: 1px solid #000;
     .container{
         // border: 1px solid #000;
         width: 75%;
@@ -275,20 +273,7 @@ label{
 
     }
 }
-.activity-top{
-    background:url(../img/cat-ear.png) no-repeat;
-    background-size: 100%;
-    background-position: top center;
-    // height: 460px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 240px;
-    gap: 48px;
-    position: relative;
-    // border: 1px solid #000;
-   
-}
+
 .activity{
 
     background: $primary-default;
@@ -439,6 +424,11 @@ label{
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 1s;
+    overflow: hidden;
+    *{
+        transition: 0.5s;
+    }
     .container{
         width: 75%;
         max-width: 1440px;
@@ -448,17 +438,41 @@ label{
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            .policy-text{
+            position: relative;
+            .policy-text.display{
+                opacity: 1;
+                transform: translateX(0);
 
+            }
+            .policy-text{
+  
                 display: flex;
                 flex-direction: column;
                 gap: 80px;
                 flex:1;
                 padding: 240px 0;
+                opacity: 0;
+                transform: translateX(-100px);
+                transition: 1s;
+                // border: 1px solid #000;
+                
+                .num{
+                        
+                    font-size: 20rem;
+                    color: rgba(2552,255,255,0.2);
+                    font-family: $sans;
+                    font-weight: 700;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+    
+                }
                 .header{
                     color: $secdonary-default;
+                    position: relative;
+                    
                 }
-                .content{
+                .policy-text-content{
                     ul{
                         display: flex;
                         flex-direction: column;
@@ -475,9 +489,23 @@ label{
             .policy-img{
                 display: flex;
                 flex-direction: column;
-                height: 600px;
+                height: 100vh;
                 overflow: auto;
-                padding: 120px 0;
+                padding: 240px 0;
+                // border: 1px solid #000;
+                &::-webkit-scrollbar {
+                    display: none;
+                  }
+                img{
+                    filter: contrast(50%);
+                    transform: translateX(120px);
+                    transition: 0.5s;
+                }
+                img.select{
+                    filter: none;
+                    transform: translateX(0);
+                }
+
             }
         }
     }
