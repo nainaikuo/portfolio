@@ -57,7 +57,7 @@ function init() {
  function observerActivityImg() {
     let option={
         root:document.querySelector("js-act-imgs"),
-        threshold:0.5
+        threshold:1
     }
     const actImgObserver = new IntersectionObserver ((entries)=>{
         entries.forEach(entry=>{

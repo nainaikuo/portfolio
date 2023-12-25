@@ -44,10 +44,13 @@ h6{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 32px 64px;
+        padding:32px;
+        >*{
+            width: 100%;
+        }
     }
 }
-@media (max-width:768px) {
+@media (max-width:992px) {
     .block{
         .container{
             width: 100%;
@@ -72,6 +75,21 @@ h6{
     }
 
 
+}
+
+@media (max-width:1280px) {
+    .name{
+        flex-direction: column;
+        gap:0px;
+        .ch{
+            font-size: 40px;
+        }
+        .eng{
+            font-size: 60px;
+            line-height: 1;
+        }
+    }
+    
 }
 
 
@@ -173,6 +191,270 @@ label{
     
     
 }
+@media (max-width:992px) {
+    .confrim-modal{
+        .modal-dialog{
+            
+            .modal-content{
+
+                .modal-body{
+                
+                    padding: 60px;
+                    
+                }
+            }
+        }
+        
+        
+    }
+    
+}
+.donation-pay-modal{
+    .modal-body{
+        background: $secdonary-tint url(../img/Murr\ Lovely.svg) no-repeat center right;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .donation-modal-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            max-width: 1280px;
+            gap: 60px;
+            .donation-modal-header{
+                display: flex;
+                position: relative;
+                h3{
+                    color: $primary-default;
+                }
+            }
+            .donation-modal-content{
+
+                background: $basic-white;
+                border-radius: 60px;
+                width: 100%;
+                padding: 1.5% 3%;
+                @include shadow();
+                display: flex;
+                flex-wrap: wrap;
+                
+                .donation-modal-content-block{
+                    width: 50%;
+
+                    padding: 3.9%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 36px;
+                    .title{
+                       padding-bottom: 8px;
+                       border-bottom: 1px solid $primary-default; 
+                       color: $primary-default;
+                    }
+                }
+                .pay{
+                    .pay-content{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 36px;
+                        .payment{
+                            p{
+                                @include body-1($weight-B)
+                            }
+                            display: flex;
+                            flex-direction: column;
+                            gap: 36px;
+                            .payment-icons{
+                                display: flex;
+                                gap: 2.5%;
+                                
+                                img{
+                                    width: 18%;
+                                }
+                            }
+                        }
+                        .card-input{
+                            display: flex;
+                            flex-direction: column;
+
+                            label{
+                                @include body-1($weight-R);
+                                color: $basic-black;
+                                margin: 0;
+                            }
+                        }
+                        .card-info{
+                            display: flex;
+                            justify-content: space-between;
+                            gap: 5% ;
+                            .card-input{
+                                width: 45%;
+                                flex: 1;
+
+                            }
+
+                        }
+                    }
+
+                }
+                .info{
+
+                    display: flex;
+                    flex-direction: column;
+                    // align-items: center;
+                    // flex: 1;
+                    .info-content{
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+                        justify-content: space-between;
+                        flex: 1;
+                        .donation-project{
+                            flex: 1;
+                            height: fill;
+                            border-bottom: 1px solid $primary-default;
+                            gap: 8px;
+                            .project{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                            }
+                        }
+                        .total{
+                            display: flex;
+                            justify-content: space-between;
+                            h3{
+                                color: $primary-light;
+                            }
+                        }
+                        .cancel-donation{
+                            background: none;
+                            color: $secdonary-dark;
+                            padding: 0;
+
+                            &:hover{
+                                color: rgba($basic-black,0.8);
+                            }
+                            &:focus{
+                                box-shadow: none;
+
+                            }
+                        }
+                        .actions{
+                            display: flex;
+                            gap: 16px;
+                            button{
+                                flex: 1;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+@media (max-width:992px) {
+    .donation-pay-modal{
+        .modal-content{
+            height: auto;
+            overflow: scroll;
+            max-height: none;
+            .modal-body{
+                background: $secdonary-tint;
+                  .donation-modal-container{
+                     
+                      .donation-modal-header{
+      
+                          h3{
+                              @include body-1($weight-B)
+                          }
+                      }
+                      .donation-modal-content{
+                          flex-direction: column;
+                          border-radius: 32px;
+                          .donation-modal-content-block{
+                              width: 100%;
+                              gap: 20px;
+                              .title{
+                                @include body-1($weight-B)
+                              }
+                          }
+                          .pay{
+                              .pay-content{
+                                  gap: 20px;
+                                  .payment{
+                                      p{
+                                          @include body-2($weight-B)
+                                      }
+      
+                                      gap: 20px;
+              
+                                  }
+                                  .card-input{
+                                      gap: 16px;
+                                      label{
+                                          @include body-2($weight-R);
+                                          
+                                      }
+                                  }
+                              }
+          
+                          }
+                          .info{
+                            height: 500px;
+                            
+                              .info-content{
+      
+                                  gap: 20px;
+      
+                                  .donation-project{
+                                      border-bottom: 1px solid $primary-default;
+                                      overflow: scroll;
+                                      .project{
+                                         h5{
+                                          @include body-1($weight-B)
+                                         }
+                                         p{
+                                          @include body-2($weight-R)
+                                         }
+          
+                                      }
+                                  }
+                                  .total{
+                                     
+                                      h3{
+                                          
+                                          @include subtitle
+                                      }
+                                  }
+                                  
+                                  .actions{
+                                      flex-direction: column;
+
+                                  }
+                                  
+                              }
+                          }
+                      }
+                  }
+                  
+              }
+        }
+        
+    
+    }
+}
+
+
+
 .banner{
     
     background: url(../img/HeaderBackground.png) no-repeat;
@@ -288,8 +570,8 @@ label{
         &::before{
             content: "";
             background: url(../img/HeaderBackground-cat.png) no-repeat;
-            background-position: top  center;
-            background-size: fill;
+            background-position:   center;
+            background-size: contain;
             width: 100%;
             height: 100%;
             // border: 1px solid #000;
@@ -315,15 +597,18 @@ label{
             
         }
         .chips{
-            height: 200px;
+            height: 250px;
         }
     }
 
 }
-@media (max-width:1280px) {
+@media (max-width:992px) {
     .banner{
+        height: 100vh;
         .header-menu{
-            padding: 8px 32px;
+            width: 90%;
+            max-width: 1200px;
+            padding: 0 24px;
             .content{
                 .menu{
                     display: none;
@@ -339,13 +624,27 @@ label{
             }
         }
         .container{
-            .text{
+            padding-top: 0;
 
+            &:before{
+                background-size: 90%;
+                background-position: center 90%;
+            }
+            .text{
+                justify-content: space-between;
+                flex: 1;
                 .slogan{
-flex-direction: column;
-                    
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 0;
+                    h1{
+                        font-size: 3rem;
+                    }
                 }
                 
+            }
+            .chips{
+                height: 150px;
             }
             
         }
@@ -401,26 +700,41 @@ flex-direction: column;
     // height: 600px;
     position: relative;
     .vote-box{
-        width: 500px;
+        width: 25%;
+        min-width: 250px;
         // height: fit-content;
-        height: 650px;
-
+        height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-bottom: 15px solid $secdonary-default;
         position: absolute;
         bottom: -70px;
         z-index: 2;
         overflow: hidden;
         .vote{
-            transform: translateY(0px);
+            transform: translateY(-50%);
             transition: 2s;
+            width: 100%;
         }
     }
+}
+
+@media (max-width:992px) {
+    .vote-box-wrap{
+        .vote-box{
+            .vote{
+                transform: translateY(-10%);
+            }
+        }
+    }
+    
 }
 
 .activity{
 
     background: $primary-default;
-    border-radius: 20vw 20vw 0 0 ;
+    border-radius: 15vw 15vw 0 0 ;
 
     &::before{
         content: "";
@@ -432,7 +746,7 @@ flex-direction: column;
         border-radius: 2vw;
         transform:  rotate(20deg) skewY(45deg);
         top: 0;
-        left: 60px;
+        left: 5%;
         z-index: 0;
     }
     &::after{
@@ -445,7 +759,7 @@ flex-direction: column;
         border-radius: 2vw;
         transform:  rotate(20deg) skewY(45deg);
         top: 0;
-        right: 60px;
+        right: 1%;
         z-index: 0;
     }
     .container{
@@ -456,20 +770,19 @@ flex-direction: column;
         .title{
             margin-top: 48px;
             color: $secdonary-tint;
+            text-align: center;
         }
 
         .content{
             // background: #000;
             width: 100%;
             display: flex;
-            justify-content: space-between;
+
+
             // align-items: center;
-            gap: 50px;
+            // gap: 50px;
             // overflow: hidden;
             flex-wrap: wrap;
-            @media (max-width:992px) {
-                gap: 16px;
-            }
             .imgs{
                 display: flex;
                 flex-direction: column;
@@ -478,18 +791,12 @@ flex-direction: column;
                 overflow: auto;
                 height: 695px;
                 // border: 1px solid #000;
-                @media (max-width:768px) {
-                    // background: #000;
-                    
-                }
                 &::-webkit-scrollbar {
                     display: none;
                   }
                 img{
                     width: 100%;
-                    height: 100%;
-                    // border: 1px solid #000;
-                    scroll-snap-align: end;
+                    object-fit:scale-down;
                 }
 
             }
@@ -508,7 +815,6 @@ flex-direction: column;
                 // border: 1px solid #000;
                 flex:1;
                 padding-top: 24px;
-
                 .activities{
                     display: flex;
                     flex-direction: column;
@@ -563,7 +869,37 @@ flex-direction: column;
     }
     
 }
+@media (max-width:992px) {
+    .activity{
+        .container{
+            .title{
+                margin-top: 72px;
+                font-size: 1.5rem;
+            }
+            .content{
+                flex-direction: column;
+    .imgs{
+        flex-direction: row;
+        // background: #000
+        padding: 8px;;
+        height: 50vh;
+    }
+    .timeline{
+        flex-direction: column;
+    border: none;
+        // border-top: 2px solid $secdonary-tint;
+        // height: 50vh;
+        .activities{
+            padding: 16px;
+        }
 
+    }
+
+            }
+        }
+    }
+    
+}
 .policy{
     background: $primary-default;
     border-radius: 0 0 20vw 20vw;
@@ -594,13 +930,12 @@ flex-direction: column;
                 flex-direction: column;
                 gap: 80px;
                 flex:1;
+                // min-width: 500px;
                 opacity: 0;
                 transform: translateX(-100px);
                 transition: 1s;
                 // border: 1px solid #000;
-                @media (max-width:992px) {
-                    padding: 60px;
-                }
+                padding-bottom: 16px;
                 .num{
                         
                     font-size: 20rem;
@@ -645,6 +980,8 @@ flex-direction: column;
                     padding: 120px;
                 }
                 img{
+                    width: 100%;
+                    object-fit:scale-down;
                     filter: contrast(50%);
                     transform: translateX(120px);
                     transition: 0.5s;
@@ -659,13 +996,40 @@ flex-direction: column;
     }
 }
 
+@media (max-width:992px) {
+.policy{
+    .container{
+        .content{
+            .policy-text{
+                // height: 70vh;
+                .num{
+                    font-size: 10rem;
+                    top: -50px;
+                }
+            }
+            .policy-img{
+                order: -1;
+                height: 50vh;
+                // border: 1px solid #000;
+                padding: 0;
+                flex-direction: row;
+                // scroll-snap-type: x proximity ;
+                scroll-behavior: smooth;
+            }
+        }
+    }
+}
+    
+}
+
 .donation{
     display: flex;
     flex-direction: column;
     align-items: center;
     background: url(../img/donate-bg.png) no-repeat bottom center;
+    margin: 120px 0;
     .container{
-        padding: 120px 0;
+        // padding: 120px 0;
         .header{
             display: flex;
             flex-direction: column;
@@ -694,6 +1058,9 @@ flex-direction: column;
                 margin-bottom: 120px;
                 gap: 24px;
                 // flex-wrap: wrap;
+                @media (max-width:992px) {
+                    flex-direction: column;
+                }
                 .donation-card{
                     min-width: 250px;
                     max-width: 300px;
@@ -728,142 +1095,7 @@ flex-direction: column;
                            @include body-2($weight-R);
                            color: $primary-default; 
                         }
-                        .donation-pay-modal{
-                            .modal-body{
-                                background: $secdonary-tint url(../img/Murr\ Lovely.svg) no-repeat center right;
-                                .donation-modal-container{
-                                    margin: 0 auto;
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    padding: 100px;
-                                    width: 80%;
-                                    max-width: 1280px;
-                                    gap: 60px;
-                                    .donation-modal-header{
-                                        display: flex;
-                                        position: relative;
-                                        
-                                    }
-                                    .donation-modal-content{
-
-                                        background: $basic-white;
-                                        border-radius: 60px;
-                                        width: 100%;
-                                        padding: 20px 40px;
-                                        @include shadow();
-                                        display: flex;
-                                        flex-wrap: wrap;
-                                        
-                                        .block{
-                                            width: 50%;
-                                            min-width: 300px;
-                                            padding: 48px;
-                                            display: flex;
-                                            flex-direction: column;
-                                            gap: 36px;
-                                            .title{
-                                               padding-bottom: 8px;
-                                               border-bottom: 1px solid $primary-default; 
-                                            }
-                                        }
-                                        .pay{
-                                            .pay-content{
-                                                display: flex;
-                                                flex-direction: column;
-                                                gap: 36px;
-                                                .payment{
-                                                    p{
-                                                        @include body-1($weight-B)
-                                                    }
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                    gap: 36px;
-                                                    .payment-icons{
-                                                        display: flex;
-                                                        gap: 2.5%;
-                                                        
-                                                        img{
-                                                            width: 18%;
-                                                        }
-                                                    }
-                                                }
-                                                .card-input{
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                    // gap: 16px;
-                                                    label{
-                                                        @include body-1($weight-R);
-                                                        color: $basic-black;
-                                                    }
-                                                }
-                                                .card-info{
-                                                    display: flex;
-                                                    justify-content: space-between;
-                                                    gap: 16px;
-                                                }
-                                            }
-
-                                        }
-                                        .info{
-
-                                            display: flex;
-                                            flex-direction: column;
-                                            // align-items: center;
-                                            // flex: 1;
-                                            .info-content{
-
-                                                display: flex;
-                                                flex-direction: column;
-                                                gap: 24px;
-                                                justify-content: space-between;
-                                                flex: 1;
-                                                .donation-project{
-                                                    flex: 1;
-                                                    height: fill;
-                                                    border-bottom: 1px solid $primary-default;
-                                                    .project{
-                                                        display: flex;
-                                                        align-items: center;
-                                                        justify-content: space-between;
-
-                                                    }
-                                                }
-                                                .total{
-                                                    display: flex;
-                                                    justify-content: space-between;
-                                                    h3{
-                                                        color: $primary-light;
-                                                    }
-                                                }
-                                                .cancel-donation{
-                                                    background: none;
-                                                    color: $secdonary-dark;
-                                                    padding: 0;
-
-                                                    &:hover{
-                                                        color: rgba($basic-black,0.8);
-                                                    }
-                                                    &:focus{
-                                                        box-shadow: none;
-
-                                                    }
-                                                }
-                                                .actions{
-                                                    display: flex;
-                                                    gap: 16px;
-                                                    button{
-                                                        flex: 1;
-                                                    }
-                                                }
-                                                
-                                            }
-                                        }
-                                    }
-                                }
-                                
-                            }
-                        }
+                        
                     }
                 }
             }
@@ -935,7 +1167,7 @@ flex-direction: column;
     flex-direction: column;
     align-items: center;
     .container{
-        padding: 100px 0;
+        // padding: 100px 0;
         .header{
             display: flex;
             flex-direction: column;
@@ -961,11 +1193,14 @@ flex-direction: column;
                 margin-bottom: 40px;
                 flex-wrap: wrap;
                 // border: 1px solid #000;
+                @media (max-width:992px) {
+                    flex-direction: column;
+                }
                 .info{
                     display: flex;
                     flex-direction: column;
                     flex: 1;
-                    min-width: 420px;
+                    // min-width: 420px;
                     gap: 28px;
                     align-items: stretch;
                     // border: 1px solid #000;
