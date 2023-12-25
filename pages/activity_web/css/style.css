@@ -112,28 +112,6 @@ h6 {
   color: #00A199;
 }
 
-.block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-.block .container {
-  width: 75%;
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 32px 64px;
-}
-
-@media (max-width: 768px) {
-  .block .container {
-    width: 100%;
-    max-width: none;
-    padding: 16px;
-  }
-}
 .name {
   display: flex;
   align-items: center;
@@ -345,6 +323,11 @@ label {
   display: none;
 }
 .banner .container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #00A199;
   flex: 1;
   padding-top: 320px;
@@ -399,9 +382,15 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 120px;
   height: 1080px;
 }
 .intro .container {
+  width: 75%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 124px;
   position: relative;
 }
@@ -425,29 +414,29 @@ label {
   width: 100%;
 }
 
-.vote-box-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.vote-box-wrap .vote-box {
+.vote-box {
   width: 500px;
-  height: 650px;
-  border-bottom: 15px solid #FFDC9E;
-  position: absolute;
-  bottom: -70px;
-  z-index: 2;
+  height: 500px;
+  border: 1px solid #000;
+  border-bottom: 15px solid #F4CA80;
+  margin-bottom: -200px;
   overflow: hidden;
+  position: absolute;
+  z-index: 2;
 }
-.vote-box-wrap .vote-box .vote {
-  transform: translateY(0px);
-  transition: 2s;
+.vote-box .vote {
+  position: absolute;
+  bottom: -300px;
+  transition: 5s;
 }
 
 .activity {
   background: #00A199;
-  border-radius: 20vw 20vw 0 0;
+  border-radius: 200px 200px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 .activity::before {
   content: "";
@@ -474,8 +463,14 @@ label {
   z-index: 0;
 }
 .activity .container {
+  width: 75%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 48px;
   position: relative;
+  padding-top: 64px;
   z-index: 1;
 }
 .activity .container .title {
@@ -507,7 +502,6 @@ label {
 }
 .activity .container .content .imgs img {
   width: 100%;
-  height: 100%;
   scroll-snap-align: end;
 }
 .activity .container .content .scroll-bar {
@@ -578,7 +572,7 @@ label {
 
 .policy {
   background: #00A199;
-  border-radius: 0 0 20vw 20vw;
+  border-radius: 0 0 200px 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -587,6 +581,10 @@ label {
 }
 .policy * {
   transition: 0.5s;
+}
+.policy .container {
+  width: 75%;
+  max-width: 1440px;
 }
 .policy .container .content {
   display: flex;
@@ -603,6 +601,7 @@ label {
   flex-direction: column;
   gap: 80px;
   flex: 1;
+  padding: 240px 0;
   opacity: 0;
   transform: translateX(-100px);
   transition: 1s;
@@ -636,7 +635,7 @@ label {
 .policy .container .content .policy-img {
   display: flex;
   flex-direction: column;
-  height: 900px;
+  height: 100vh;
   overflow: auto;
   padding: 240px 0;
 }
@@ -665,6 +664,8 @@ label {
   background: url(../img/donate-bg.png) no-repeat bottom center;
 }
 .donation .container {
+  width: 75%;
+  max-width: 1440px;
   padding: 120px 0;
 }
 .donation .container .header {
@@ -695,7 +696,6 @@ label {
 }
 .donation .container .content .cards .donation-card {
   min-width: 250px;
-  max-width: 300px;
   background: #FFFFFF;
   border-radius: 20px;
   box-shadow: 6px 8px #FFDC9E;
@@ -916,6 +916,8 @@ label {
   align-items: center;
 }
 .contact .container {
+  width: 75%;
+  max-width: 1440px;
   padding: 100px 0;
 }
 .contact .container .header {
@@ -985,6 +987,11 @@ label {
   align-items: center;
 }
 .footer .container {
+  width: 75%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 60px 0;
 }
 .footer .container .content {
@@ -993,16 +1000,16 @@ label {
   justify-content: center;
   gap: 80px;
 }
-.footer .container .content .footer-block .ul-title {
+.footer .container .content .block .ul-title {
   color: #FFDC9E;
   margin-bottom: 8px;
 }
-.footer .container .content .footer-block ul {
+.footer .container .content .block ul {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.footer .container .content .footer-block ul li a {
+.footer .container .content .block ul li a {
   color: #FFFFFF;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
