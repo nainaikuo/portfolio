@@ -1,0 +1,11 @@
+@import "template.scss";
+
+.work-detail{
+    height: 100vh;
+    gap: 16px;
+    .content{
+        .work-pic{
+            width: 800px;
+        }
+    }
+}
