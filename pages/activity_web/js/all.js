@@ -9,6 +9,7 @@ function init() {
   .then(function (result) {
     renderActivity(result.activity)
     renderPolicy(result.policy)
+    renderDonationProject(result.donation_project)
   });
   }
 
@@ -146,9 +147,8 @@ function observerPolicyImg(data){
         observer.observe(img)
     })
 }
-
+// 投票動畫
 const introBlock = document.querySelector(".vote-box-wrap")
-
 
 const introBlockObserver = new IntersectionObserver((entries)=>{
     
@@ -172,9 +172,64 @@ const introBlockObserver = new IntersectionObserver((entries)=>{
 })
 
 introBlockObserver.observe(introBlock)
-function ticketmove(e){
-    console.log(e)
-    
+
+// 渲染捐款方案
+
+function renderDonationProject(data){
+    let donationProjectContent = ""
+    data.forEach(pro=>{
+        donationProjectContent+=
+        `<div class="donation-card">
+        <div class="card-header">
+            <h4 class="title">「 ${pro.title} 」</h4>
+            <p class="amount">捐款新台幣${pro.amount}元</p>
+        </div>
+        <div class="action">
+            <button type="button" class="btn js-donate-btn" data-donate-id="${pro.id}" data-bs-toggle="modal" data-bs-target="#donation-pay">
+                馬上支持
+            </button>
+            <p class="people">已有 ${pro.donate_num} 人贊助</p>
+        </div>
+    </div>`
+    })
+    const donationProjectArea = document.querySelector(".js-donation-project-area")
+    donationProjectArea.innerHTML = donationProjectContent
+
 }
 
-// ticketmove()
+const donation = document.querySelector(".js-donation")
+
+
+donation.addEventListener("click",donate)
+
+function donate(e){
+    if(e.target.nodeName!=="BUTTON") return;
+    
+    const donateId  = e.target.dataset.donateId
+    let nowDonateAmount=0
+    let nowDonateName = ""
+    if(donateId==="custom"){
+        nowDonateName="自訂金額贊助"
+        nowDonateAmount = document.querySelector(".js-custom-donate-amount").value;
+        document.querySelector(".js-donate-project-amount").textContent=nowDonateAmount
+        document.querySelector(".js-donate-project-name").textContent=nowDonateName
+        document.querySelector(".js-total-donate-amount").textContent = nowDonateAmount
+    }else{
+        fetch("./data/data.json")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (result) {
+    const nowDonationProject = result.donation_project.filter(i=>i.id===donateId)[0]
+    nowDonateAmount= nowDonationProject.amount
+    nowDonateName = nowDonationProject.title
+    document.querySelector(".js-donate-project-amount").textContent=nowDonateAmount
+    document.querySelector(".js-donate-project-name").textContent=nowDonateName
+    document.querySelector(".js-total-donate-amount").textContent = nowDonateAmount
+  });
+  }
+
+
+
+
+}

@@ -73,15 +73,15 @@
                                 <div class="info-content">
                                     <div class="donation-project">
                                         <div class="project">
-                                            <h5>「 喵星大使 」</h5>
-                                            <p class="price">NTD6,000</p>
+                                            <h5 class="js-donate-project-name">「 喵星大使 」</h5>
+                                            <p>NTD <span class="js-donate-project-amount"></span></p>
                                         </div>
 
 
                                     </div>
                                     <div class="total">
                                         <p>Total</p>
-                                        <h3>NT$ <span>6,000</span></h3>
+                                        <h3>NT$ <span class="js-total-donate-amount">6,000</span></h3>
                                     </div>
                                     <div class="actions">
                                         <button type="button" class="btn cancel-donation"
@@ -240,15 +240,15 @@
         </div>
     </div>
 
-    <div class="donation block">
+    <div class="donation block js-donation">
         <div class="container">
             <div class="header">
-                <h3 class="title">您的小筆捐款，是每隻毛孩未來的大大動力！</h3>
-                <h4 class="subtitle">目前贊助總金額：NT$ 987,655,873</h4>
+                <h3 class="title">您的小筆捐款，<br>是每隻毛孩未來的大大動力！</h3>
+                <h4 class="subtitle">目前贊助總金額：<br>NT$ 987,655,873</h4>
             </div>
             <div class="content">
-                <div class="cards">
-                    <div class="donation-card">
+                <div class="cards js-donation-project-area">
+                    <!-- <div class="donation-card">
                         <div class="card-header">
                             <h4 class="title">「 喵星人之友 」</h4>
                             <p class="amount">捐款新台幣600元</p>
@@ -259,46 +259,18 @@
                             </button>
                             <p class="people">已有 9,957 人贊助</p>
                         </div>
-                    </div>
-                    <div class="donation-card">
-                        <div class="card-header">
-                            <h4 class="title">「 喵星人之友 」</h4>
-                            <p class="amount">捐款新台幣600元</p>
-                        </div>
-                        <div class="action">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#donation-pay">
-                                馬上支持
-                            </button>
-                            <p class="people">已有 9,957 人贊助</p>
-                        </div>
-                    </div>
-                    <div class="donation-card">
-                        <div class="card-header">
-                            <h4 class="title">「 喵星人之友 」</h4>
-                            <p class="amount">捐款新台幣600元</p>
-                        </div>
-                        <div class="action">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#donation-pay">
-                                馬上支持
-                            </button>
-
-
-                            <p class="people">已有 9,957 人贊助</p>
-                        </div>
-
-
-                    </div>
+                    </div> -->
+                    
                 </div>
                 <div class="donate-total">
                     <h3 class="title">「 自訂贊助金額 」</h3>
-                    <h4 class="subtitle">目前小額贊助總金額：NT$ 655,873</h4>
+                    <h4 class="subtitle">目前小額贊助總金額：<br>NT$ 655,873</h4>
                     <div class="input">
                         <p class="sign">NT$</p>
-                        <input type="number" class="money" value="10000">
+                        <input type="number" class="money js-custom-donate-amount" value="10000">
                     </div>
 
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#donation-pay">
+                    <button type="button" class="btn js-donate-btn" data-donate-id="custom" data-bs-toggle="modal" data-bs-target="#donation-pay">
                         馬上支付
                     </button>
                 </div>
