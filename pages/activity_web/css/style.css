@@ -806,6 +806,7 @@ label {
   gap: 64px;
   overflow: auto;
   height: 695px;
+  width: 50%;
 }
 .activity .container .content .imgs::-webkit-scrollbar {
   display: none;
@@ -889,11 +890,13 @@ label {
   }
   .activity .container .content {
     flex-direction: column;
+    align-items: center;
   }
   .activity .container .content .imgs {
     flex-direction: row;
     padding: 8px;
     height: 50vh;
+    width: 100%;
   }
   .activity .container .content .timeline {
     flex-direction: column;
@@ -993,9 +996,11 @@ label {
 .policy .container .content .policy-img {
   display: flex;
   flex-direction: column;
-  height: 900px;
+  height: 600px;
   overflow: auto;
   padding: 240px 0;
+  width: 50%;
+  scroll-behavior: smooth;
 }
 .policy .container .content .policy-img::-webkit-scrollbar {
   display: none;
@@ -1006,6 +1011,8 @@ label {
   filter: contrast(50%);
   transform: translateX(120px);
   transition: 0.5s;
+  scroll-snap-align: center;
+  scroll-snap-align: center;
 }
 .policy .container .content .policy-img img.select {
   filter: none;
@@ -1015,6 +1022,12 @@ label {
 @media (max-width: 768px) {
   .policy {
     border-radius: 0 0 10vw 10vw;
+  }
+  .policy .container .content {
+    flex-direction: column;
+  }
+  .policy .container .content .policy-text {
+    width: 100%;
   }
   .policy .container .content .policy-text .num {
     font-size: 10rem;
@@ -1032,24 +1045,30 @@ label {
     font-size: 1rem;
     line-height: 160%;
   }
-  .policy .container .content .policy-text-content ul li h5 {
+  .policy .container .content .policy-text .policy-text-content ul li h5 {
     font-family: "Noto Sans TC", sans-serif;
     font-weight: 700;
     font-size: 1rem;
     line-height: 160%;
   }
-  .policy .container .content .policy-text-content ul li p {
+  .policy .container .content .policy-text .policy-text-content ul li p {
     font-family: "Noto Sans TC", sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 160%;
   }
   .policy .container .content .policy-img {
+    width: 100%;
     order: -1;
     height: 50vh;
     padding: 0;
     flex-direction: row;
-    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  .policy .container .content .policy-img img {
+    transform: none;
+    filter: none;
+    scroll-snap-align: center;
   }
 }
 .donation {
