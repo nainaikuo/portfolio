@@ -130,12 +130,12 @@ function renderFilterWorks(e){
 
   const filtertag  = e.target.id;
 
-    fetch(workDataUrl)
+    fetch(dataUrl)
   .then(function (response) {
     return response.json();
   })
   .then(function (res) {
-    const workData = res.filter(work=>work.tags.indexOf(filtertag)!==-1)
+    const workData = res.work.filter(work=>work.tags.indexOf(filtertag)!==-1)
 
     renderWorks(workData)
     const y = document.querySelector("#work").getBoundingClientRect().top + window.scrollY;
