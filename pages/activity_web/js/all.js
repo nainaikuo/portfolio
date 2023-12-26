@@ -146,3 +146,35 @@ function observerPolicyImg(data){
         observer.observe(img)
     })
 }
+
+const introBlock = document.querySelector(".vote-box-wrap")
+
+
+const introBlockObserver = new IntersectionObserver((entries)=>{
+    
+    const block=entries[0]
+    const ticket = document.querySelector("img.vote")
+
+    if(block.isIntersecting){
+        console.log("IN") 
+    ticket.style.transform="translateY(150%)"
+    }else if(!block.isIntersecting){
+        console.log("OUT")
+        ticket.style.transform="translateY(-10%)"
+
+    }
+    // console.log(blocks)
+
+},{
+    threshold:0,
+    rootMargin:"100px 0px -200px 0px"
+
+})
+
+introBlockObserver.observe(introBlock)
+function ticketmove(e){
+    console.log(e)
+    
+}
+
+// ticketmove()
