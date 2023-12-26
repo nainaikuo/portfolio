@@ -57,7 +57,7 @@ function init() {
  function observerActivityImg() {
     let option={
         root:document.querySelector("js-act-imgs"),
-        threshold:1
+        threshold:0.8
     }
     const actImgObserver = new IntersectionObserver ((entries)=>{
         entries.forEach(entry=>{
@@ -98,8 +98,8 @@ function init() {
     <div class="num">No.${num+1}</div>
     <div class="header">
     
-    <h3 class="title">政策 No. 0<span class="no-id">.${num+1}</span></h3>
-    <h4 class="subtitle">${nowSelectedPolicy.title}</h4>
+    <h3 class="policy-title">政策 No. 0<span class="no-id">.${num+1}</span></h3>
+    <h4 class="policy-subtitle">${nowSelectedPolicy.title}</h4>
 </div>
 <div class="policy-text-content">
     <ul class="policy-list ">

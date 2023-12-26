@@ -17,109 +17,107 @@
 
 <body>
 
-                            <!-- 捐款付款modal -->
-                            <div class="modal fade donation-pay-modal" id="donation-pay" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
-                                    <div class="modal-content">
-                                        <div class="modal-body">
-                                            <div class="donation-modal-container">
-                                                <div class="donation-modal-header">
-                                                    <h3>您的支持將讓喵喵能夠推動更多政策與福利 !</h3>
-                                                </div>
+    <!-- 捐款付款modal -->
+    <div class="modal fade donation-pay-modal" id="donation-pay" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="donation-modal-container">
+                        <div class="donation-modal-header">
+                            <h3>您的支持將讓喵喵能夠推動更多政策與福利 !</h3>
+                        </div>
 
-                                                <div class="donation-modal-content">
+                        <div class="donation-modal-content">
 
-                                                    <div class="pay donation-modal-content-block">
-                                                        <h4 class="title">進行付款</h4>
-                                                        <div class="pay-content">
-                                                            <div class="payment">
-                                                                <p>付款方式</p>
-                                                                <div class="payment-icons">
-                                                                    <img data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                    data-bs-custom-class="custom-tooltip"
-                                                                    data-bs-title="This top tooltip is themed via CSS variables." src="img/Payment Method/Mastercard.png" alt="">
-                                                                    <img src="img/Payment Method/UnionPay.png" alt="">
-                                                                    <img src="img/Payment Method/Visa.png" alt="">
-                                                                    <img src="img/Payment Method/GooglePay.png" alt="">
-                                                                    <img src="img/Payment Method/ApplePay.png" alt="">
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-input card-no">
-                                                                <label for="card-no">
-                                                                    信用卡/金融卡卡號
-                                                                </label>
-                                                                <input type="text" name=""
-                                                                    placeholder="1234 5678 9101 1121" id="card-no">
-                                                            </div>
-                                                            <div class="card-info">
-                                                                <div class="expired-data card-input ">
-                                                                    <label for="card-expired-data">
-                                                                        卡片到期日
-                                                                    </label>
-                                                                    <input type="text" name="" placeholder="MM/YY"
-                                                                        id="card-expired-data">
-                                                                </div>
-                                                                <div class="valid-code card-input ">
-                                                                    <label for="card-valid-code">
-                                                                        驗證碼
-                                                                    </label>
-                                                                    <input type="text" name="" placeholder="123"
-                                                                        id="card-valid-code">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="info donation-modal-content-block">
-                                                        <h4 class="title">贊助方案</h4>
-                                                        <div class="info-content">
-                                                            <div class="donation-project">
-                                                                <div class="project">
-                                                                    <h5>「 喵星大使 」</h5>
-                                                                    <p class="price">NTD6,000</p>
-                                                                </div>
-                                                                
-
-                                                            </div>
-                                                            <div class="total">
-                                                                <p>Total</p>
-                                                                <h3>NT$ <span>6,000</span></h3>
-                                                            </div>
-                                                            <div class="actions">
-                                                                <button type="button" class="btn cancel-donation" data-bs-dismiss="modal">讓我再想想</button>
-
-                                                                <button class="btn"
-                                                                    data-bs-target="#donation-confrim"
-                                                                    data-bs-toggle="modal">確認付款</button>
-                                                            </div>
-                                                           
-                                                        
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="pay donation-modal-content-block">
+                                <h4 class="title">進行付款</h4>
+                                <div class="pay-content">
+                                    <div class="payment">
+                                        <p>付款方式</p>
+                                        <div class="payment-icons">
+                                            <img data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-custom-class="custom-tooltip"
+                                                data-bs-title="This top tooltip is themed via CSS variables."
+                                                src="img/Payment Method/Mastercard.png" alt="">
+                                            <img src="img/Payment Method/UnionPay.png" alt="">
+                                            <img src="img/Payment Method/Visa.png" alt="">
+                                            <img src="img/Payment Method/GooglePay.png" alt="">
+                                            <img src="img/Payment Method/ApplePay.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-input card-no">
+                                        <label for="card-no">
+                                            信用卡/金融卡卡號
+                                        </label>
+                                        <input type="text" name="" placeholder="1234 5678 9101 1121" id="card-no">
+                                    </div>
+                                    <div class="card-info">
+                                        <div class="expired-data card-input ">
+                                            <label for="card-expired-data">
+                                                卡片到期日
+                                            </label>
+                                            <input type="text" name="" placeholder="MM/YY" id="card-expired-data">
+                                        </div>
+                                        <div class="valid-code card-input ">
+                                            <label for="card-valid-code">
+                                                驗證碼
+                                            </label>
+                                            <input type="text" name="" placeholder="123" id="card-valid-code">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 付款成功modal -->
-                            <div class="modal fade donation-confrim-modal confrim-modal" id="donation-confrim" aria-hidden="true"
-                            aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-
-                                    <div class="modal-body">
-                                        <div class="text">
-                                            <h4>感謝您的支持</h4>
-                                        <p>您已收到好運喵喵的祝福！</p>
+                            <div class="info donation-modal-content-block">
+                                <h4 class="title">贊助方案</h4>
+                                <div class="info-content">
+                                    <div class="donation-project">
+                                        <div class="project">
+                                            <h5>「 喵星大使 」</h5>
+                                            <p class="price">NTD6,000</p>
                                         </div>
-                                        
-                                        <button type="button" class="btn white" data-bs-dismiss="modal">收下祝福</button>
+
+
                                     </div>
+                                    <div class="total">
+                                        <p>Total</p>
+                                        <h3>NT$ <span>6,000</span></h3>
+                                    </div>
+                                    <div class="actions">
+                                        <button type="button" class="btn cancel-donation"
+                                            data-bs-dismiss="modal">讓我再想想</button>
+
+                                        <button class="btn" data-bs-target="#donation-confrim"
+                                            data-bs-toggle="modal">確認付款</button>
+                                    </div>
+
+
                                 </div>
+
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 付款成功modal -->
+    <div class="modal fade donation-confrim-modal confrim-modal" id="donation-confrim" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="text">
+                        <h4>感謝您的支持</h4>
+                        <p>您已收到好運喵喵的祝福！</p>
+                    </div>
+
+                    <button type="button" class="btn white" data-bs-dismiss="modal">收下祝福</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="banner block">
         <div class="header-menu">
             <div class="content">
@@ -139,12 +137,12 @@
                         <li><a href=""><img src="img/ic_fixed_btn_54_instagram.png" alt=""></a></li>
                         <li><a href=""><img src="img/ic_fixed_btn_54_youtube.png" alt=""></a></li>
                     </ul>
-                    
+
                 </div>
-<div class="nav-icon">
-    <img src="img/List.png" alt="">
-</div>
+                <div class="nav-icon">
+                    <img src="img/List.png" alt="">
                 </div>
+            </div>
         </div>
         <div class="container">
             <div class="text">
@@ -187,9 +185,9 @@
                     <h4>讓我們一同護航台灣的幸福經濟，從照顧每一隻貓咪開始！</h4>
                 </div>
                 <img src="img/VoteMiao-desktop.png" alt="">
-                
+
             </div>
-            
+
 
         </div>
     </div>
@@ -197,13 +195,15 @@
         <div class="vote-box">
             <img src="img/vote.png" alt="" class="vote">
         </div>
-        
+
     </div>
     <div class="activity block">
 
         <div class="container">
-            
-            <h3 class="title">掌握喵喵最新活動！</h3>
+            <div class="header">
+                <h3 class="title">掌握喵喵最新活動！</h3>
+
+            </div>
             <div class="content ">
                 <div class="imgs js-act-imgs  ">
 
@@ -255,10 +255,9 @@
                             <p class="amount">捐款新台幣600元</p>
                         </div>
                         <div class="action">
-                            <button type="button" class="btn" data-bs-toggle="modal"
-                            data-bs-target="#donation-pay">
-                            馬上支持
-                        </button>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#donation-pay">
+                                馬上支持
+                            </button>
                             <p class="people">已有 9,957 人贊助</p>
                         </div>
                     </div>
@@ -268,10 +267,9 @@
                             <p class="amount">捐款新台幣600元</p>
                         </div>
                         <div class="action">
-                            <button type="button" class="btn" data-bs-toggle="modal"
-                            data-bs-target="#donation-pay">
-                            馬上支持
-                        </button>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#donation-pay">
+                                馬上支持
+                            </button>
                             <p class="people">已有 9,957 人贊助</p>
                         </div>
                     </div>
@@ -281,11 +279,10 @@
                             <p class="amount">捐款新台幣600元</p>
                         </div>
                         <div class="action">
-                             <!-- Button trigger modal -->
-                             <button type="button" class="btn" data-bs-toggle="modal"
-                             data-bs-target="#donation-pay">
-                             馬上支持
-                         </button>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#donation-pay">
+                                馬上支持
+                            </button>
 
 
                             <p class="people">已有 9,957 人贊助</p>
@@ -302,10 +299,9 @@
                         <input type="number" class="money" value="10000">
                     </div>
 
-                    <button type="button" class="btn" data-bs-toggle="modal"
-                    data-bs-target="#donation-pay">
-                    馬上支付
-                </button>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#donation-pay">
+                        馬上支付
+                    </button>
                 </div>
             </div>
 
@@ -344,30 +340,28 @@
                     </div>
 
                 </div>
-                <button type="button" class="btn" data-bs-toggle="modal"
-                data-bs-target="#form-thank">
-                送出
-            </button>
-            
-                <p>為了喵喵站出來！</p>
-                <div class="modal fade form-thank-modal confrim-modal" id="form-thank" aria-hidden="true"
-                tabindex="-1">
-               <div class="modal-dialog modal-dialog-centered">
-                   <div class="modal-content">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#form-thank">
+                    送出
+                </button>
 
-                       <div class="modal-body">
-                           <div class="text">
-                               <h4>感謝您的發聲</h4>
-                           <p>您的建議正朝向喵喵飛奔中 !</p>
-                           </div>
-                           
-                           <button type="button" class="btn white" data-bs-dismiss="modal">好的</button>
-                       </div>
-                   </div>
-               </div>
-           </div>
+                <p>為了喵喵站出來！</p>
+                <div class="modal fade form-thank-modal confrim-modal" id="form-thank" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <div class="text">
+                                    <h4>感謝您的發聲</h4>
+                                    <p>您的建議正朝向喵喵飛奔中 !</p>
+                                </div>
+
+                                <button type="button" class="btn white" data-bs-dismiss="modal">好的</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-           
+
         </div>
     </div>
     <div class="footer block">

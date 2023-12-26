@@ -130,11 +130,23 @@ h6 {
   width: 100%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .block .container {
     width: 100%;
     max-width: none;
     padding: 16px;
+  }
+  .block .header .title {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 160%;
+  }
+  .block .header .subtitle {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
   }
 }
 .name {
@@ -171,7 +183,9 @@ h6 {
     line-height: 1;
   }
 }
-input[type=button], input[type=submit], .btn {
+input[type=button],
+input[type=submit],
+.btn {
   padding: 8px 32px;
   background: #00A199;
   color: #FFFFFF;
@@ -184,10 +198,14 @@ input[type=button], input[type=submit], .btn {
   transition: 0.1s;
   cursor: pointer;
 }
-input[type=button]:hover, input[type=submit]:hover, .btn:hover {
+input[type=button]:hover,
+input[type=submit]:hover,
+.btn:hover {
   background: #14C3BB;
 }
-input[type=button]:focus, input[type=submit]:focus, .btn:focus {
+input[type=button]:focus,
+input[type=submit]:focus,
+.btn:focus {
   background: #00A199;
   border: 1px solid #FFFFFF;
   box-shadow: 0 0 0 2px #00A199;
@@ -213,7 +231,9 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=text], input[type=email], textarea {
+input[type=text],
+input[type=email],
+textarea {
   padding: 10px;
   border: 1px solid #C9F1EF;
   background: #FFFFFF;
@@ -224,10 +244,14 @@ input[type=text], input[type=email], textarea {
   font-size: 0.75rem;
   line-height: 160%;
 }
-input[type=text]:hover, input[type=email]:hover, textarea:hover {
+input[type=text]:hover,
+input[type=email]:hover,
+textarea:hover {
   box-shadow: 0 0 0 1px #00A199;
 }
-input[type=text]:focus, input[type=email]:focus, textarea:focus {
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
   background: #E9FEFD;
   outline: 1px solid #00A199;
 }
@@ -274,7 +298,7 @@ label {
   color: #F4CA80;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .confrim-modal .modal-dialog .modal-content .modal-body {
     padding: 60px;
   }
@@ -415,7 +439,7 @@ label {
   flex: 1;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .donation-pay-modal .modal-content {
     height: auto;
     overflow: scroll;
@@ -615,7 +639,7 @@ label {
   height: 250px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .banner {
     height: 100vh;
   }
@@ -688,6 +712,20 @@ label {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .intro .container .text .intro-text p {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+  }
+  .intro .container .text .intro-title {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 150%;
+  }
+}
 .vote-box-wrap {
   display: flex;
   align-items: center;
@@ -713,14 +751,14 @@ label {
   width: 100%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .vote-box-wrap .vote-box .vote {
     transform: translateY(-10%);
   }
 }
 .activity {
   background: #00A199;
-  border-radius: 15vw 15vw 0 0;
+  border-radius: 20vw 20vw 0 0;
 }
 .activity::before {
   content: "";
@@ -842,10 +880,12 @@ label {
   line-height: 160%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
+  .activity {
+    border-radius: 10vw 10vw 0 0;
+  }
   .activity .container .title {
     margin-top: 72px;
-    font-size: 1.5rem;
   }
   .activity .container .content {
     flex-direction: column;
@@ -861,6 +901,39 @@ label {
   }
   .activity .container .content .timeline .activities {
     padding: 16px;
+  }
+  .activity .container .content .timeline .activities .item .icon {
+    display: none;
+  }
+  .activity .container .content .timeline .activities .item .text .date {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 150%;
+  }
+  .activity .container .content .timeline .activities .item .text .act-title {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 160%;
+  }
+  .activity .container .content .timeline .activities .item.select .text .date {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 150%;
+  }
+  .activity .container .content .timeline .activities .item.select .text .act-title {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 160%;
+  }
+  .activity .container .content .timeline .activities .item.select .text .text-content {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 160%;
   }
 }
 .policy {
@@ -893,7 +966,7 @@ label {
   opacity: 0;
   transform: translateX(-100px);
   transition: 1s;
-  padding-bottom: 16px;
+  padding-bottom: 32px;
 }
 .policy .container .content .policy-text .num {
   font-size: 20rem;
@@ -913,7 +986,8 @@ label {
   flex-direction: column;
   gap: 60px;
 }
-.policy .container .content .policy-text .policy-text-content ul li h5, .policy .container .content .policy-text .policy-text-content ul li p {
+.policy .container .content .policy-text .policy-text-content ul li h5,
+.policy .container .content .policy-text .policy-text-content ul li p {
   color: #FFFFFF;
 }
 .policy .container .content .policy-img {
@@ -925,11 +999,6 @@ label {
 }
 .policy .container .content .policy-img::-webkit-scrollbar {
   display: none;
-}
-@media (max-width: 992px) {
-  .policy .container .content .policy-img {
-    padding: 120px;
-  }
 }
 .policy .container .content .policy-img img {
   width: 100%;
@@ -943,10 +1012,37 @@ label {
   transform: translateX(0);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
+  .policy {
+    border-radius: 0 0 10vw 10vw;
+  }
   .policy .container .content .policy-text .num {
     font-size: 10rem;
     top: -50px;
+  }
+  .policy .container .content .policy-text .policy-title {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 150%;
+  }
+  .policy .container .content .policy-text .policy-subtitle {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 160%;
+  }
+  .policy .container .content .policy-text-content ul li h5 {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 160%;
+  }
+  .policy .container .content .policy-text-content ul li p {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
   }
   .policy .container .content .policy-img {
     order: -1;
@@ -989,7 +1085,7 @@ label {
   margin-bottom: 120px;
   gap: 24px;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .donation .container .content .cards {
     flex-direction: column;
   }
@@ -1118,7 +1214,7 @@ label {
   margin-bottom: 40px;
   flex-wrap: wrap;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .contact .container .content .form {
     flex-direction: column;
   }
