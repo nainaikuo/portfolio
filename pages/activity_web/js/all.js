@@ -250,7 +250,7 @@ function renderSloganChip(data) {
         let colorIndex = (Math.floor(Math.random()*(data.color.length)))
         let textIndex = (Math.floor(Math.random()*(data.content.length)))
         const chip = 
-        `<div class="chip${i+1} chip" style="background: ${data.color[colorIndex]};transform: rotate(${transform[i].rotate}deg) translateY(${transform[i].translateY}px);">${data.content[textIndex]}</div>`
+        `<div class="chip${i+1} chip" style="background: ${data.color[colorIndex]};transform: rotate(${transform[i].rotate}deg) translateY(0px);">${data.content[textIndex]}</div>`
         chips += chip
     }
     chipArea.innerHTML = chips
@@ -270,15 +270,28 @@ const bannerObserver = new IntersectionObserver((entries)=>{
    
     
     if(banner.isIntersecting){
+        
         chips.forEach((chip,index)=>{
             const transformation = chip.style.transform
             let start = transformation.indexOf("(")
             let end = transformation.indexOf(")")
             const deg = transformation.slice(start+1, end)
             setTimeout(function(){
-                chip.style.transform=` rotate(${deg}) translateY(0)`
-            },index*50)
+                chip.style.transform=` rotate(${deg}) translateY(-650px)`
+            },index*20)
         })
-    }},{
-    threshold:0.8
+    }else{
+        chips.forEach((chip,index)=>{
+            const transformation = chip.style.transform
+            let start = transformation.indexOf("(")
+            let end = transformation.indexOf(")")
+            const deg = transformation.slice(start+1, end)
+            setTimeout(function(){
+                chip.style.transform=` rotate(${deg}) translateY(0px)`
+            },index*20)
+        })
+    }
+},{
+    threshold:0.8,
+    rootMargin:"200px 0px -200px 0px"
 })

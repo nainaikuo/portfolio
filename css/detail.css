@@ -137,6 +137,10 @@ body p {
   width: 100%;
 }
 
+header {
+  height: 200px;
+}
+
 .header {
   display: flex;
   flex-direction: column;

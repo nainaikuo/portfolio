@@ -82,7 +82,7 @@ function renderTags(data){
 
 function renderWorks (data) {
     let workAreaContent=""
-    data.forEach(work=>{
+    data.forEach((work,index)=>{
         const tags = work.tags
         let tagsContent =""
 
@@ -92,7 +92,7 @@ function renderWorks (data) {
         })
 
         workAreaContent+=
-        ` <div class="card hide" id="${work.title}" onclick="window.open('${work.link}','mywindow');">
+        ` <div class="card wow animate__animated animate__fadeInUp" id="${work.title}" data-wow-duration="1.5s" data-wow-delay="${index/10}s" onclick="window.open('${work.link}','mywindow');">
         <div class="img"><img src="${work.pic}" alt=""></div>
         <div class="content">
           <h3 class="title">${work.title}</h3>
@@ -153,5 +153,6 @@ function renderPersonalData(data){
 }
 
 tags.addEventListener("click",renderFilterWorks)
-window.addEventListener("DOMContentLoaded", fadeIn)
+// window.addEventListener("DOMContentLoaded", fadeIn)
 init()
+

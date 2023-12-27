@@ -176,10 +176,6 @@ body {
   overflow: auto;
 }
 
-.fade-in, .hide {
-  opacity: 0;
-}
-
 .tags {
   display: flex;
   gap: 16px;
