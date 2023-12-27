@@ -126,6 +126,9 @@ h6 {
   align-items: center;
   padding: 32px;
 }
+.block .container .header .title, .block .container .header .subtitle {
+  text-align: center;
+}
 .block .container > * {
   width: 100%;
 }
@@ -609,8 +612,12 @@ label {
 }
 .banner .container {
   color: #00A199;
-  flex: 1;
-  padding-top: 320px;
+  height: 700px;
+  padding-bottom: 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 .banner .container::before {
   content: "";
@@ -632,11 +639,57 @@ label {
 }
 .banner .container .text .slogan {
   display: flex;
-  gap: 32px;
-  max-width: 1200px;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1400px;
+  white-space: nowrap;
+  flex-wrap: wrap;
 }
 .banner .container .chips {
-  height: 250px;
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  transition: 1.5s;
+  bottom: 0;
+}
+.banner .container .chips .chip {
+  border-radius: 40px;
+  padding: 16px;
+  height: fit-content;
+  color: #00A199;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 160%;
+  position: absolute;
+  bottom: 0;
+  transition: 1s;
+}
+.banner .container .chips .chip2 {
+  left: 11%;
+  bottom: 80px;
+}
+.banner .container .chips .chip3 {
+  left: 22%;
+  bottom: 36px;
+}
+.banner .container .chips .chip4 {
+  left: 35%;
+}
+.banner .container .chips .chip5 {
+  left: 46%;
+  bottom: 80px;
+}
+.banner .container .chips .chip6 {
+  left: 60%;
+  bottom: 36px;
+}
+.banner .container .chips .chip7 {
+  left: 75%;
+  bottom: 50px;
 }
 
 @media (max-width: 768px) {
@@ -747,7 +800,7 @@ label {
 }
 .vote-box-wrap .vote-box .vote {
   transform: translateY(-50%);
-  transition: 2s;
+  transition: 1.5s;
   width: 100%;
 }
 
@@ -805,7 +858,7 @@ label {
   padding: 32px;
   gap: 64px;
   overflow: auto;
-  height: 695px;
+  height: 40vw;
   width: 50%;
 }
 .activity .container .content .imgs::-webkit-scrollbar {
@@ -953,7 +1006,6 @@ label {
 }
 .policy .container .content {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   position: relative;
 }
@@ -971,14 +1023,17 @@ label {
   transition: 1s;
   padding-bottom: 32px;
 }
+.policy .container .content .policy-text .subtitle {
+  text-align: left;
+}
 .policy .container .content .policy-text .num {
   font-size: 20rem;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 700;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -80px;
+  left: 0px;
 }
 .policy .container .content .policy-text .header {
   color: #FFDC9E;
@@ -996,10 +1051,10 @@ label {
 .policy .container .content .policy-img {
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: 40vw;
   overflow: auto;
   padding: 240px 0;
-  width: 50%;
+  width: 40vw;
   scroll-behavior: smooth;
 }
 .policy .container .content .policy-img::-webkit-scrollbar {
