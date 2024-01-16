@@ -79,7 +79,7 @@
             "pic": "https://nainaikuo.com/img/work_pic/pos.png"
         },
         {
-            "title": "解決方案介紹網頁設計",
+            "title": "Landing Page Design",
             "link": "https://www.bonvies.com/ai-customer-service/",
             "tags": [
                 "UI",
@@ -90,7 +90,7 @@
             "pic": "https://nainaikuo.com/img/work_pic/company_feature_1.png"
         },
         {
-            "title": "解決方案介紹網頁設計",
+            "title": "Landing Page Design",
             "link": "https://www.bonvies.com/mobile-office/",
             "tags": [
                 "UI",
@@ -99,6 +99,16 @@
                 "Visual"
             ],
             "pic": "https://nainaikuo.com/img/work_pic/company_feature_2.png"
+        },
+        {
+            "title": "室內設計網站",
+            "link": "https://wanong.net",
+            "tags": [
+                "UI",
+                "Wordpress",
+                "frontend"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/wanong.jpeg"
         },
         {
             "title": "蔬菜比價網",
@@ -128,16 +138,7 @@
             ],
             "pic": "https://nainaikuo.com/img/work_pic/donate_web.png"
         },
-        {
-            "title": "室內設計網站",
-            "link": "https://wanong.net",
-            "tags": [
-                "UI",
-                "Wordpress",
-                "frontend"
-            ],
-            "pic": "https://nainaikuo.com/img/work_pic/wanong.jpeg"
-        },
+        
         {
             "title": "ToDoList",
             "link": "https://nainaikuo.com/pages/todolist/index.html",
