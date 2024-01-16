@@ -58,16 +58,6 @@
             "pic": "https://nainaikuo.com/img/work_pic/activity_web.png"
         },
         {
-            "title": "公司網站",
-            "link": "https://www.bonvies.com",
-            "tags": [
-                "UI",
-                "wordpress",
-                "frontend"
-            ],
-            "pic": "https://nainaikuo.com/img/work_pic/company_homepage.png"
-        },
-        {
             "title": "蔬菜比價網",
             "link": "https://nainaikuo.com/pages/vegetable/index.html",
             "tags": [
@@ -136,13 +126,22 @@
             "pic": "https://nainaikuo.com/img/work_pic/pos.png"
         },
         {
-            "title": "Landing page",
-            "link": "https://medium.com/@nainaikuo1210/ui-ux-redesign-pos系統-15ae8b61967b",
+            "title": "解決方案介紹網頁設計",
+            "link": "https://www.bonvies.com/ai-customer-service/",
             "tags": [
                 "UI/UX",
                 "web"
             ],
             "pic": "https://nainaikuo.com/img/work_pic/company_feature_1.png"
+        },
+        {
+            "title": "解決方案介紹網頁設計",
+            "link": "https://www.bonvies.com/mobile-office/",
+            "tags": [
+                "UI/UX",
+                "web"
+            ],
+            "pic": "https://nainaikuo.com/img/work_pic/company_feature_2.png"
         }
     ]
 }
