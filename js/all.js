@@ -2,6 +2,9 @@ const dataUrl = "./data/data.json"
 const tags = document.querySelector(".js-total-tags-area")
 const fadeInBlock = [...document.querySelectorAll(".fade-in")]
 
+
+
+
 function fadeIn() {
   fadeInBlock.forEach((i, index) => {
       setTimeout(() => {
@@ -24,6 +27,7 @@ function showHide() {
 }
 
 function init(){
+    fadeIn()
     renderinit()
     nameSet()
 }
@@ -153,6 +157,18 @@ function renderPersonalData(data){
 }
 
 tags.addEventListener("click",renderFilterWorks)
-// window.addEventListener("DOMContentLoaded", fadeIn)
+window.addEventListener("scroll", showHeader)
+
+function showHeader(){
+  console.log(window.pageYOffset)
+  const header = document.querySelector(".header")
+  if(window.pageYOffset>0){
+    console.log(window)
+    
+    header.classList.remove("header-hide")
+  }else{
+    header.classList.add("header-hide")
+  }
+}
 init()
 

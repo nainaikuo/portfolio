@@ -143,12 +143,14 @@ body p {
   gap: 16px;
   align-items: center;
   justify-content: center;
-  padding: 32px;
+  padding: 16px;
   width: 100%;
   overflow: hidden;
   z-index: 99;
   box-shadow: 0 0px 20px #636363;
   background-color: #FFF;
+  transition: 2s;
+  position: fixed;
 }
 @media (max-width: 768px) {
   .header {
@@ -157,16 +159,20 @@ body p {
 }
 .header h1 {
   font-weight: bold;
+  font-size: 1.5rem;
 }
 @media (max-width: 768px) {
   .header h1 {
     font-size: 32px;
   }
 }
+.header h3 {
+  font-size: 1.2rem;
+}
 .header img {
   display: none;
 }
 
-.header.none {
-  display: none;
+.header.header-hide {
+  transform: translateY(-200px);
 }/*# sourceMappingURL=template.css.map */

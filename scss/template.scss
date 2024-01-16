@@ -159,13 +159,15 @@ font-family: 'Tenor Sans', sans-serif;
     gap: 16px;
     align-items: center;
     justify-content: center;
-    padding: 32px;
+    padding: 16px;
     width: 100%;
     overflow: hidden;
     z-index: 99;
-
     box-shadow: 0 0px 20px $gray ;
     background-color: $white;
+    transition: 2s;
+    position: fixed;
+
     @media (max-width:768px){
         padding: 16px;
         // color: red;
@@ -173,16 +175,23 @@ font-family: 'Tenor Sans', sans-serif;
     }
     h1{
         font-weight: bold;
+        font-size: 1.5rem;
         @media (max-width:768px){
             // color: red;
             font-size: 32px;
         }
+    }
+    h3{
+        font-size: 1.2rem;
     }
     img{
         display: none;
     }
     
 }
-.header.none{
-    display: none;
+
+.header.header-hide{
+    transform: translateY(-200px);
 }
+
+
