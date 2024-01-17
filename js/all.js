@@ -160,10 +160,10 @@ tags.addEventListener("click",renderFilterWorks)
 window.addEventListener("scroll", showHeader)
 
 function showHeader(){
-  console.log(window.pageYOffset)
+
   const header = document.querySelector(".header")
   if(window.pageYOffset>0){
-    console.log(window)
+
     
     header.classList.remove("header-hide")
   }else{
@@ -171,4 +171,4 @@ function showHeader(){
   }
 }
 init()
-
+new WOW().init();

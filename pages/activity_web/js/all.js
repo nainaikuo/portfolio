@@ -1,5 +1,69 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const bannerArea = document.querySelector(".banner")
+const donation = document.querySelector(".js-donation")
+// chips動畫
+const bannerObserver = new IntersectionObserver((entries)=>{
+    const banner = entries[0]
+    const chipArea = document.querySelector(".chips")
+    const chips = document.querySelectorAll(".chip")
+    // console.log(chips)
+    
+   
+    
+    if(banner.isIntersecting){
+        
+        chips.forEach((chip,index)=>{
+            const transformation = chip.style.transform
+            let start = transformation.indexOf("(")
+            let end = transformation.indexOf(")")
+            const deg = transformation.slice(start+1, end)
+            console.log(deg)
+            setTimeout(function(){
+                chip.style.transform=` rotate(${deg}) translateY(-650px)`
+            },index*20)
+        })
+    }else{
+        chips.forEach((chip,index)=>{
+            const transformation = chip.style.transform
+            let start = transformation.indexOf("(")
+            let end = transformation.indexOf(")")
+            const deg = transformation.slice(start+1, end)
+            setTimeout(function(){
+                chip.style.transform=` rotate(${deg}) translateY(0px)`
+            },index*20)
+        })
+    }
+},{
+    threshold:0.8,
+    rootMargin:"200px 0px 0px 0px"
+})
+
+// 投票動畫
+const introBlock = document.querySelector(".vote-box-wrap")
+
+const introBlockObserver = new IntersectionObserver((entries) => {
+
+    const block = entries[0]
+    const ticket = document.querySelector("img.vote")
+
+    if (block.isIntersecting) {
+
+        ticket.style.transform = "translateY(150%)"
+    } else if (!block.isIntersecting) {
+
+        ticket.style.transform = "translateY(-10%)"
+
+    }
+
+}, {
+    threshold: 0,
+    rootMargin: "100px 0px -200px 0px"
+
+})
+introBlockObserver.observe(introBlock)
+
+
 
 function init() {
     fetch("./data/data.json")
@@ -54,7 +118,7 @@ function renderActivityText(data) {
     actTextArea.innerHTML = actTextAreaContent
 }
 
-init()
+
 
 function observerActivityImg() {
     let option = {
@@ -148,38 +212,17 @@ function observerPolicyImg(data) {
         observer.observe(img)
     })
 }
-// 投票動畫
-const introBlock = document.querySelector(".vote-box-wrap")
 
-const introBlockObserver = new IntersectionObserver((entries) => {
 
-    const block = entries[0]
-    const ticket = document.querySelector("img.vote")
 
-    if (block.isIntersecting) {
-
-        ticket.style.transform = "translateY(150%)"
-    } else if (!block.isIntersecting) {
-
-        ticket.style.transform = "translateY(-10%)"
-
-    }
-
-}, {
-    threshold: 0,
-    rootMargin: "100px 0px -200px 0px"
-
-})
-
-introBlockObserver.observe(introBlock)
 
 // 渲染捐款方案
 
 function renderDonationProject(data) {
     let donationProjectContent = ""
-    data.forEach(pro => {
+    data.forEach((pro,index) => {
         donationProjectContent +=
-            `<div class="donation-card">
+            `<div class="donation-card  wow animate__animated animate__fadeInUp" data-wow-delay="${index*0.15}s">
         <div class="card-header">
             <h4 class="title">「 ${pro.title} 」</h4>
             <p class="amount">捐款新台幣${pro.amount}元</p>
@@ -197,10 +240,6 @@ function renderDonationProject(data) {
 
 }
 
-const donation = document.querySelector(".js-donation")
-
-
-donation.addEventListener("click", donate)
 
 function donate(e) {
     if (e.target.nodeName !== "BUTTON") return;
@@ -258,40 +297,7 @@ function renderSloganChip(data) {
     bannerObserver.observe(bannerArea)
 }
 
-const bannerArea = document.querySelector(".banner")
+donation.addEventListener("click", donate)
 
-const bannerObserver = new IntersectionObserver((entries)=>{
-    const banner = entries[0]
-    const chipArea = document.querySelector(".chips")
-    const chips = document.querySelectorAll(".chip")
-    // console.log(chips)
-    
-   
-    
-    if(banner.isIntersecting){
-        
-        chips.forEach((chip,index)=>{
-            const transformation = chip.style.transform
-            let start = transformation.indexOf("(")
-            let end = transformation.indexOf(")")
-            const deg = transformation.slice(start+1, end)
-            console.log(deg)
-            setTimeout(function(){
-                chip.style.transform=` rotate(${deg}) translateY(-650px)`
-            },index*20)
-        })
-    }else{
-        chips.forEach((chip,index)=>{
-            const transformation = chip.style.transform
-            let start = transformation.indexOf("(")
-            let end = transformation.indexOf(")")
-            const deg = transformation.slice(start+1, end)
-            setTimeout(function(){
-                chip.style.transform=` rotate(${deg}) translateY(0px)`
-            },index*20)
-        })
-    }
-},{
-    threshold:0.8,
-    rootMargin:"200px 0px 0px 0px"
-})
+init()
+new WOW().init();

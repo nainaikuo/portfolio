@@ -547,7 +547,8 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // height: 100vh;
+    justify-content: end;
+    height: 100vh;
     // border: 1px solid #000;
 
     .header-menu {
@@ -555,7 +556,6 @@ label {
         border-radius: 100px;
         width: 62.5%;
         max-width: 1400px;
-        margin-top: 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -563,7 +563,8 @@ label {
         box-shadow: 6px 8px $secdonary-default ;
         z-index: 2;
         // border: 1px solid #000;
-        position: relative;
+        position: absolute;
+        top: 40px;
 
         &::before {
             content: "";
@@ -657,7 +658,7 @@ label {
 
         color: $primary-default;
         // flex: 1;
-        // padding-top: 320px;
+        padding-top: 320px;
         height: 700px;
         padding-bottom: 0;
 

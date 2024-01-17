@@ -532,20 +532,22 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: end;
+  height: 100vh;
 }
 .banner .header-menu {
   background: #FFFFFF;
   border-radius: 100px;
   width: 62.5%;
   max-width: 1400px;
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0.2% 5%;
   box-shadow: 6px 8px #FFDC9E;
   z-index: 2;
-  position: relative;
+  position: absolute;
+  top: 40px;
 }
 .banner .header-menu::before {
   content: "";
@@ -612,6 +614,7 @@ label {
 }
 .banner .container {
   color: #00A199;
+  padding-top: 320px;
   height: 700px;
   padding-bottom: 0;
   width: 100%;
