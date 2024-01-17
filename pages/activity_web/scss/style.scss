@@ -727,44 +727,27 @@ label {
             .chip1{
             }
             .chip2{
-
                 left: 11%;
-
                 bottom: 80px;
-
             }
             .chip3{
-
                 left: 22%;
                 bottom: 36px;
-
             }
             .chip4{
-
                 left: 35%;
-
-
             }
             .chip5{
                 left: 46%;
                 bottom: 80px;
-
-
             }
             .chip6{
-
                 left: 60%;
                 bottom: 36px;
-
-
-
             }
             .chip7{
-
-
                 left: 75%;
                 bottom: 50px;
-
             }
         }
     }
@@ -839,7 +822,8 @@ label {
     flex-direction: column;
     align-items: center;
 
-    height: 1080px;
+    // height: 1080px;
+    padding-bottom: 320px;
 
     .container {
         // border: 1px solid #000;
@@ -880,7 +864,7 @@ label {
 
 @media (max-width:768px) {
     .intro {
-
+        padding-bottom: 0;
         .container {
 
             .text {
@@ -936,10 +920,9 @@ label {
 
 @media (max-width:768px) {
     .vote-box-wrap {
+        // width: 100%;
         .vote-box {
-            .vote {
-                transform: translateY(-10%);
-            }
+            width: 50%;
         }
     }
 

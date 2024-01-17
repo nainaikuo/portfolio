@@ -739,7 +739,7 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 1080px;
+  padding-bottom: 320px;
 }
 .intro .container {
   gap: 124px;
@@ -766,6 +766,9 @@ label {
 }
 
 @media (max-width: 768px) {
+  .intro {
+    padding-bottom: 0;
+  }
   .intro .container .text .intro-text p {
     font-family: "Noto Sans TC", sans-serif;
     font-weight: 400;
@@ -805,8 +808,8 @@ label {
 }
 
 @media (max-width: 768px) {
-  .vote-box-wrap .vote-box .vote {
-    transform: translateY(-10%);
+  .vote-box-wrap .vote-box {
+    width: 50%;
   }
 }
 .activity {

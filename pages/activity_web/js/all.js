@@ -275,6 +275,7 @@ const bannerObserver = new IntersectionObserver((entries)=>{
             let start = transformation.indexOf("(")
             let end = transformation.indexOf(")")
             const deg = transformation.slice(start+1, end)
+            console.log(deg)
             setTimeout(function(){
                 chip.style.transform=` rotate(${deg}) translateY(-650px)`
             },index*20)
@@ -292,5 +293,5 @@ const bannerObserver = new IntersectionObserver((entries)=>{
     }
 },{
     threshold:0.8,
-    rootMargin:"200px 0px -200px 0px"
+    rootMargin:"200px 0px 0px 0px"
 })
