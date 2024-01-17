@@ -164,7 +164,6 @@ const introBlockObserver = new IntersectionObserver((entries) => {
         ticket.style.transform = "translateY(-10%)"
 
     }
-    // console.log(blocks)
 
 }, {
     threshold: 0,

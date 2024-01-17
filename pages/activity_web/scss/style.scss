@@ -928,7 +928,7 @@ label {
 
         .vote {
             transform: translateY(-50%);
-            transition: 1.5s;
+            transition: 2s  cubic-bezier(0.65, 0, 0.35, 1);
             width: 100%;
         }
     }
