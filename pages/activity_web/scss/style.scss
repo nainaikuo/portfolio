@@ -559,7 +559,7 @@ label {
         display: flex;
         flex-direction: column;
         align-items: center;
-        // padding: 0.2% 5%;
+        padding: 0.2% 5%;
         box-shadow: 6px 8px $secdonary-default ;
         z-index: 2;
         // border: 1px solid #000;
@@ -609,7 +609,7 @@ label {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border: 1px solid #000;
+            // padding: 5px;
             .logo {
                 h1 {
                     @include gaegu(2.5rem);

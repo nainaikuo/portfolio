@@ -543,6 +543,7 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0.2% 5%;
   box-shadow: 6px 8px #FFDC9E;
   z-index: 2;
   position: absolute;
@@ -581,7 +582,6 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #000;
 }
 .banner .header-menu .content .logo h1 {
   font-family: "Gaegu", sans-serif;
