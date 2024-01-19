@@ -1,9 +1,18 @@
 @import "reset.scss";
 @import "font.scss";
 @import "color.scss";
-
+html{
+    height: 100vh;
+    // overflow: auto;
+}
 body {
     background: $secdonary-tint;
+    scroll-snap-type: proximity;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y proximity;
+    height: 100vh;
+    overflow: scroll;
+    scroll-behavior: smooth
 }
 
 h1 {
@@ -45,7 +54,7 @@ h6 {
     flex-direction: column;
     align-items: center;
     position: relative;
-
+    scroll-snap-align: center;
     .container {
 
         width: 75%;
@@ -566,48 +575,49 @@ label {
         padding: 0.2% 2%;
         box-shadow: 6px 8px $secdonary-default ;
         z-index: 2;
+        transition: 0.5s;
         // border: 1px solid #000;
         position: absolute;
         top: 40px;
         // overflow: hidden;
 
-        &::before {
-            content: "";
-            width: 2vw;
-            height: 40px;
-            // background: #000;
-            // border: 1px solid #000;
-            position: absolute;
-            top: -27px;
-            left: 30px;
-            background: $basic-white;
-            z-index: -1;
-            transform: rotate(-30deg);
-            border-radius: 2px;
-            border-right: 6px solid $secdonary-default;
-            clip-path: polygon(100% 0, 100% 100%, 0 63%);
-            // border: 1px solid #000;
+        // &::before {
+        //     content: "";
+        //     width: 2vw;
+        //     height: 40px;
+        //     // background: #000;
+        //     // border: 1px solid #000;
+        //     position: absolute;
+        //     top: -27px;
+        //     left: 30px;
+        //     background: $basic-white;
+        //     z-index: -1;
+        //     transform: rotate(-30deg);
+        //     border-radius: 2px;
+        //     border-right: 6px solid $secdonary-default;
+        //     clip-path: polygon(100% 0, 100% 100%, 0 63%);
+        //     // border: 1px solid #000;
 
-        }
+        // }
 
-        &::after {
-            content: "";
-            width: 2vw;
-            height: 40px;
-            // background: #000;
-            // border: 1px solid #000;
-            position: absolute;
-            top: -27px;
-            left: 80px;
-            background: $basic-white;
-            z-index: -1;
-            transform: rotate(-30deg);
-            border-radius: 2px;
-            border-right: 6px solid $secdonary-default;
-            clip-path: polygon(100% 0, 100% 100%, 0 63%);
-            // border: 1px solid #000;
+        // &::after {
+        //     content: "";
+        //     width: 2vw;
+        //     height: 40px;
+        //     // background: #000;
+        //     // border: 1px solid #000;
+        //     position: absolute;
+        //     top: -27px;
+        //     left: 80px;
+        //     background: $basic-white;
+        //     z-index: -1;
+        //     transform: rotate(-30deg);
+        //     border-radius: 2px;
+        //     border-right: 6px solid $secdonary-default;
+        //     clip-path: polygon(100% 0, 100% 100%, 0 63%);
+        //     // border: 1px solid #000;
 
-        }
+        // }
 
         .content-new {
             width: 100%;
@@ -648,9 +658,6 @@ label {
                         display: flex;
                     }
                 }
-                .menu.show{
-                    transform: translateY(-5px);
-                }
                 .navbar-toggler {
                     border: none;
                 }
@@ -690,13 +697,14 @@ label {
             flex-direction: column;
             align-items: center;
             .slogan {
+                transition: 0.5s;
                 display: flex;
                 justify-content: space-between;
                 // gap: 128px;
                 gap: 16px;
                 max-width: 1400px;
                 white-space: nowrap;
-                flex-wrap: wrap;
+                // flex-wrap: wrap;
 
             }
 
@@ -726,32 +734,40 @@ label {
                 bottom: 0;
                 transition: 1s;
             }
-
+            .chip1{
+                transform: rotate(2deg);
+            }
             .chip2 {
+                transform: rotate(-10deg);
                 left: 11%;
                 bottom: 80px;
             }
 
             .chip3 {
+                transform: rotate(-20deg);
                 left: 22%;
                 bottom: 36px;
             }
 
             .chip4 {
+                transform: rotate(7deg);
                 left: 35%;
             }
 
             .chip5 {
+                transform: rotate(-10deg);
                 left: 46%;
                 bottom: 80px;
             }
 
             .chip6 {
+                transform: rotate(15deg);
                 left: 60%;
                 bottom: 36px;
             }
 
             .chip7 {
+                transform: rotate(5deg);
                 left: 75%;
                 bottom: 50px;
             }
@@ -768,6 +784,7 @@ label {
             width: 90%;
             max-width: 1200px;
             padding: 0 24px;
+            border-radius: 50px;
         }
 
         .container {
@@ -782,7 +799,7 @@ label {
                     gap: 0;
 
                     h1 {
-                        font-size: 3rem;
+                        font-size: 6rem;
                     }
                 }
 
@@ -1157,11 +1174,11 @@ label {
     .container {
         .content {
             display: flex;
-            // align-items: center;
+            align-items: center;
             // justify-content: space-between;
             flex-wrap: wrap;
             position: relative;
-
+            // overflow: hidden;
             .policy-text.display {
                 opacity: 1;
                 transform: translateX(0);
@@ -1224,13 +1241,12 @@ label {
             .policy-img {
                 display: flex;
                 flex-direction: column;
-                height: 40vw;
+                height:40vw;
                 overflow: auto;
-                padding: 240px 0;
+                padding: 80px 0;
                 width: 40vw;
-                // scroll-snap-type: y mandatory;
                 scroll-behavior: smooth;
-
+                overflow-x: hidden;
                 &::-webkit-scrollbar {
                     display: none;
                 }

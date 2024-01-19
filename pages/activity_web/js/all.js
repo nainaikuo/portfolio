@@ -277,18 +277,18 @@ function renderSloganChip(data) {
 
     const chipArea = document.querySelector(".chips")
     let chips = ""
-    const transform = [{ "rotate": 2, "translateY":-600},
-    { "rotate": -10, "translateY":-550},
-    { "rotate": -20, "translateY":-500},
-    { "rotate": 7, "translateY":-550},
-    { "rotate": -10, "translateY":-500},
-    { "rotate": 15, "translateY":-480},
-    { "rotate": 5, "translateY":-500}]
+
     for (let i=0;i<7;i++){
         let colorIndex = (Math.floor(Math.random()*(data.color.length)))
         let textIndex = (Math.floor(Math.random()*(data.content.length)))
         const chip = 
-        `<div class="chip${i+1} chip" style="background: ${data.color[colorIndex]};transform: rotate(${transform[i].rotate}deg) translateY(0px);">${data.content[textIndex]}</div>`
+        `<div 
+        class="chip${i+1} chip" 
+        style="
+        background: ${data.color[colorIndex]};"
+        >
+        ${data.content[textIndex]}
+        </div>`
         chips += chip
     }
     chipArea.innerHTML = chips
