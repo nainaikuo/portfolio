@@ -57,8 +57,8 @@ const introBlockObserver = new IntersectionObserver((entries) => {
     }
 
 }, {
-    threshold: 0,
-    rootMargin: "100px 0px -200px 0px"
+    threshold: 1,
+    rootMargin: "200px 0px -200px 0px"
 
 })
 introBlockObserver.observe(introBlock)

@@ -613,11 +613,8 @@ label {
             width: 100%;
             display: flex;
             justify-content: space-between;
-            // align-items: center;
-            height: 80px;
 
             .navbar {
-                // background: rgba(255,255,255,0.8);
                 width: 100%;
 
                 .logo {
@@ -633,7 +630,7 @@ label {
                 .menu {
                     background: rgba($basic-white,0.8);
                     padding: 0 5%;
-                    transform: translateY(-5px);
+
                     .menu-nav {
                         display: flex;
                         justify-content: end;
@@ -651,7 +648,9 @@ label {
                         display: flex;
                     }
                 }
-
+                .menu.show{
+                    transform: translateY(-5px);
+                }
                 .navbar-toggler {
                     border: none;
                 }
@@ -677,7 +676,7 @@ label {
             background: url(../img/HeaderBackground-cat.png) no-repeat;
             background-position: center;
             background-size: contain;
-            width: 100%;
+            width: 90%;
             height: 100%;
             position: absolute;
             top: 100px;
@@ -806,19 +805,13 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    // height: 1080px;
-    padding-bottom: 320px;
-
     .container {
-        // border: 1px solid #000;
+
         gap: 124px;
-        // border: 1px solid #000;
         position: relative;
 
         .text {
-            // border: 1px solid #000;
-            // width: 100%;
+
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -878,14 +871,13 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
-    // border: 1px solid #000;
-    // height: 600px;
+
     position: relative;
 
     .vote-box {
         width: 25%;
         min-width: 250px;
-        // height: fit-content;
+
         height: 700px;
         display: flex;
         align-items: center;
@@ -897,7 +889,7 @@ label {
         overflow: hidden;
 
         .vote {
-            transition: 1s;
+            transition: 1.5s;
             width: 100%;
         }
     }

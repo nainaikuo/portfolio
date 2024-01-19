@@ -582,7 +582,6 @@ label {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 80px;
 }
 .banner .header-menu .content-new .navbar {
   width: 100%;
@@ -602,7 +601,6 @@ label {
 .banner .header-menu .content-new .navbar .menu {
   background: rgba(255, 255, 255, 0.8);
   padding: 0 5%;
-  transform: translateY(-5px);
 }
 .banner .header-menu .content-new .navbar .menu .menu-nav {
   display: flex;
@@ -620,6 +618,9 @@ label {
 .banner .header-menu .content-new .navbar .menu .menu-social {
   display: flex;
 }
+.banner .header-menu .content-new .navbar .menu.show {
+  transform: translateY(-5px);
+}
 .banner .header-menu .content-new .navbar .navbar-toggler {
   border: none;
 }
@@ -636,7 +637,7 @@ label {
   background: url(../img/HeaderBackground-cat.png) no-repeat;
   background-position: center;
   background-size: contain;
-  width: 100%;
+  width: 90%;
   height: 100%;
   position: absolute;
   top: 100px;
@@ -733,7 +734,6 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 320px;
 }
 .intro .container {
   gap: 124px;
@@ -796,7 +796,7 @@ label {
   overflow: hidden;
 }
 .vote-box-wrap .vote-box .vote {
-  transition: 1s;
+  transition: 1.5s;
   width: 100%;
 }
 
