@@ -81,6 +81,7 @@ function init() {
 function renderActivity(data) {
     renderActivityImg(data)
     renderActivityText(data)
+    renderActivityMobile(data)
 }
 
 function renderActivityImg(data) {
@@ -118,6 +119,25 @@ function renderActivityText(data) {
     actTextArea.innerHTML = actTextAreaContent
 }
 
+function renderActivityMobile(data){
+    let content = ""
+    data.forEach((act,index)=>{
+        content+=
+        `
+        <div class="activity-card wow animate__animated animate__fadeInUp" data-wow-delay="${index}*0.01s">
+                    <div class="img"><img src="${act.img}" alt=""></div>
+                    <div class="text">
+                        <h4 class="date">${act.date}</h4>
+                    <p class="act-title">${act.title}</p>
+                    <p class="text-content">${act.description}</p>
+                </div>
+        `
+    })
+
+    // console.log(content)
+    const contentBlock = document.querySelector(".js-act-content-m")
+    contentBlock.innerHTML = content
+}
 
 
 function observerActivityImg() {
@@ -294,7 +314,7 @@ function renderSloganChip(data) {
     chipArea.innerHTML = chips
 
     // console.log(document.querySelectorAll(".chip"))
-    bannerObserver.observe(bannerArea)
+    // bannerObserver.observe(bannerArea)
 }
 
 donation.addEventListener("click", donate)

@@ -22,10 +22,10 @@
     <div class="banner block wow animate__animated animate__fadeIn " data-wow-duration="1" data-wow-delay="0.1s" >
         <div class="header-menu wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">
             <div class="content-new">
-                <nav class="navbar navbar-expand-lg">
+                <nav class="navbar navbar-expand-xl">
                     <div class="container-fluid">
                         <div class="logo">
-                            <a class="navbar-brand" onclick="location.reload();" href="#"><h1>Miao</h1></a>
+                            <a class="navbar-brand" onclick="location.reload();window.scrollTop(0)" href="#"><h1>Miao</h1></a>
                         </div>
                         <div class="nav-icon navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                             <img src="img/List.png" alt="">
@@ -132,18 +132,24 @@
                 <h3 class="title">掌握喵喵最新活動！</h3>
 
             </div>
-            <div class="content wow animate__animated animate__fadeIn " data-wow-delay="0.2s">
+            <div class="content d-md-flex d-none  wow animate__animated animate__fadeIn " data-wow-delay="0.2s">
                 <div class="imgs js-act-imgs  ">
-
-
-
-                </div>
-                <!-- <div class="scroll-bar">   
-                </div> -->
+                </div> 
                 <div class="timeline">
                     <div class="activities js-act-text">
 
                     </div>
+                </div>
+            </div>
+            <div class="content content-mobile js-act-content-m d-block d-md-none  wow animate__animated animate__fadeIn " data-wow-delay="0.2s">
+                <div class="activity-card">
+                    <div class="img"><img src="./img/act-img-1.png" alt=""></div>
+                    <div class="text">
+                        <h4 class="date">${act.date}</h4>
+                    <p class="act-title">${act.title}</p>
+                    <p class="text-content">${act.description}</p>
+                </div>
+                </div>
                 </div>
             </div>
         </div>
