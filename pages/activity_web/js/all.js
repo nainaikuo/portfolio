@@ -319,10 +319,6 @@ function renderSloganChip(data) {
 
 donation.addEventListener("click", donate)
 
-window.addEventListener("scroll",function(e){
-    console.log(e.target)
-})
-
 
 init()
 new WOW().init();
