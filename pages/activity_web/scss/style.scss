@@ -724,7 +724,7 @@ label {
                 border-radius: 40px;
                 padding: 16px;
                 height: fit-content;
-                // background: #89FCC8;
+
                 color: $primary-default;
                 display: flex;
                 justify-content: center;
@@ -734,6 +734,9 @@ label {
                 bottom: 0;
                 transition: 1s;
             }
+
+            
+
             .chip1{
                 transform: rotate(2deg);
             }
@@ -772,11 +775,33 @@ label {
                 bottom: 50px;
             }
         }
+        .chips.chips-mobile{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            // background: #000;
+            height: auto;
+            .chip{
+                position: relative;
+            }
+            .chip8{
+                transform: rotate(2deg);
+                background: #ECD0FC;
+            }
+            .chip9{
+                transform: rotate(-3deg);
+                background: #89FCC8;
+            }
+            .chip10{
+                transform: rotate(4deg);
+                background: #F5FE68;
+            }
+        }
     }
 
 }
 
-@media (max-width:992px) {
+@media (max-width:768px) {
     .banner {
         height: 100vh;
 
@@ -799,7 +824,7 @@ label {
                     gap: 0;
 
                     h1 {
-                        font-size: 6rem;
+                        font-size: 3rem;
                     }
                 }
 

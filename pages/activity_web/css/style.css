@@ -694,8 +694,29 @@ label {
   left: 75%;
   bottom: 50px;
 }
+.banner .container .chips.chips-mobile {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: auto;
+}
+.banner .container .chips.chips-mobile .chip {
+  position: relative;
+}
+.banner .container .chips.chips-mobile .chip8 {
+  transform: rotate(2deg);
+  background: #ECD0FC;
+}
+.banner .container .chips.chips-mobile .chip9 {
+  transform: rotate(-3deg);
+  background: #89FCC8;
+}
+.banner .container .chips.chips-mobile .chip10 {
+  transform: rotate(4deg);
+  background: #F5FE68;
+}
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .banner {
     height: 100vh;
   }
@@ -715,7 +736,7 @@ label {
     gap: 0;
   }
   .banner .container .text .slogan h1 {
-    font-size: 6rem;
+    font-size: 3rem;
   }
   .banner .container .chips {
     height: 150px;
