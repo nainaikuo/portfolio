@@ -122,6 +122,17 @@ h6 {
   color: #00A199;
 }
 
+.select-bg-light *::selection {
+  background: rgba(255, 233, 195, 0.8);
+}
+
+.select-bg-dark::selection {
+  background: rgba(20, 195, 187, 0.8);
+}
+.select-bg-dark *::selection {
+  background: rgba(20, 195, 187, 0.8);
+}
+
 .block {
   display: flex;
   flex-direction: column;
@@ -555,7 +566,7 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.2% 2%;
+  padding: 0 2%;
   box-shadow: 6px 8px #FFDC9E;
   z-index: 2;
   transition: 0.5s;
@@ -578,6 +589,7 @@ label {
 }
 .banner .header-menu .content-new .navbar {
   width: 100%;
+  padding: 0;
 }
 .banner .header-menu .content-new .navbar .logo {
   display: flex;
@@ -880,6 +892,7 @@ label {
   overflow: auto;
   height: 40vw;
   width: 50%;
+  scroll-snap-type: y mandatory;
 }
 .activity .container .content .imgs::-webkit-scrollbar {
   display: none;
@@ -887,6 +900,7 @@ label {
 .activity .container .content .imgs img {
   width: 100%;
   object-fit: scale-down;
+  scroll-snap-align: center;
 }
 .activity .container .content .scroll-bar {
   width: 2px;
@@ -1025,6 +1039,7 @@ label {
   text-align: left;
 }
 .policy .container .content .policy-text .num {
+  user-select: none;
   font-size: 20rem;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Noto Sans TC", sans-serif;
@@ -1064,9 +1079,7 @@ label {
   object-fit: scale-down;
   filter: contrast(50%);
   transform: translateX(120px);
-  transition: 0.5s;
-  scroll-snap-align: center;
-  scroll-snap-align: center;
+  transition: 1s;
 }
 .policy .container .content .policy-img img.select {
   filter: none;

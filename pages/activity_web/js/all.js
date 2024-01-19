@@ -109,8 +109,8 @@ function renderActivityText(data) {
         </div>
         <div class="text">
             <h4 class="date">${act.date}</h4>
-        <p class="act-title">${act.title}</p>
-        <p class="text-content">${act.description}</p>
+            <p class="act-title">${act.title}</p>
+            <p class="text-content">${act.description}</p>
     </div>
     </div>
         `
@@ -318,6 +318,11 @@ function renderSloganChip(data) {
 }
 
 donation.addEventListener("click", donate)
+
+window.addEventListener("scroll",function(e){
+    console.log(e.target)
+})
+
 
 init()
 new WOW().init();

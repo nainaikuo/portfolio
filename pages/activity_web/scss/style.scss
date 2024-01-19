@@ -49,6 +49,27 @@ h6 {
     box-shadow: 6px 8px 0px 0px #FADCA8;
 }
 
+.select-bg-light{
+    *{
+        &::selection{
+            background: rgba($secdonary-light,0.8);
+        }
+    }
+    
+}
+
+.select-bg-dark{
+    &::selection{
+        background: rgba($primary-light,0.8);
+    }
+    *{
+        &::selection{
+            background: rgba($primary-light,0.8);
+        }
+    }
+    
+}
+
 .block {
     display: flex;
     flex-direction: column;
@@ -572,7 +593,7 @@ label {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0.2% 2%;
+        padding: 0 2%;
         box-shadow: 6px 8px $secdonary-default ;
         z-index: 2;
         transition: 0.5s;
@@ -598,7 +619,7 @@ label {
 
             .navbar {
                 width: 100%;
-
+                padding: 0;
                 .logo {
                     display: flex;
                     align-items: center;
@@ -992,8 +1013,8 @@ label {
                 overflow: auto;
                 height: 40vw;
                 width: 50%;
-
-                // border: 1px solid #000;
+                // scroll-behavior: smooth;
+                scroll-snap-type: y mandatory;
                 &::-webkit-scrollbar {
                     display: none;
                 }
@@ -1001,6 +1022,7 @@ label {
                 img {
                     width: 100%;
                     object-fit: scale-down;
+                    scroll-snap-align: center;
                 }
 
             }
@@ -1182,7 +1204,7 @@ label {
                 }
 
                 .num {
-
+                    user-select: none;
                     font-size: 20rem;
                     color: rgba(2552, 255, 255, 0.2);
                     font-family: $sans;
@@ -1236,9 +1258,7 @@ label {
                     object-fit: scale-down;
                     filter: contrast(50%);
                     transform: translateX(120px);
-                    transition: 0.5s;
-                    scroll-snap-align: center;
-                    scroll-snap-align: center;
+                    transition: 1s;
                 }
 
                 img.select {
@@ -1370,8 +1390,6 @@ label {
                 .donation-card {
                     min-width: 250px;
                     max-width: 300px;
-                    // flex: 0.5;
-                    // border: 1px solid #000;
                     background: $basic-white;
                     border-radius: 20px;
                     box-shadow: 6px 8px $secdonary-default ;
