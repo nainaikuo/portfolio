@@ -3,41 +3,41 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 const bannerArea = document.querySelector(".banner")
 const donation = document.querySelector(".js-donation")
 // chips動畫
-const bannerObserver = new IntersectionObserver((entries)=>{
-    const banner = entries[0]
-    const chipArea = document.querySelector(".chips")
-    const chips = document.querySelectorAll(".chip")
-    // console.log(chips)
+// const bannerObserver = new IntersectionObserver((entries)=>{
+//     const banner = entries[0]
+//     const chipArea = document.querySelector(".chips")
+//     const chips = document.querySelectorAll(".chip")
+//     // console.log(chips)
     
    
     
-    if(banner.isIntersecting){
+//     if(banner.isIntersecting){
         
-        chips.forEach((chip,index)=>{
-            const transformation = chip.style.transform
-            let start = transformation.indexOf("(")
-            let end = transformation.indexOf(")")
-            const deg = transformation.slice(start+1, end)
-            console.log(deg)
-            setTimeout(function(){
-                chip.style.transform=` rotate(${deg}) translateY(-650px)`
-            },index*20)
-        })
-    }else{
-        chips.forEach((chip,index)=>{
-            const transformation = chip.style.transform
-            let start = transformation.indexOf("(")
-            let end = transformation.indexOf(")")
-            const deg = transformation.slice(start+1, end)
-            setTimeout(function(){
-                chip.style.transform=` rotate(${deg}) translateY(0px)`
-            },index*20)
-        })
-    }
-},{
-    threshold:0.8,
-    rootMargin:"200px 0px 0px 0px"
-})
+//         chips.forEach((chip,index)=>{
+//             const transformation = chip.style.transform
+//             let start = transformation.indexOf("(")
+//             let end = transformation.indexOf(")")
+//             const deg = transformation.slice(start+1, end)
+//             console.log(deg)
+//             setTimeout(function(){
+//                 chip.style.transform=` rotate(${deg}) translateY(-650px)`
+//             },index*20)
+//         })
+//     }else{
+//         chips.forEach((chip,index)=>{
+//             const transformation = chip.style.transform
+//             let start = transformation.indexOf("(")
+//             let end = transformation.indexOf(")")
+//             const deg = transformation.slice(start+1, end)
+//             setTimeout(function(){
+//                 chip.style.transform=` rotate(${deg}) translateY(0px)`
+//             },index*20)
+//         })
+//     }
+// },{
+//     threshold:0.8,
+//     rootMargin:"200px 0px 0px 0px"
+// })
 
 // 投票動畫
 const introBlock = document.querySelector(".vote-box-wrap")
