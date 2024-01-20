@@ -105,6 +105,7 @@ body p {
   justify-content: center;
   align-self: stretch;
   transition: opacity 2s;
+  scroll-snap-align: start;
 }
 .block .container {
   width: 80%;

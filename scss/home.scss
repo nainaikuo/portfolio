@@ -1,11 +1,5 @@
 @import "template.scss";
 
-body{
-    scroll-snap-type: y mandatory;
-    // height: 100vh;
-    overflow: auto;
-    // display: flex;
-}
 
 .tags{
     // border: 1px solid $black;
@@ -64,11 +58,6 @@ body{
 }
 
 
-// .header.scroll{
-//     h4{
-//         display: none;
-//     }
-// }
 
 .banner{
     height: 100vh;
@@ -81,7 +70,7 @@ body{
         .search{
             border-bottom: 1px solid $black;
             padding: 16px 32px;
-            width: 50%;
+            width: 80%;
             display: flex;
             justify-content: space-between;
             align-items: center;

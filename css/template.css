@@ -71,7 +71,7 @@ button {
 
 body {
   background-color: #FAFAFA;
-  margin: 0 auto;
+  height: 100vh;
   font-family: "Tenor Sans", sans-serif;
   display: flex;
   align-items: center;

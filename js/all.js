@@ -3,8 +3,7 @@ const tags = document.querySelector(".js-total-tags-area")
 const fadeInBlock = [...document.querySelectorAll(".fade-in")]
 
 
-
-
+console.log(fadeInBlock)
 function fadeIn() {
   fadeInBlock.forEach((i, index) => {
       setTimeout(() => {
@@ -30,6 +29,7 @@ function init(){
     fadeIn()
     renderinit()
     nameSet()
+    // LocomotiveScroll()
 }
 
 
@@ -126,7 +126,6 @@ function renderFilterWorks(e){
     tag.classList.remove("select")
   })
   if(e.target.id==="reset"){
-    console.log("RE")
     init()
     return
   }
@@ -156,13 +155,12 @@ function renderPersonalData(data){
   console.log(data)
 }
 
-tags.addEventListener("click",renderFilterWorks)
-window.addEventListener("scroll", showHeader)
 
 function showHeader(){
-
+  const offset = window.pageYOffset
+  //  console.log(offset)
   const header = document.querySelector(".header")
-  if(window.pageYOffset>0){
+  if(offset>100){
 
     
     header.classList.remove("header-hide")
@@ -170,5 +168,11 @@ function showHeader(){
     header.classList.add("header-hide")
   }
 }
+
+
+
+tags.addEventListener("click",renderFilterWorks)
+window.addEventListener("scroll", showHeader)
+
 init()
 new WOW().init();
