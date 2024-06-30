@@ -3,7 +3,6 @@ const tags = document.querySelector(".js-total-tags-area")
 const fadeInBlock = [...document.querySelectorAll(".fade-in")]
 
 
-console.log(fadeInBlock)
 function fadeIn() {
   fadeInBlock.forEach((i, index) => {
       setTimeout(() => {
@@ -151,9 +150,6 @@ function renderFilterWorks(e){
     
 }
 
-function renderPersonalData(data){
-  console.log(data)
-}
 
 
 function showHeader(){

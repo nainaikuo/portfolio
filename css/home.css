@@ -195,7 +195,9 @@ body p {
 }
 .tags .tag:hover {
   background-color: #636363;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   color: #FFF;
   border-color: #636363;
 }
@@ -210,7 +212,9 @@ body p {
 }
 .tags .tag.select {
   background-color: #636363;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   color: #FFF;
   border-color: #636363;
 }
@@ -442,4 +446,5 @@ body p {
 .rights {
   padding: 8px;
   font-size: 12px;
+  text-align: center;
 }/*# sourceMappingURL=home.css.map */
