@@ -2,14 +2,14 @@
     "personal": {
         "name": "郭乃萱",
         "en-name": "Nai Hsuan Kuo",
-        "pic-url": "https://nainaikuo.com/img/personal-pic.JPG",
+        "pic-url": "/img/personal-pic.JPG",
         "contact": {
             "email": "nainaikuo1210@gmail.com",
             "phone": "0972237438"
         },
         "link": {
             "github": "https://github.com/nainaikuo",
-            "personal-web": "https://nainaikuo.com/",
+            "personal-web": "/",
             "medium": "https://medium.com/@nainaikuo1210"
         },
         "skills": [
@@ -41,24 +41,34 @@
         ]
     },
     "work": [
+         {
+            "title": "旅遊形象電商網站",
+            "link": "https://newgbt.gobytrain.com.tw/",
+            "tags": [
+                "API",
+                "frontend",
+                "web"
+            ],
+            "pic": "/img/work_pic/election.png"
+        },
         {
             "title": "開票地圖",
-            "link": "https://nainaikuo.com/pages/election_map/index.html",
+            "link": "/pages/election_map/index.html",
             "tags": [
                 "frontend",
                 "web"
             ],
-            "pic": "https://nainaikuo.com/img/work_pic/election.png"
+            "pic": "/img/work_pic/election.png"
         },
         {
             "title": "活動頁面",
-            "link": "https://nainaikuo.com/pages/activity_web/index.html",
+            "link": "/pages/activity_web/index.html",
             "tags": [
                 "frontend",
                 "anmation",
                 "web"
             ],
-            "pic": "https://nainaikuo.com/img/work_pic/activity_web.png"
+            "pic": "/img/work_pic/activity_web.png"
         },
         {
             "title": "動物醫院住院管理系統",
@@ -69,7 +79,7 @@
                 "system",
                 "project"
             ],
-            "pic": "https://nainaikuo.com/img/work_pic/hospital.png"
+            "pic": "/img/work_pic/hospital.png"
         },
         {
             "title": "POS系統 Redesign",
@@ -81,45 +91,45 @@
                 "system",
                 "project"
             ],
-            "pic": "https://nainaikuo.com/img/work_pic/pos.png"
+            "pic": "/img/work_pic/pos.png"
         },
         {
             "title": "蔬菜比價網",
-            "link": "https://nainaikuo.com/pages/vegetable/index.html",
+            "link": "/pages/vegetable/index.html",
             "tags": [
                 "frontend",
                 "web"
             ],
-            "pic": "https://nainaikuo.com/img/work_pic/vegetable.png"
+            "pic": "/img/work_pic/vegetable.png"
         },
         {
             "title": "電商網站前後台",
-            "link": "https://nainaikuo.com/pages/ecommerce/index.html",
+            "link": "/pages/ecommerce/index.html",
             "tags": [
                 "frontend",
                 "web"
             ],
-            "pic": "https://nainaikuo.com/img/work_pic/ecommerce.jpeg"
+            "pic": "/img/work_pic/ecommerce.jpeg"
         },
         {
             "title": "募資網站",
-            "link": "https://nainaikuo.com/pages/donate_web/index.html",
+            "link": "/pages/donate_web/index.html",
             "tags": [
                 "frontend",
                 "web",
                 "RWD"
             ],
-            "pic": "https://nainaikuo.com/img/work_pic/donate_web.png"
+            "pic": "/img/work_pic/donate_web.png"
         },
         
         {
             "title": "ToDoList",
-            "link": "https://nainaikuo.com/pages/todolist/index.html",
+            "link": "/pages/todolist/index.html",
             "tags": [
                 "frontend",
                 "web"
             ],
-            "pic": "https://nainaikuo.com/img/work_pic/todolist.png"
+            "pic": "/img/work_pic/todolist.png"
         }
         
         

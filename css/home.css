@@ -195,9 +195,7 @@ body p {
 }
 .tags .tag:hover {
   background-color: #636363;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   color: #FFF;
   border-color: #636363;
 }
@@ -212,9 +210,7 @@ body p {
 }
 .tags .tag.select {
   background-color: #636363;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   color: #FFF;
   border-color: #636363;
 }
@@ -383,6 +379,7 @@ body p {
 
 .personal .content {
   display: flex;
+  align-items: flex-start;
   width: 100%;
   gap: 2%;
 }
@@ -394,9 +391,10 @@ body p {
   }
 }
 .personal .content .personal-pic {
+  flex-shrink: 0;
   width: 20%;
-  max-width: 450px;
   min-width: 320px;
+  aspect-ratio: 2372/3025;
 }
 .personal .content .personal-info {
   display: flex;

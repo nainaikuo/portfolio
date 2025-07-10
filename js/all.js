@@ -19,8 +19,26 @@ function showHide() {
       setTimeout(() => {
           i.classList.remove("hide")
       }, index * 30)
-
   })
+}
+
+function renderPersonalData(data){
+  console.log(data)
+  
+}
+
+function renderinit(){
+  fetch(dataUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (res) {
+    const workData = res.work;
+    const personalData = res.personal;
+    renderTags(workData)
+    renderWorks(workData)
+    renderPersonalData(personalData)
+  });
 
 }
 
@@ -40,23 +58,9 @@ function nameSet(){
     rights.innerHTML=` ©
     <span class="year js-year">${year}</span>
     <span class="name js-name">${englishName}</span>`
-
 }
 
-function renderinit(){
-    fetch(dataUrl)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (res) {
-    const workData = res.work;
-    const personalData = res.personal;
-    renderTags(workData)
-    renderWorks(workData)
-    renderPersonalData(personalData)
-  });
 
-}
 
 
 function renderTags(data){
