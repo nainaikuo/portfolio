@@ -1,137 +1,98 @@
 {
-    "personal": {
-        "name": "郭乃萱",
-        "en-name": "Nai Hsuan Kuo",
-        "pic-url": "/img/personal-pic.JPG",
-        "contact": {
-            "email": "nainaikuo1210@gmail.com",
-            "phone": "0972237438"
-        },
-        "link": {
-            "github": "https://github.com/nainaikuo",
-            "personal-web": "/",
-            "medium": "https://medium.com/@nainaikuo1210"
-        },
-        "skills": [
-            "Vue.js",
-            "Nuxt.js",
-            "Git 版本控制",
-            "HTML5",
-            "CSS3",
-            "JavaScriprt",
-            "UI/UX設計",
-            "平面設計"
-        ],
-        "experience": [
-            {
-                "from-time": "2014/09",
-                "to-time": "2018/06",
-                "title": "國立臺北藝術大學｜劇場設計學系"
-            },
-            {
-                "from-time": "2018/09",
-                "to-time": "2020/12",
-                "title": "品牌營運專員"
-            },
-            {
-                "from-time": "2021/01",
-                "to-time": "PRESENT",
-                "title": "品牌營運專員"
-            }
-        ]
+  "personal": {
+    "name": "郭乃萱",
+    "en-name": "Nai Hsuan Kuo",
+    "pic-url": "/img/personal-pic.JPG",
+    "contact": {
+      "email": "nainaikuo1210@gmail.com",
+      "phone": "0972237438"
     },
-    "work": [
-         {
-            "title": "旅遊形象電商網站",
-            "link": "https://newgbt.gobytrain.com.tw/",
-            "tags": [
-                "API",
-                "frontend",
-                "web"
-            ],
-            "pic": "/img/work_pic/election.png"
-        },
-        {
-            "title": "開票地圖",
-            "link": "/pages/election_map/index.html",
-            "tags": [
-                "frontend",
-                "web"
-            ],
-            "pic": "/img/work_pic/election.png"
-        },
-        {
-            "title": "活動頁面",
-            "link": "/pages/activity_web/index.html",
-            "tags": [
-                "frontend",
-                "anmation",
-                "web"
-            ],
-            "pic": "/img/work_pic/activity_web.png"
-        },
-        {
-            "title": "動物醫院住院管理系統",
-            "link": "https://medium.com/@nainaikuo1210/ui-design-寵物住院紀錄系統-3518324101ed",
-            "tags": [
-                "UI",
-                "UX",
-                "system",
-                "project"
-            ],
-            "pic": "/img/work_pic/hospital.png"
-        },
-        {
-            "title": "POS系統 Redesign",
-            "link": "https://medium.com/@nainaikuo1210/ui-ux-redesign-pos系統-15ae8b61967b",
-            "tags": [
-                "UI",
-                "UX",
-                "redesign",
-                "system",
-                "project"
-            ],
-            "pic": "/img/work_pic/pos.png"
-        },
-        {
-            "title": "蔬菜比價網",
-            "link": "/pages/vegetable/index.html",
-            "tags": [
-                "frontend",
-                "web"
-            ],
-            "pic": "/img/work_pic/vegetable.png"
-        },
-        {
-            "title": "電商網站前後台",
-            "link": "/pages/ecommerce/index.html",
-            "tags": [
-                "frontend",
-                "web"
-            ],
-            "pic": "/img/work_pic/ecommerce.jpeg"
-        },
-        {
-            "title": "募資網站",
-            "link": "/pages/donate_web/index.html",
-            "tags": [
-                "frontend",
-                "web",
-                "RWD"
-            ],
-            "pic": "/img/work_pic/donate_web.png"
-        },
-        
-        {
-            "title": "ToDoList",
-            "link": "/pages/todolist/index.html",
-            "tags": [
-                "frontend",
-                "web"
-            ],
-            "pic": "/img/work_pic/todolist.png"
-        }
-        
-        
+    "link": {
+      "github": "https://github.com/nainaikuo",
+      "personal-web": "/",
+      "medium": "https://medium.com/@nainaikuo1210"
+    },
+    "skills": [
+      "Vue.js",
+      "Nuxt.js",
+      "HTML5",
+      "CSS3",
+      "JavaScriprt",
+      "UI/UX設計"
+    ],
+    "experience": [
+      {
+        "from-time": "2014/09",
+        "to-time": "2018/06",
+        "title": "國立臺北藝術大學｜劇場設計學系"
+      },
+      {
+        "from-time": "2018/09",
+        "to-time": "2020/12",
+        "title": "品牌營運專員"
+      },
+      {
+        "from-time": "2021/01",
+        "to-time": "PRESENT",
+        "title": "品牌營運專員"
+      }
     ]
+  },
+  "work": [
+    {
+      "title": "旅遊形象電商網站",
+      "link": "https://newgbt.gobytrain.com.tw/",
+      "tags": ["API", "frontend", "web"],
+      "pic": "/img/work_pic/gobytrain.jpeg"
+    },
+    {
+      "title": "開票地圖",
+      "link": "/pages/election_map/index.html",
+      "tags": ["frontend", "web"],
+      "pic": "/img/work_pic/election.png"
+    },
+    {
+      "title": "活動頁面",
+      "link": "/pages/activity_web/index.html",
+      "tags": ["frontend", "anmation", "web"],
+      "pic": "/img/work_pic/activity_web.png"
+    },
+    {
+      "title": "動物醫院住院管理系統",
+      "link": "https://medium.com/@nainaikuo1210/ui-design-寵物住院紀錄系統-3518324101ed",
+      "tags": ["UI", "UX", "system", "project"],
+      "pic": "/img/work_pic/hospital.png"
+    },
+    {
+      "title": "POS系統 Redesign",
+      "link": "https://medium.com/@nainaikuo1210/ui-ux-redesign-pos系統-15ae8b61967b",
+      "tags": ["UI", "UX", "redesign", "system", "project"],
+      "pic": "/img/work_pic/pos.png"
+    },
+    {
+      "title": "蔬菜比價網",
+      "link": "/pages/vegetable/index.html",
+      "tags": ["frontend", "web"],
+      "pic": "/img/work_pic/vegetable.png"
+    },
+    {
+      "title": "電商網站前後台",
+      "link": "/pages/ecommerce/index.html",
+      "tags": ["frontend", "web"],
+      "pic": "/img/work_pic/ecommerce.jpeg"
+    },
+    {
+      "title": "募資網站",
+      "link": "/pages/donate_web/index.html",
+      "tags": ["frontend", "web", "RWD"],
+      "pic": "/img/work_pic/donate_web.png"
+    },
+
+    {
+      "title": "ToDoList",
+      "link": "/pages/todolist/index.html",
+      "tags": ["frontend", "web"],
+      "pic": "/img/work_pic/todolist.png"
+    }
+  ]
 }
